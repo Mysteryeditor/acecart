@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import HomePage from './Components/FirstSection';
 import reportWebVitals from './reportWebVitals';
+import SecondSection from './Components/SecondSection';
+import ThirdSection from './Components/ThirdSection';
+import FourthSection from './Components/FourthSection';
+import FifthSection from './Components/FifthSection';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+<HomePage/>
+<SecondSection/>
+<ThirdSection/>
+<FourthSection/>
+<FifthSection/>
+
   </React.StrictMode>
 );
 
