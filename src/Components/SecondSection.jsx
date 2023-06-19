@@ -1,8 +1,10 @@
 import React from 'react';
 import { TabMenu } from 'primereact/tabmenu';
+import Carousel from 'react-bootstrap/Carousel';
 import Home1 from 'C:/Users/cgvak/Desktop/React/acecart/src/Assets/images/Home-1.jpg.webp'
 import Home2 from 'C:/Users/cgvak/Desktop/React/acecart/src/Assets/images/home3.jpg.webp'
 import Home3 from 'C:/Users/cgvak/Desktop/React/acecart/src/Assets/images/home4.jpg.webp'
+
 import "primereact/resources/primereact.min.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import Card from 'react-bootstrap/Card';
@@ -16,7 +18,27 @@ import { Container } from 'react-bootstrap';
 export default function SecondSection() {
     const [show, setShow] = useState(false);
     const target = useRef(null);
+    const [index, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex) => {
+      setIndex(selectedIndex);
+    };
     return (
+        <React.Fragment>
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={Home1}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      
+    </Carousel>
         <div className='position-relative'>
             <img className='col-lg-12 col-md-12 col-sm-12' src={Home1} alt="" />
 
@@ -72,5 +94,6 @@ export default function SecondSection() {
     </div>
     </Container>
         </div>
+        </React.Fragment>
     )
 }

@@ -5,11 +5,16 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/App.css'
-import React from 'react';
+import React from 'react';import { useState } from 'react';
+
 
 function HomePage() {
+
   return (
+
+
     <React.Fragment >
+       
         <div className="Navbar">
                 <Navbar.Brand className="acecraftTitle" href="#">acecraft</Navbar.Brand>
 
