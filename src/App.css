@@ -54,6 +54,11 @@
   font-size: 30px;
   padding-top: 10px;
 }
+.settingImage{
+  height: 20px;
+  width: 20px;
+}
+
 
 
 .Navbar{
@@ -68,10 +73,14 @@
   display: flex;
 margin-left:40px
 }
+.navLink:hover{
+  color: white;
+}
 .NavbarLinks{
   margin-left: 330px;
  
 }
+
 .HomePageCard{
   height: 94px;
   width: 340px;
@@ -79,11 +88,16 @@ margin-left:40px
   outline: white;
   border-color: aliceblue;
   border-radius: 0%;
- margin-top: 135px;
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+ /* margin-top: -185px;
+ margin-left: 300px; */
 }
 .overTheCommon{
   color: #9E9E9E;
   font-weight: 700;
+  visibility: visible;
 }
 .cardTitleImg{
   color: #9E9E9E;
@@ -98,6 +112,7 @@ margin-top: -15px;
   font-size: 36px;
   justify-content: center;
   display: flex;
+  visibility: visible;
 }
 .fa-chevron-right{
   animation: movechevron 1s  infinite;
@@ -150,35 +165,48 @@ left:0px;
  
 }
 
-.ACECRAFTLINK{
-  margin-top: -85px;
+.acecraftLink{
+  font-family: 'Proxima';
   color: white;
 }
-.ACECRAFTLINK:hover{
+.acecraftLink:hover{
   color: black;
   font-family: 'Proxima';
 }
-.homeimg2{
+.acecraftTitle:hover{
 
+color: white;}
+
+.carousel button, .carousel-control-next-icon ,  .carousel-control-prev , .carousel-control-next{
+  visibility: hidden;
 }
 
-
-@media screen and (min-width:320px) and (max-width:425px){
-  
-.Navbar{
+.home2{
+  width: 724.5px;
+  height: 786.31px;
+  object-fit:unset;
+ }
+ .SecondSectionBody{
   background-color: black;
+ }
+
+
+
+ /* footer */
+.footerLogo{
+    height: 5%;
+    width: 5%;
 }
 
-.navLink{
-  color:#9E9E9E;
-  font-family: Proxima;
-  font-weight: 700;
-  justify-content: center;
-  display: flex;
-margin-left:40px
+.footer .col-2 {
+  border-right: solid white .1em;
+  text-align: center;
+  font-size: 15px;
 }
-.NavbarLinks{
-  margin-left: 330px;
- 
+.footerLink{
+  color: #9E9E9E;
+  font-weight: 400;
 }
+.footerLink:hover{
+  color: white;
 }
