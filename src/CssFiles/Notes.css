@@ -1,0 +1,25 @@
+@font-face {
+    font-family: Proxima;
+    src: url('../Fonts/Proxima-Nova-Font/Proxima\ Nova\ Font.otf');
+  }
+.blogsCard{
+    height: 347px;
+    width: 547px;
+    font-size: 12px;
+
+}
+.blogscardBody{
+    margin-bottom:60px;
+    margin-left: -7px;
+    margin-right: -7px;
+
+}
+
+    .blogTitle{
+        padding-top: 123px;
+        font-family: Proxima;
+    }
+    .Blogs{
+        font-family: Proxima;
+        font-weight: 600;
+    }

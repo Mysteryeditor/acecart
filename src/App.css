@@ -76,6 +76,9 @@ margin-left:40px
 .navLink:hover{
   color: white;
 }
+.navLink::after{
+  color:#9E9E9E;
+}
 .NavbarLinks{
   margin-left: 330px;
  

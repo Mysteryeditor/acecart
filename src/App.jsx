@@ -1,30 +1,19 @@
 import logo from './logo.svg';
-import './App.css';
-import Button from 'react-bootstrap/Button';
+import 'C:/Users/cgvak/Desktop/React/acecart/src/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HomePage from './Components/FirstSection';
+import SecondSection from './Components/SecondSection';
+import { Route,Routes } from 'react-router-dom';
+import SchoolPage from './Components/SchoolPage/SchoolPage';
 
 function App() {
   return (
     <div className="App">
-      
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-
-        <Button>Hello world!</Button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-          
-          Learn React
-        </a>
-      </header>
+        <HomePage />
+        <Routes>
+          <Route exact path='/' element={<SecondSection />} />
+          <Route path="/school" element={<SchoolPage />} />
+        </Routes>
     </div>
   );
 }

@@ -10,13 +10,26 @@ import FifthSection from './Components/FifthSection';
 import SchoolPage from './Components/SchoolPage/SchoolPage'
 import { BrowserRouter } from 'react-router-dom';
 import SchoolPageTwo from './Components/SchoolPage/SchoolPageTwo';
+import { Route,Routes } from 'react-router-dom';
+import NotesBlogs from './Components/Notes/Blogs';
+import Error404 from './Components/AirenMask/Error404'
+import College from './Components/College/College';
+import FooterNavBar from './Components/FooterNavBar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <BrowserRouter>
 <HomePage/>
-<SecondSection/>
-<SchoolPage/>
+<Routes>
+          <Route exact path='/' element={<SecondSection />} />
+          <Route path="/school" element={<SchoolPage />} />
+          <Route path="/college" element={<College />} />
+          <Route path="/school" element={<SchoolPage />} />
+          <Route path="/notes" element={<NotesBlogs />} />
+          <Route path="/airenmask" element={<Error404 />} />
 
+        </Routes>
+
+        <FooterNavBar className=""/>    
   </BrowserRouter>
 );
 

@@ -30,5 +30,56 @@
             "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/627b614a77743f91a456432d/webp/front-view-nhg-shirt-girls-grade-11-12--480x480.jpg",
             "name":"NHG County Shirt"
         }
+    ],
+    "Blogs":[
+        {
+            "id":1,
+            "title":"STYLING ACCESSORIES THAT COMPLEMENT YOUR FORMAL WEAR"
+        },
+        {
+            "id":2,
+            "title":"5 CLASSIC LOOKS FOR HER"
+        },
+        {
+            "id":3,
+            "title":"ACING YOUR FORMAL ATTIRE"
+        },
+        {
+            "id":4,
+            "title":"SELECTING & STYLING YOUR WORKWEAR"
+        },
+        {
+            "id":5,
+            "title":"LET'S TALK 'BODY TYPES',WOMEN!"
+        },
+        {
+            "id":6,
+            "title":"5 CLASSIC LOOKS FOR HIM"
+        },
+        {
+            "id":7,
+            "title":"TIPS FOR A GREAT OUTFIT"
+        },
+        {
+            "id":8,
+            "title":"DRESSING TO SUCCEED: THE IMPORTANCE OF FORMALS"
+        },
+        {
+            "id":9,
+            "title":"WORKWEAR FOR ALL SEASONS: THE WOMEN EDIT"
+        }, {
+            "id":10,
+            "title":"THE ACECRAFT DIFFERENCE"
+        }, {
+            "id":11,
+            "title":"CORPORATE TO CUPCAKES!-STORY OF A SUPERWOMAN"
+        }, {
+            "id":12,
+            "title":"HOW TO COMPLETE YOUR COLLEGE LOOK"
+        }, {
+            "id":13,
+            "title":"DRESS THE RIGHT WAY TO IMPRESS THE RIGHT WAY"
+        }
+
     ]
 }
