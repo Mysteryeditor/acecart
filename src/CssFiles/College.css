@@ -1,3 +1,83 @@
+@font-face {
+    font-family: Proxima;
+    src: url(../Fonts/Proxima-Nova-Font/Proxima\ Nova\ Font.otf);
+}
 .collegeHeader{
     background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/College-11.jpg');
+  padding-bottom:225px;
+    background-repeat: no-repeat;
+}
+.collegeHeaderTitles{
+    margin-top: 100px;
+    color: #9e9e9e;
+    font-family: 'Proxima';
+    padding-right: 100px;
+
+
+}
+#collegeHeaderTitles1{
+    font-weight: bolder;
+    
+}
+.collegeHeaderTitles2{
+    font-size: medium;
+}
+#collegeHeaderTitles3{
+    font-weight: 800;
+}
+
+
+/* College second section  */
+.collegeSecondSection{
+    background-color: #B2B3B5;
+padding-left: 0px;
+}
+.collegeSingleImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+    width: 374.2px;
+    height: 200px;
+}
+.collegeSingletitle{
+    color: #9e9e9e;
+    font-weight: bolder;
+    font-family: Proxima;
+}
+.collegeSingleContent{
+    font-family: Proxima;
+   font-size: small;
+   color: #00000096;
+}
+
+.collegeSingleImageOddEven{
+width: 222.06px;
+height: 200px;
+margin-left: 200px;
+}
+
+.Comfy{
+    background-image: url('../Assets/images/College21_1.webp');
+    background-repeat: no-repeat;
+    margin-right: 200px;
+}
+.comfy-contents{
+    margin-top: 235px;
+    margin-left: 400px;
+    margin-right: auto;
+    width: 50%;
+    font-family: Proxima;
+    color: #9e9e9e;
+    
+}
+.comfy-title{
+    font-weight: 900;
+    margin-left: 125px;
+}
+.comfy-subtitle{
+    width: 360px;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
 }

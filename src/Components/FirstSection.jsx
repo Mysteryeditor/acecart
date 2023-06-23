@@ -50,7 +50,7 @@ function HomePage() {
               >
                 <Nav.Link as={Link} to='/school' className='navLink '>SCHOOL</Nav.Link>
                 <Nav.Link as={Link} to='/college' className='navLink '>COLLEGE</Nav.Link>       
-                <Nav.Link href="#action1" className='navLink'>ENTERPRISE</Nav.Link>
+                <Nav.Link href="/Enterprise" className='navLink'>ENTERPRISE</Nav.Link>
                 <Nav.Link as={Link} to='/notes' className='navLink'>NOTES</Nav.Link>
                 <Nav.Link href="/airenmask" className='navLink'>AIREN MASK</Nav.Link>
 
