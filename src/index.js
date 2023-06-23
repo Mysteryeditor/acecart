@@ -4,12 +4,8 @@ import './index.css';
 import HomePage from './Components/FirstSection';
 import reportWebVitals from './reportWebVitals';
 import SecondSection from './Components/SecondSection';
-import ThirdSection from './Components/NavList';
-import FourthSection from './Components/FourthSection';
-import FifthSection from './Components/FifthSection';
 import SchoolPage from './Components/SchoolPage/SchoolPage'
 import { BrowserRouter } from 'react-router-dom';
-import SchoolPageTwo from './Components/SchoolPage/SchoolPageTwo';
 import { Route,Routes } from 'react-router-dom';
 import NotesBlogs from './Components/Notes/Blogs';
 import Error404 from './Components/AirenMask/Error404'
