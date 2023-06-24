@@ -36,8 +36,8 @@ function HomePage() {
 
     <React.Fragment >
 
-      <div className="Navbar">
-        <Nav.Link className="acecraftTitle" as={Link} to='/'>acecraft</Nav.Link>
+      <div className="Navbar sticky-top" >
+        <Nav.Link className="acecraftTitle"  as={Link} to='/'>acecraft</Nav.Link>
         <Navbar expand="lg" className='NavbarLinks'  >
           <Container fluid >
 

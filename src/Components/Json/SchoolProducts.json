@@ -111,9 +111,7 @@
     "CollegeCarousel":[
         {
             "id":1,
-            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Screenshot%202019-09-14%20at%202.16.47%20PM.png",
-            "contenth1":"Your pre-trial.Powered by our AI.",
-            "contenth2":"The acecraft Measurement Process is one among the world's most accurate methods. We set up a pre-trial event in your campus and make each one try on the right fit. No more guessing the right size business."
+            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Screenshot%202019-09-14%20at%202.16.47%20PM.png"
         }, {
             "id":2,
             "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Screenshot%202019-09-18%20at%204.06.18%20PM.png"
@@ -122,6 +120,25 @@
             "id":3,
             "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Screenshot%202019-09-14%20at%202.15.49%20PM.png"
           
+        }
+    ],
+    "WorkRelaxCards":[
+        {
+            "id":1,
+            "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-2.png",
+            "title":"F(IT) MATTERS",
+            "subtitle":"A size for every one."
+        },
+        {
+            "id":2,
+            "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-3.png",
+            "title":"PERSONALISED BRANDING",
+            "subtitle":"Your design. Our customization"
+        }, {
+            "id":3,
+            "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-4.png",
+            "title":"TEAM UP FOR TEAM WEAR",
+            "subtitle":"Bulk orders delivered seamlessly"
         }
     ]
 }

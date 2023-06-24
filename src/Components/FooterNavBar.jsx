@@ -10,7 +10,7 @@ import Lnkdin from "C:/Users/cgvak/Desktop/React/acecart/src/Assets/images/Lnkdi
 
 const FooterNavBar = () => {
   return (
-    <div>
+    <div className='bg-black'>
     <div >
     <div className='justify-content-center  display-flex text-center'>
       
@@ -20,7 +20,7 @@ const FooterNavBar = () => {
        
     </div>
     
-          <section className="footer " >
+          <section className="footer  " >
     <Nav className='justify-content-center' activeKey="/home"
           onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
           <Nav.Item className='col-2 mb-4'>

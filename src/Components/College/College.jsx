@@ -4,18 +4,19 @@ import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/College.css';
 import Carousel from 'react-bootstrap/Carousel';
 
 
+
 const College = () => {
   const [college, setCollege] = useState([]);
-  const [collegeCarousels,setCollegeCarousels] = useState([]);
+  const [collegeCarousels, setCollegeCarousels] = useState([]);
 
-const clgMatUrl="http://localhost:4000/CollegeMaterials";
-const clgCarUrl="http://localhost:4000/CollegeCarousel";
-  const fetchData = (url) => {
-    fetch(url)
+  // const clgMatUrl = "http://localhost:4000/CollegeMaterials";
+  // const clgCarUrl = "http://localhost:4000/CollegeCarousel";
+  const fetchData = () => {
+    fetch("http://localhost:4000/CollegeMaterials")
       .then((response) => {
         console.log(response)
         return response.json()
-        
+
       })
       .then((data) => {
         setCollege(data);
@@ -23,27 +24,32 @@ const clgCarUrl="http://localhost:4000/CollegeCarousel";
       });
   }
 
-  useEffect(() => {
-   
-    fetchData(clgCarUrl);
-    
-  }, [])
+  const fetchData2 = ()=>{
+    fetch("http://localhost:4000/CollegeCarousel")
+    .then((response)=>{
+      return response.json()
+    })
+    .then((data)=>{
+      setCollegeCarousels(data);
+     })
+  }
 
   useEffect(() => {
-   
-    fetchData(clgMatUrl)
-    
+    fetchData();
+    fetchData2();
   }, [])
-  
+
+
+
 
 
   return (
-    <div >
+    <div className='collegeMaindiv'>
       <Container fluid>
 
         <div className='collegeHeader row '>
           <div className='col-lg-6'>
-            
+
           </div>
           <div className='collegeHeaderTitles col-lg-6 pt-5 '>
             <h1 className=' text-end  ' id='collegeHeaderTitles1'>The acecraft Collection.</h1>
@@ -115,7 +121,7 @@ const clgCarUrl="http://localhost:4000/CollegeCarousel";
 
 
           )}
-          <div className='container Comfy '>
+          <div className='container Comfy mt-5'>
             <div>  .</div>
             <div className='comfy-contents text-center '>
               <h6>THE ACECRAFT FIT</h6>
@@ -127,51 +133,42 @@ const clgCarUrl="http://localhost:4000/CollegeCarousel";
 
             </div>
           </div>
-          <div className='AIpower  container'>
-          {collegeCarousels.length>0 &&(
-                    <div className='row '>
-{collegeCarousels.map((collegeCar)=>(
-  <>
-  <div className='col-lg-6 ' key={collegeCar.id}>
-  <h1>Your pre-trial.
-  Powered by our AI.</h1>
-  <h6></h6>
-                        </div>
-                        <div className='col-lg-6 '>
-                        <Carousel>
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
-            alt="First slide"
-          />
-          
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Second slide"
-          />
-          
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
-            alt="Third slide"
-          />
-          
-        </Carousel.Item>
-      </Carousel>
-                        </div>
-                        </>
-))}
-
-
-                    
+          <div className='AIpower  -fluid mt-5 pt-5 bg-black'>
+            <Container>
+              <div className='row '>
+               
+                    <div className='col-lg-6 mt-5' >
+                      <h1 className='col-lg-8'>Your pre-trial.
+                        Powered by our AI.</h1>
+                      <h6 className='col-lg-8 aipowerh6'>The acecraft Measurement Process is one among the world's most accurate methods. We set up a pre-trial event in your campus and make each one try on the right fit. No more guessing the right size business.</h6>
                     </div>
-                    )}
+                   
+                   
+                    
+                    <div className='col-lg-6'>
+    <Carousel controls>
+      {collegeCarousels.map((collegeCar) => (
+
+        
+        <Carousel.Item key={collegeCar.id} interval={10000}>
+          <img
+            className="d-block w-100"
+            src={collegeCar.image}
+            alt="Carousel slide"
+          />
+         
+        </Carousel.Item>
+      ))}
+    </Carousel>
+ 
+</div>
+
+               
+            
+
+
+              </div>
+              </Container>
           </div>
 
         </div>
@@ -179,6 +176,28 @@ const clgCarUrl="http://localhost:4000/CollegeCarousel";
 
 
       </Container>
+<div className='getInTouch'>
+
+<Container fluid>
+  <div className='row getInTouchrow'>
+    <div className='col-lg-12 d-flex justify-content-center align-items-center'>
+    <div className='text-center  d-block'>
+              <h3>Designer Uniforms</h3>
+              <div className='d-flex justify-content-center'>
+              <h5 className='getInTsouchSpans'>________</h5><h2 id='by' className='mx-2'> by </h2>  <h5 className='getInTosuchSpans'>________</h5>
+              </div>
+              <h3 className='ace'>acecraft</h3>
+             <button className='GIT text-white p-1 px-2 border-2 border-white bg-transparent '>Get In Touch</button>
+
+              </div> 
+    </div>
+
+  </div>
+  </Container>                                                             
+</div>
+
+
+
     </div>
   )
 }

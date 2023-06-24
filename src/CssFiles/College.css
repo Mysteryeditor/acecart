@@ -2,6 +2,16 @@
     font-family: Proxima;
     src: url(../Fonts/Proxima-Nova-Font/Proxima\ Nova\ Font.otf);
 }
+@font-face {
+    font-family: ProximaBold;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Bold.otf);
+}
+@font-face {
+    font-family: Blenheim;
+    src: url(../Fonts/Proxima-Nova-Font/Blenheim\ Signature\ v2.ttf);
+}
+
+
 .collegeHeader{
     background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/College-11.jpg');
   padding-bottom:225px;
@@ -81,3 +91,57 @@ margin-left: 200px;
     margin-left: auto;
     margin-right: auto;
 }
+.AIpower{
+    color: #978F8F;
+    height: 500px;
+    font-family: ProximaBold;
+}
+.aipowerh6{
+    font-family: Proxima;
+    font-size: large;
+    word-spacing: 2px;
+    line-height: 28px;
+}
+.carousel-control-prev-icon{
+    visibility: visible;
+ 
+}
+.carousel-control-prev{
+    left: -100px;
+    
+}
+
+
+/* get in touch  */
+.getInTouch{
+    background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/College-3.jpg);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 508px;
+}
+
+
+.getInTouchContent{
+    margin-top: 500px;
+}
+.getInTouchTitle{
+    margin-top: 500px;
+}
+.getInTouchrow{
+    height: 508px;
+    color: #978F8F;
+    font-family: Proxima;
+
+}
+
+#by{
+    font-family: Blenheim;
+    
+}
+.ace{
+    font-family: 'Courier New', Courier, monospace;
+}
+/* .GIT{
+    background: none;
+} */

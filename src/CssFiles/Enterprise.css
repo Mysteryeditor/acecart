@@ -1,0 +1,86 @@
+@font-face {
+    font-family: Proxima;
+    src: url(../Fonts/Proxima-Nova-Font/Proxima\ Nova\ Font.otf);
+}
+@font-face {
+    font-family: ProximaBold;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Bold.otf);
+}
+
+.honda{
+    font-family: Proxima;
+    font-size: medium;
+}
+.fixBack{
+    background-size: cover;
+    background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-1.jpg);
+    background-position: center 120px;
+    background-attachment: fixed;
+    height: 600px;
+}
+.workwear{
+    color: #978F8F;
+    margin-top: 395px;
+    font-family: ProximaBold;
+}
+.fa-angle-down{
+    animation: fa-angle-down 1s infinite;
+    animation-timing-function: linear;
+    position: relative;
+    
+}
+@keyframes fa-angle-down {
+    0%{
+  bottom:0px;
+  
+    }
+    10%{
+        bottom: 1px;
+    }
+    20%{
+        bottom: 3px;
+    }
+   
+    30%{
+        bottom: 5px;
+    }
+   
+    40%{
+        bottom: 5px;
+    }
+   
+    50%{
+        bottom: 5px;
+    }
+    55%{
+        bottom: 5px;
+    }
+   
+    60%{
+        bottom: 4px;
+    }
+    65%{
+        bottom: 3px;
+    }
+    70%{
+        bottom: 2px;
+    }
+    75%{
+        bottom: 1px;
+    }
+    80%{
+        bottom: 0px;
+    }
+}
+
+
+
+/* work relaxed  */
+.workRelaxed{
+    background-color: #DADADA;
+    color: black;
+    font-family: Proxima;
+}
+#workRelax{
+    font-family: ProximaBold;
+}
