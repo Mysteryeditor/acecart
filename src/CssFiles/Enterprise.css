@@ -6,6 +6,10 @@
     font-family: ProximaBold;
     src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Bold.otf);
 }
+@font-face {
+    font-family: ProximaThin;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Thin.otf);
+}
 
 .honda{
     font-family: Proxima;
@@ -83,4 +87,32 @@
 }
 #workRelax{
     font-family: ProximaBold;
+}
+.enterpriseCard{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 100px;
+}
+.howWeDoIt{
+    font-family: ProximaBold;
+}
+
+
+
+
+/* Time line  */
+.timelineImage{
+    height: 140px;
+    width: 140px;
+}
+.flex-column{
+background-color: black;
+
+}
+.itemTitle{
+    font-family: ProximaThin;
+    font-weight: 100;
+    font-size: 31px;
+    height: 70px;
+    width: 190px;
 }

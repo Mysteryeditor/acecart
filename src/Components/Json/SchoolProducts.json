@@ -140,5 +140,32 @@
             "title":"TEAM UP FOR TEAM WEAR",
             "subtitle":"Bulk orders delivered seamlessly"
         }
+    ],
+    "TimeLine":[
+        {
+            "id":1,
+            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png",
+            "title":"Single line brief"
+        },{
+            "id":2,
+            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-2.png",
+            "title":"Mind mapping"
+        },{
+            "id":3,
+            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-3.png",
+            "title":"Design and details"
+        },{
+            "id":4,
+            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-4.png",
+            "title":"Sampling"
+        },{
+            "id":5,
+            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-5.png",
+            "title":"Manufacturing"
+        },{
+            "id":6,
+            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-6.png",
+            "title":"Delivery"
+        }
     ]
 }
