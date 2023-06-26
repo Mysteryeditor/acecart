@@ -51,15 +51,17 @@ console.log(timeLines)
 
     const customizedMarker = (item) => {
         return (
-            <span className="flex w-2rem h-2rem align-items-center justify-content-center text-white bg-black" >
+          <div className='justify-content-center text-center  '>
+            <span className="flex  w-2rem h-2rem float-right text-white  bg-black">
                {item.id}
             </span>
+            </div>
         );
     };
 
     const customizedContent = (item) => {
         return (
-            <div className='bg-black' >
+            <div className='bg-black ms-' >
               <img src={item.image} className='timelineImage pb-1 mb-3' alt="" />
               <div className='col-lg-8 text-white'>
                 <h5 className='text-center itemTitle'>{item.title}</h5>
@@ -70,7 +72,7 @@ console.log(timeLines)
         
     return (
        
-        <div className='col-lg-12 bg-black container-fluid'>
+        <div className='col-lg-12 ms-5 bg-black container-fluid'>
             <Timeline value={launchOptimistic} layout="horizontal" align="top" className="customized-timeline" marker={customizedMarker} content={customizedContent} />
         </div>
         

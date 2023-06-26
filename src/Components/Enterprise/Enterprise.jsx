@@ -8,7 +8,8 @@ import TimeLineFunc from './TimelineComponent';
 
 const Enterprise = () => {
   const [cards, setCards] = useState([]);
-  const [timeLines,setTimeLines] = useState([])
+  const [git,setGit] = useState([])
+  
   const a =[1,2,3,4,5,6]
 
 
@@ -24,6 +25,12 @@ const Enterprise = () => {
       .then((data) => {
         setCards(data);
       })
+  }
+  const fetchDataGetInTTouch=()=>{
+    axios.get("http://localhost:4000/EnterPriseGetInTouch")
+    .then((response)=>{
+setGit(response.data)
+    })
   }
 
   useEffect(() => {
@@ -107,7 +114,13 @@ const Enterprise = () => {
         </div>
 
 
+<div>
+  <div className='row'>
+    <div className='col-lg-6'>
 
+    </div>
+  </div>
+</div>
 
 
       
