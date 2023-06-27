@@ -1,5 +1,81 @@
+@font-face {
+    font-family: Proxima;
+    src: url(../Fonts/Proxima-Nova-Font/Proxima\ Nova\ Font.otf);
+}
+@font-face {
+    font-family: ProximaBold;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Bold.otf );
+}
+
+.schoolMainDiv{
+    padding-bottom: 500px;
+}
 .SchoolUniformLinks{
     list-style: none;
     overflow: hidden;
     display: flex; 
+}
+.schoolName{
+    font-family: Proxima;
+    font-size: 15px;
+}
+.schoolImage{
+    height: 48px;
+}
+.schoolDiv{
+    padding: 0px 15px 0px 0px;
+
+}
+.designUni{
+    font-family: Proxima;
+    font-size: 40px;
+}
+.fordoers{
+    font-family: ProximaBold;
+}
+.schoolFixBack{
+    background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/School-1.jpg);
+    background-size: cover;
+    background-position: center 120px;
+    background-attachment: fixed;
+    height: 600px;
+}
+.aestheticSpan{
+    font-family: ProximaBold;
+}
+.Aesthetic{
+    font-family: Proxima;
+}
+.AestheticDiv{
+    padding: 250px 0px 250px 0px;
+    color: #978f8f;
+}
+
+
+
+
+.perfectionForDelivery{
+    background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/School-2.jpg);
+    background-size: cover;
+    background-position: center 120px;
+    background-attachment: fixed;
+}
+.perfect{
+    font-family: Proxima;
+}
+.perfectBold{
+    font-family: ProximaBold;
+}
+.perfectDesignUniform{
+    padding: 500px 0px 300px 0px;
+}
+.hassle{
+    padding-bottom: 250px;
+}
+
+
+
+.beatease{
+    font-family: ProximaBold;
+    
 }

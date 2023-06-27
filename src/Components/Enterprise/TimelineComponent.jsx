@@ -34,13 +34,7 @@ useEffect(()=>{
 },[timeLines])
 console.log(timeLines)
 
-        const events = [
-        { status: 'Ordered', date: '15/10/2020 10:30', icon: 1,  },
-        { status: 'Processing', date: '15/10/2020 14:00', icon: 2, },
-        { status: 'Shipped', date: '15/10/2020 16:15', icon: 3, },
-        { status: 'Delivered', date: '16/10/2020 10:00', icon: 4, }, { status: 'Shipped', date: '15/10/2020 16:15', icon: 3, },
-        { status: 'Delivered', date: '16/10/2020 10:00', icon: 4, }
-    ];
+        
     const launchOptimistic = timeLines.map(elem => (
         {
             id:elem.id,
@@ -61,7 +55,7 @@ console.log(timeLines)
 
     const customizedContent = (item) => {
         return (
-            <div className='bg-black ms-' >
+            <div className='bg-black kkk ' >
               <img src={item.image} className='timelineImage pb-1 mb-3' alt="" />
               <div className='col-lg-8 text-white'>
                 <h5 className='text-center itemTitle'>{item.title}</h5>
@@ -73,7 +67,7 @@ console.log(timeLines)
     return (
        
         <div className='col-lg-12 ms-5 bg-black container-fluid'>
-            <Timeline value={launchOptimistic} layout="horizontal" align="top" className="customized-timeline" marker={customizedMarker} content={customizedContent} />
+            <Timeline  value={launchOptimistic} layout="horizontal" align="top" className="customized-timeline" marker={customizedMarker} content={customizedContent} />
         </div>
         
     )

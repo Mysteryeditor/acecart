@@ -1,74 +1,77 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
-import HomePage from '../FirstSection'
-import { Link } from 'react-router-dom';
-import { Routes } from 'react-router-dom';
-import allUniforms from 'C:/Users/cgvak/Desktop/React/acecart/src/Components/Json/SchoolProducts.json';
-import Card from 'react-bootstrap/Card';
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/SchoolPage.css'
-// import { Container } from 'react-bootstrap';
-import { Container } from '@mui/material';
-
 const SchoolPage = () => {
-
-  const [uniforms, setUniforms] = useState([]);
-
-   const fetchData = () => {
-    fetch("http://localhost:4000/uniforms")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setUniforms(data);
-        console.log(data);
-      })
-  }
-  useEffect(() => {
-    fetchData();
-
-  }, [])
-
+  const [schools,setSchools]= useState([])
+const schoolnames =()=>{
+  axios.get("http://localhost:4000/Schools")
+  .then((response)=>{
+setSchools(response.data)
+  })
+}
+useEffect(()=>{
+  schoolnames();
+},[])
 
   return (
-    <div>
-
-      <div>
-        <Container fluid>
-          <Card>
-            <Card.Body>
-              <ul className='SchoolUniformLinks justify-content-center '>
-                <li className='ms-5 mx-3'>PRICE</li>
-                <li className='ms-5 mx-3'>GENDER</li>
-                <li className='ms-5 mx-3'>GRADE</li>
-                <li className='ms-5 mx-3'>BRAND</li>
-              </ul>
-            </Card.Body>
-          </Card>
+    <div className='schoolMainDiv'>
+     
 
 
-          {uniforms.length > 0 && (
-            <div className='row'>
-              {uniforms.map((uniform) => (
-                <Link to={`/school/${uniform.id}`} key={uniform.id} className='col-lg-4'>
-                  <Card key={uniform.id} >
-                    <Card.Img variant="top" className='UniformCards' src={uniform.image} />
-                    <Card.Body>
-                      <Card.Text>
-                        {uniform.name}
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-          )}
-
-        </Container>
+              <div className='schoolFixBack'>
+          <div className='bg-white pt-2   text-center container-fluid'>
+          {schools.length>0&&(
+      <div className='bg-white container-fluid col-lg-6  justify-content-center d-flex '>
+{schools.map((school)=>(
+  <>
+  <div className='schoolDiv'> 
+        <img src={school.image} className='schoolImage mx-4'  alt="" />
+        
+        <h6 className='schoolName text-center'> {school.name} </h6>
+        </div>
+    </>
+        ))}
       </div>
+      )}
+          </div>
+
+          <div className='workwear  d-flex justify-content-center align-items-center'>
+            <div>
+              <h3 className='designUni'>Designer uniforms <span className='fordoers'>for the doers.</span></h3>
+              <span className=' d-flex justify-content-center'><i class="fa-solid fa-angle-down"></i> </span>
+            </div>
+          </div>
+        </div>
+        <div className='bg-black AestheticDiv'>
+          <h1 className='Aesthetic text-center container '>Aesthetically advanced,</h1>
+          <h1 className='Aesthetic text-center container '>our designer uniforms are <span className='aestheticSpan'>a cut above the rest,</span></h1>
+          <h1 className='Aesthetic text-center container '><span className='aestheticSpan'>in every sense of the word.</span></h1>
+
+        </div>
+
+        <div className='perfectionForDelivery '>
+        <div className='text-center text-black perfectDesignUniform '>
+              <h3 className='designUni'>Perfection. Now <span className='fordoers'>delivering to your doorstep.</span></h3>
+              <span className=' d-flex justify-content-center'><i class="fa-solid fa-angle-down"></i> </span>
+            </div>
+<div className='hassle'>
+            <h1 className='text-center text-black perfect'>Less <span className='perfectBold'>hassle.</span> More <span>hustle.</span></h1>
+            <h1 className='text-center text-black perfect'>Our end-to-end e-commerce facility with</h1>
+            <h1 className='text-center text-black perfect'><span className='perfectBold'>superior technology enables us to</span></h1>
+            <h1 className='text-center text-black perfect'><span className='perfectBold'>deliver your order right to your doorstep.</span></h1>
+            </div>
+        </div>
+
+<div className='beAtEase'>
+  <h1 className='beatease'>Be at ease.</h1>
+  <h1>Everyday.</h1>
+<p>Our uniforms keep your children looking great</p>
+<p>from the first day of school until the end-of-the-year picnic.</p>
 
 
+</div>
     </div>
   )
 }
 
-export default SchoolPage;
+export default SchoolPage

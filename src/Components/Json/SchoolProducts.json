@@ -174,14 +174,39 @@
     },{
         "id":2,
         "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Untitled-2.png"
-    },
-    {
-        "id":3,
-        "image":""
-    },{
-        "id":4,
-        "image":""
     }
+],
+"Schools":[
+    {
+    "id":1,
+    "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/jain.jpeg",
+    "name":"JGI"
+},
+{
+    "id":2,
+    "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/rvschool.png",
+    "name":"RV"
+},{
+    "id":3,
+    "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/sophias.jpg",
+    "name":"SOPHIA"
+},{
+    "id":4,
+    "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/kumarans.png",
+    "name":"KUMARANS"
+},{
+    "id":5,
+    "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Logo-%20New%20Horizon%20Gurukul.jpg",
+    "name":"NEW HORIZON GURUKUL"
+},{
+    "id":6,
+    "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/cgis.png",
+    "name":"CISB"
+},{
+    "id":7,
+    "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/NHIS%20LOGO%20Jpeg.jpg",
+    "name":"NHIS"
+}
 ]
 
 }

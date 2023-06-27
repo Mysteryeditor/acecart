@@ -92,9 +92,20 @@
     height: 300px;
     width: 300px;
     margin-bottom: 100px;
+    transition: all 0.3s ease;
+    
+}
+.enterpriseCard:hover{
+    transform: scale(0.9);
+}
+.epCardST{
+    font-size: 30px;
+    color: #978F8F;
+font-family: ProximaThin;
 }
 .howWeDoIt{
     font-family: ProximaBold;
+    color: #978F8F;
 }
 
 
@@ -118,4 +129,38 @@ background-color: black;
 }
 .line{
     margin: 0 0 0 3em;
+}
+
+.kkk{
+    margin-left: -70px;
+}
+
+
+
+#by{
+    font-size: small;
+}
+
+.getInTouchSpans{
+    margin-top: -12px;
+  
+}
+.Duni{
+    font-size: medium;
+}
+.ace{
+    font-size: medium;
+    letter-spacing: 5px;
+}
+.GIT{
+    border: 1px 1px 1px 1px;
+    border-color: white;
+}
+.GIT:hover{
+    
+    border-color: black;
+}
+.getIntTouchMainDiv{
+    margin-top: -710px;
+    margin-right: 40px;
 }

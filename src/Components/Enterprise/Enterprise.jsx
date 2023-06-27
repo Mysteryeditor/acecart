@@ -4,16 +4,15 @@ import { Card, Container } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import TimeLineFunc from './TimelineComponent';
-
+import GetInTouch from '../GetInTouch/GetInTouch';
 
 const Enterprise = () => {
   const [cards, setCards] = useState([]);
-  const [git,setGit] = useState([])
-  
-  const a =[1,2,3,4,5,6]
+  const [git, setGit] = useState([])
 
 
-  
+
+
 
 
 
@@ -26,26 +25,26 @@ const Enterprise = () => {
         setCards(data);
       })
   }
-  const fetchDataGetInTTouch=()=>{
+  const fetchDataGetInTTouch = () => {
     axios.get("http://localhost:4000/EnterPriseGetInTouch")
-    .then((response)=>{
-setGit(response.data)
-    })
+      .then((response) => {
+        setGit(response.data)
+      })
   }
 
   useEffect(() => {
     fetchData();
+    fetchDataGetInTTouch();
   }, [])
 
 
 
-  
   return (
     <>
       <div className=''>
         <div className='fixBack'>
           <div className='bg-white pt-2   text-center container-fluid'>
-            <img src="https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/honda.png" className='col-lg-2' alt="" />
+            <img src="https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/honda.png" className='col-lg-2 img-fluid' alt="" />
             <h6 className='honda pt-2'>HONDA CAR'S DEALER MANPOWER UNIFORM</h6>
           </div>
 
@@ -73,10 +72,10 @@ setGit(response.data)
               <div className='row justify-content-center'>
                 {cards.map((card) => (
 
-                  <Card key={card.id} className='mx-4 enterpriseCard pt-3' style={{ backgroundImage: `url(${card.image})`, backgroundSize: 'fill', backgroundPosition: 'center' }}>
+                  <Card key={card.id} className='mx-4 enterpriseCard  pt-3' style={{ backgroundImage: `url(${card.image})`, backgroundSize: 'fill', backgroundPosition: 'center' }}>
                     <Card.Body>
                       <Card.Subtitle className="mt-5 text-muted">{card.title}</Card.Subtitle>
-                      <Card.Title className='display-6'>{card.subtitle}</Card.Title>
+                      <Card.Title className='epCardST'>{card.subtitle}</Card.Title>
                     </Card.Body>
                   </Card>
 
@@ -86,44 +85,46 @@ setGit(response.data)
           )}
         </div>
 
-        <div className='bg-black'>
-          <h1 className='howWeDoIt'>This is how we do it.</h1>
+        <div className='bg-black pt-5'>
+          <h1 className='howWeDoIt text-center pt-5'>This is how we do it.</h1>
           <div className="card flex flex-column gap-3">
-     
-<Container>
-          <TimeLineFunc></TimeLineFunc>
-          </Container>
-{/* 
-{timeLines.length > 0 &&(
-<div>
-  {timeLines.map((timeLine)=>(
 
-    <div key={timeLine.id}>
-    <Timeline value={a}  layout="horizontal" marker={a[0]} align="top" content={(item) => item} />
-    </div>
-  ))}
+            <Container>
+              <TimeLineFunc></TimeLineFunc>
+            </Container>
 
-  
-</div>
-)} */}
-  </div>
+          </div>
 
-           
-           
+
+
         </div>
-        </div>
+      </div>
 
 
-<div>
-  <div className='row'>
-    <div className='col-lg-6'>
+      <div className='container-fluid '>
 
-    </div>
-  </div>
-</div>
+        {git.length > 0 && (
+
+          <div className='row bg-black'>
+
+            <div className='col-lg-12 bg-black'>
+              {git.map((gitImage) => (
+
+                <img className=' col-lg-12 img-fluid' src={gitImage.image} alt="" />
+              ))}
+
+            </div>
+          </div>
+        )}
+        <Container fluid>
+        
+            <GetInTouch colSize="2" bgColor='bg-black' height="200"/>
+         
+        </Container>
+      </div>
 
 
-      
+
     </>
   )
 }
