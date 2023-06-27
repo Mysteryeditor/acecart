@@ -3,14 +3,24 @@ import React, { useEffect, useState } from 'react'
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/SchoolPage.css'
 const SchoolPage = () => {
   const [schools,setSchools]= useState([])
-const schoolnames =()=>{
+  const [beatease, setBeAtEase] = useState([]);
+
+  const schoolnames =()=>{
   axios.get("http://localhost:4000/Schools")
   .then((response)=>{
 setSchools(response.data)
   })
 }
+
+const beAtEaseMapping=()=>{
+  axios.get("http://localhost:4000/BeAtEase")
+  .then((response)=>{
+    setBeAtEase(response.data)
+  })
+}
 useEffect(()=>{
   schoolnames();
+  beAtEaseMapping();
 },[])
 
   return (
@@ -62,11 +72,24 @@ useEffect(()=>{
             </div>
         </div>
 
-<div className='beAtEase'>
+<div className='beAtEaseDiv text-end '>
   <h1 className='beatease'>Be at ease.</h1>
   <h1>Everyday.</h1>
 <p>Our uniforms keep your children looking great</p>
 <p>from the first day of school until the end-of-the-year picnic.</p>
+
+{console.log("Outside the be at ease")}
+
+{beatease.length > 0&&(
+  <div>
+    {beatease.map((beEase)=>(
+<img key={beEase.id} src={`${beEase.image}`} className='col-lg-12' alt="" />      
+    ))
+    }
+  </div>
+)
+}
+
 
 
 </div>

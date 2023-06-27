@@ -74,8 +74,11 @@
 }
 
 
-
+.beAtEaseDiv{
+    background-color: #0E0C0D;
+padding: 50px 0px 0px 0px ;
+color: #978f8f;
+}
 .beatease{
     font-family: ProximaBold;
-    
 }

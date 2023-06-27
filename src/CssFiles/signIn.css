@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Proxima;
+    src: url(../Fonts/Proxima-Nova-Font/Proxima\ Nova\ Font.otf);
+}
+@font-face {
+    font-family: ProximaBold;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Bold.otf);
+}
+@font-face {
+    font-family: ProximaThin;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Thin.otf);
+}
+
+.login{
+    font-family: Proxima;
+    font-size: 32px;
+    color: #978f8f;
+}
+.logInButton{
+    border-radius: 0px;
+    text-decoration: none;
+    padding-left: 150px;
+    padding-right: 150px;
+    color: white;
+    border: black;
+}
+input{
+    width: 300px;
+}

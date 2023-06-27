@@ -24,7 +24,7 @@ function HomePage() {
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseOver = () => {
-    setIsHovering(true);
+    setIsHovering(!isHovering);
   }
   const handleMouseOut = () => {
     setIsHovering(false);
@@ -58,7 +58,7 @@ function HomePage() {
                   Link
                 </Nav.Link>
               </Nav>
-              <div>      <img onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className='settingImage mx-3' sx={{
+              <div>      <img onClick={handleMouseOver} className='settingImage mx-3' sx={{
                 "& .settingImage:hover": {
 
                 }

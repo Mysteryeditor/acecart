@@ -12,6 +12,8 @@ import Error404 from './Components/AirenMask/Error404'
 import College from './Components/College/College';
 import FooterNavBar from './Components/FooterNavBar';
 import Enterprise from './Components/Enterprise/Enterprise';
+import SignIn from './Components/SettingComponents/signIn';
+import Register from './Components/SettingComponents/Register';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -25,6 +27,11 @@ root.render(
       <Route path="/Enterprise" element={<Enterprise />} />
       <Route path="/notes" element={<NotesBlogs />} />
       <Route path="/airenmask" element={<Error404 />} />
+      <Route path="/signIn" element={<SignIn />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/orderStatus" element={<Error404 />} />
+      <Route path="/contact" element={<Error404 />} />
+
     </Routes>
 
     <FooterNavBar />
