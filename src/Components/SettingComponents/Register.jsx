@@ -2,46 +2,67 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import { Card } from 'react-bootstrap';
-// import validator from 'validator';
+import validator from 'validator';
 import { useForm } from 'react-hook-form';
+import Input from 'react-validation/build/input';
+import { isEmail } from 'validator';
+import { useState } from 'react';
+import { Watch } from '@mui/icons-material';
+// import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/signIn.css';
+import { Link } from 'react-router-dom';
+
 
 function SignUpForm() {
-    const {register,handleSubmit,formState:{errors}}=useForm();
-const onSubmit = (data)=>{
-    console.log(data)
-}
-    
+
+
+   
+ const { register, handleSubmit, formState: { errors }, watch } = useForm() 
+    const onSubmit = (data) => {
+        console.log(data)
+
+   
+    }
+
     return (
         <div>
-            <div className='justify-content-center d-flex text-center vh-100 m-5 border-4'>
+            <div className='justify-content-center d-flex text-center  m-5 border-4'>
                 <Card className='col-lg-4 shadow border-0'>
 
                     <Card.Body>
                         <Form name='signUp' onSubmit={handleSubmit(onSubmit)}>
 
                             <h2 className='signup'>Signup with ACECRAFT</h2>
-                            <Form.Group as={Col} controlId="formGridName" className='my-1 '>
-                                <Form.Control type="text" placeholder="First Name" id='Fname' {...register('firstName',{required:true,minLength:8,maxLength:16})}  />
-                                {errors.firstName && <span>First name is required</span>}
+                            <Form.Group as={Col} className='mb-3 '>
+                                <Form.Control type="text" placeholder="First Name" id='Fname' {...register('firstName', { required: true, minLength: 8, maxLength: 16 })} />
+                                {errors.firstName && <span className='signUpSpan' >First name is required</span>}
                             </Form.Group>
 
-                            <Form.Group as={Col} controlId="formGridName" className='my-1'>
-                                <Form.Control type="text" placeholder="Last Name" id="Lname" />
+                            <Form.Group as={Col} className='mb-3 '>
+                                <Form.Control type="text" placeholder="Last Name" id="Lname" {...register('lastName', { required: true, maxLength: 16 })} />
+                                {errors.lastName && <span className='signUpSpan'>Last name is required</span>}
                             </Form.Group>
 
-                            <Form.Group as={Col} controlId="formGridEmail" className='my-1'>
-                                <Form.Control type="email" placeholder="Enter email" id="email" />
+                            <Form.Group as={Col} className='mb-3 '>
+                                <Form.Control type="email" placeholder="Enter email" id="email" {...register('email', { required: 'Email is required' || "Enter the email", validate: (value) => isEmail(value) || "Invalid email address" })} />
+                                {errors.email && <span className='signUpSpan'>{errors.email.message}</span>}
                             </Form.Group>
 
-                            <Form.Group as={Col} controlId="formGridPassword" className='my-1'>
-                                <Form.Control type="password" placeholder="Password" id="pwd" />
+                            <Form.Group as={Col} className='mb-3 '>
+                                <Form.Control type="password" placeholder="Password" id="pwd"   {...register('password', {
+                                    required: "Password is required", pattern: {
+                                        value: /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])/,
+                                        message: "Password must contain atleast one uppercase ,lowercase , number and a special character"
+                                    }
+                                })} />
+                                {errors.password && <span className='signUpSpan'>{errors.password.message}</span>}
                             </Form.Group>
 
-                            <Form.Group as={Col} controlId="formGridCPassword" className='my-1'>
-                                <Form.Control type="password" placeholder="Confirm Password" id="cpwd" />
+                            <Form.Group as={Col} className='my-1'>
+                                <Form.Control type="password" placeholder="Confirm Password" id="cpwd"   {...register('confirmPassword', { required: "Confirm Password is required", validate: (value) => value === watch('password') || "Passwords are not matching" })} />
+                                {errors.confirmPassword && <span className='signUpSpan'>{errors.confirmPassword.message}</span>}
                             </Form.Group>
 
-                            <div className='row justify-content-center my-1'>
+                            <div className='row justify-content-center my-1' {...register('category', { required: true })}>
                                 <div className='col-lg-4'>
                                     <Form.Check
                                         type="radio"
@@ -62,28 +83,32 @@ const onSubmit = (data)=>{
                                 </div>
 
                             </div>
+                            {errors.category && <span className='signUpSpan'>Please select the category</span>}
 
 
 
-                            <Form.Group className="mb-3" controlId="formGridDname my-1" >
-                                <Form.Control placeholder="Dealership Name" id="dname" />
+                            <Form.Group className="mb-3"  >
+                                <Form.Control placeholder="Dealership Name" id="dname" {...register('dname',{required:true})} />
+                                {errors.dname && <span className='signUpSpan'>Dealership name is required</span>}
                             </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formGridDcode my-1" >
+                            <Form.Group className="mb-3 "  >
 
-                                <Form.Control placeholder="Dealership Number/Code" id="dcode" />
+                                <Form.Control placeholder="Dealership Number/Code" id="dcode" {...register('dcode',{required:true})}/>
+                                {errors.dcode && <span className='signUpSpan'>Dealership code is required</span>}
                             </Form.Group>
 
 
-                            <Form.Group as={Col} controlId="formGridCity" className='my-1'>
-                                <Form.Control placeholder="City" id="city" />
+                            <Form.Group as={Col} className='mb-3'>
+                                <Form.Control placeholder="City" id="city" {...register('city',{required:true})}/>
+                                {errors.city && <span className='signUpSpan'>City is required</span>}
                             </Form.Group>
 
-                            <Form.Group as={Col} controlId="formGridState" className='my-1'>
+                            <Form.Group as={Col} className='mb-3'>
                                 <Form.Label className='justify-content-start d-flex' column sm={2}>
                                     State
                                 </Form.Label>
-                                <Form.Select defaultValue="" className='my-1' id="state">
+                                <Form.Select defaultValue="" className='my-1' id="state" {...register('state',{required:true})}>
                                     <option value=""></option>
                                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -121,10 +146,12 @@ const onSubmit = (data)=>{
                                     <option value="Delhi">Delhi</option>
                                     <option value="Puducherry">Puducherry</option>
                                 </Form.Select>
+                                {errors.state && <span className='signUpSpan'>State is required</span>}
                             </Form.Group>
 
-                            <Form.Group as={Col} controlId="formGridGstnum" className='my-1'>
-                                <Form.Control placeholder="GST Number" id="gstnum" />
+                            <Form.Group as={Col} className='mb-3'>
+                                <Form.Control placeholder="GST Number" id="gstnum" {...register('gst',{required:true})}/>
+                                {errors.gst && <span className='signUpSpan'>GST number is required</span>}
                             </Form.Group>
 
 
@@ -133,6 +160,8 @@ const onSubmit = (data)=>{
                             <Button className='logInButton bg-black' type="submit">
                                 Register
                             </Button>
+                            <div>
+                            <span className=' already p-4'>Already have an account? <Link className='login' to="/login" >Login!</Link></span></div>
                         </Form>
                     </Card.Body>
                 </Card>
@@ -144,55 +173,3 @@ const onSubmit = (data)=>{
 export default SignUpForm;
 
 
-
-
-// import React from 'react'
-// import { Card } from 'react-bootstrap';
-
-
-// const Register = () => {
-//   return (
-//     <div>
-//          <div className='justify-content-center d-flex text-center vh-100 m-5 border-4'>
-//                 <Card className='col-lg-4 shadow border-0'>
-
-//                     <Card.Body>
-//                         <h1 className='login'>Login with ACECRAFT</h1>
-//                         <div>
-//                         <input className='my-2' id='uname' type="text" placeholder='Username' />
-//                         </div>
-//                         <div>
-//                         <input className='my-2' id='lname' type="text" placeholder='Username' />
-//                         </div> <div>
-//                         <input className='my-2' id='email' type="text" placeholder='Username' />
-//                         </div> <div>
-//                         <input className='my-2' id='pwd' type="text" placeholder='Username' />
-//                         </div> <div>
-//                         <input className='my-2' id='cpwd' type="text" placeholder='Username' />
-//                         </div>
-//                         <div>
-//                             <input type="radio" /> <input type="radio" />
-//                         </div>
-//                         <div>
-//                         <input className='my-2' id='dname' type="text" placeholder='Username' />
-//                         </div> <div>
-//                         <input className='my-2' id='dcode' type="text" placeholder='Username' />
-//                         </div> <div>
-//                         <input className='my-2' id='city' type="text" placeholder='Username' />
-//                         </div> <div>
-//                         <input className='my-2' id='state' type="" placeholder='Username' />
-//                         </div>
-//                         <div>
-//                         <input type="password" id='gstnum' placeholder='GST Number' />
-//                         </div>
-
-//                     <button className='logInButton bg-black mt-3'>Login</button>
-
-//                     </Card.Body>
-//                 </Card>
-//             </div>
-//     </div>
-//   )
-// }
-
-// export default Register

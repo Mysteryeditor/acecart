@@ -11,7 +11,7 @@
     src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Thin.otf);
 }
 
-.login{
+.loginh1{
     font-family: Proxima;
     font-size: 32px;
     color: #978f8f;
@@ -19,11 +19,37 @@
 .logInButton{
     border-radius: 0px;
     text-decoration: none;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding: 5px 130px 5px 130px;
     color: white;
     border: black;
 }
-input{
+.loginInput{
     width: 300px;
+    border-radius: 0px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+.signUpSpan{
+    color: red;
+    font-family: ProximaBold;
+    justify-content: start;
+    margin-left: 0px !important;
+    display: flex;
+}
+.already{
+    color: #978f8f;
+    font-family: Proxima;
+    font-size: 12px;
+    justify-content: center;
+}
+.login{
+    color: #978f8f;
+    font-family: Proxima;
+    font-size: 12px;
+    justify-content: center;
+    text-decoration: none;
+
+}
+.login:hover{
+    color: black;
 }

@@ -1,4 +1,5 @@
-import  validator from 'react'
+import axios from "axios";
+import { useEffect } from "react";
 export function registerValidate(){
     const Fname = document.getElementById("Fname").value;
     const Lname = document.getElementById("Lname").value;
@@ -13,8 +14,9 @@ export function registerValidate(){
 
 
 
-    // regular expressions 
-    const nameRegEx = "/^[A-Za-z0-9]{8,16}$/"
+
+
+  
     
 
 

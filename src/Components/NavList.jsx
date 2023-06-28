@@ -1,14 +1,11 @@
 import React from 'react';
-import handleMouseOver from './FirstSection';
-import handleMouseOut from './FifthSection';
-import { useState } from 'react';
-import isHovering from './FirstSection';
+
 import { Link } from 'react-router-dom';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/NavList.css'
 const ThirdSection = () => {
   return (
     <div className='HomeForm' >
-      <ul className='HomeUlsMain' >
+      <ul className='HomeUlsMain position-absolute ' >
 
         <li>
           <Link to='/signIn'><label className='HomeUls' >Sign In | <i class="fa-solid fa-right-to-bracket"></i></label></Link>
