@@ -1,8 +1,7 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/NavList.css'
-const ThirdSection = () => {
+const Settings = () => {
   return (
     <div className='HomeForm' >
       <ul className='HomeUlsMain position-absolute ' >
@@ -25,4 +24,4 @@ const ThirdSection = () => {
   )
 }
 
-export default ThirdSection
+export default Settings

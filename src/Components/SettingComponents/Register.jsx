@@ -2,26 +2,64 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import { Card } from 'react-bootstrap';
-import validator from 'validator';
 import { useForm } from 'react-hook-form';
-import Input from 'react-validation/build/input';
 import { isEmail } from 'validator';
-import { useState } from 'react';
-import { Watch } from '@mui/icons-material';
-// import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/signIn.css';
+import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/signIn.css';
 import { Link } from 'react-router-dom';
-
-
+import { useState } from 'react';
+import axios from "axios";
+import { useEffect } from 'react';
 function SignUpForm() {
+   const [Fname,setFname]=useState('')
+    const [Lname,setLname]=useState('')
+    const [email,setemail]=useState('')
+    const [pwd,setpwd]=useState('')
+    const [category,setcategory]=useState('')
+    const [dname,setDname]=useState('')
+    const [dcode,setdcode]=useState('')
+    const [city,setcity]=useState('')
+    const [state,setState]=useState('')
+    const [gst,setGst]=useState('')
 
 
+    const postData=()=>{
+        axios.post("http://localhost:4000/register",{
+            fname:Fname,
+            lname:Lname,
+            email: email,
+            password:pwd,
+            category:category,
+            dname:dname,
+            dcode:dcode,
+            city:city,
+            state:state,
+            gst:gst
+        })
+        
+        .then((error)=>{
+            console.log(error)
+        })
+    }
+   
    
  const { register, handleSubmit, formState: { errors }, watch } = useForm() 
     const onSubmit = (data) => {
         console.log(data)
-
-   
+data.preventDefault();
+        setFname(data.firstName);
+        setLname(data.lastName);
+        setemail(data.email);
+        setpwd(data.password);
+        setcategory(data.category);
+        setDname(data.dname);
+        setdcode(data.dcode);
+        setcity(data.city);
+        setState(data.state);
+        setGst(data.gst);
+        console.log("The first name is "+Fname);
+        postData();
     }
+   
 
     return (
         <div>

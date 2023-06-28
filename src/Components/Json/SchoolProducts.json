@@ -1,216 +1,273 @@
 {
-    "uniforms": [
-        {
-            "id": 1,
-            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/627bd600820ea897cb5a5cfc/webp/day-wear-polos-480x480.jpg",
-            "name": "Day wear POLO"
-        },
-        {
-            "id": 2,
-            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-            "name": "CIS Royal Day Wear(Grade 1-5)"
-        },
-        {
-            "id": 3,
-            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f798f04705ab2ca347bb/images/5aa0f798f04705ab2ca347bc/5aa0f79ff04705ab2ca347d7/webp/5aa0f79ff04705ab2ca347d7-480x480.jpg",
-            "name": "NHG Shirt[Girls, Grade 1-10]"
-        },
-        {
-            "id": 4,
-            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/601d6ffdbb47db6b5e246674/webp/middle-school-480x480.jpg",
-            "name": "CIS Sky Day Wear"
-        },
-        {
-            "id": 5,
-            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f5c6f04705ab2ca345c6/images/5aa0f5c6f04705ab2ca345c7/5aa0f5d0f04705ab2ca345f9/webp/5aa0f5d0f04705ab2ca345f9-480x480.jpg",
-            "name": "NHG Shirt"
-        },
-        {
-            "id": 6,
-            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/627b614a77743f91a456432d/webp/front-view-nhg-shirt-girls-grade-11-12--480x480.jpg",
-            "name": "NHG County Shirt"
-        }
-    ],
-    "Blogs": [
-        {
-            "id": 1,
-            "title": "STYLING ACCESSORIES THAT COMPLEMENT YOUR FORMAL WEAR"
-        },
-        {
-            "id": 2,
-            "title": "5 CLASSIC LOOKS FOR HER"
-        },
-        {
-            "id": 3,
-            "title": "ACING YOUR FORMAL ATTIRE"
-        },
-        {
-            "id": 4,
-            "title": "SELECTING & STYLING YOUR WORKWEAR"
-        },
-        {
-            "id": 5,
-            "title": "LET'S TALK 'BODY TYPES',WOMEN!"
-        },
-        {
-            "id": 6,
-            "title": "5 CLASSIC LOOKS FOR HIM"
-        },
-        {
-            "id": 7,
-            "title": "TIPS FOR A GREAT OUTFIT"
-        },
-        {
-            "id": 8,
-            "title": "DRESSING TO SUCCEED: THE IMPORTANCE OF FORMALS"
-        },
-        {
-            "id": 9,
-            "title": "WORKWEAR FOR ALL SEASONS: THE WOMEN EDIT"
-        },
-        {
-            "id": 10,
-            "title": "THE ACECRAFT DIFFERENCE"
-        },
-        {
-            "id": 11,
-            "title": "CORPORATE TO CUPCAKES!-STORY OF A SUPERWOMAN"
-        },
-        {
-            "id": 12,
-            "title": "HOW TO COMPLETE YOUR COLLEGE LOOK"
-        },
-        {
-            "id": 13,
-            "title": "DRESS THE RIGHT WAY TO IMPRESS THE RIGHT WAY"
-        }
-    ],
-    "CollegeMaterials": [
-        {
-            "id":1,
-            "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/woolen-ball.jpg",
-            "title": "Naturally Cutting-Edge.",
-            "content": "The ‘best of both worlds’ has a new definition. Every fabric in the acecraft line-up is made from a blend of two fibres to give you the best range. No tech involved - it’s just the touch of nature."
-        }, {
-            "id":2,
-            "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Wool.png",
-            "title": "The Blended Wool",
-            "content": "The Blended Wool is a class apart - with a mix of polyester for its wrinkle/crease-resistance and wool for warmth and absorbency, end your day looking the same as how you began it."
-        }, {
-            "id":3,
-            "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Cotton.png",
-            "title": "The Blended Cotton",
-            "content": "The Blended Cotton is extremely strong and breathable. Easy to iron, this variant shrinks lesser than pure cotton and retains its colour, which makes it a favourite choice for your everyday college wear."
-        }, {
-            "id":4,
-            "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Viscose.png",
-            "title": "The Blended Viscose",
-            "content": "The Blended Viscose addition combines two ends of the spectrum - durability and a sense of softness. While the polyester contributes to resilience and shape retention, the viscose adds on to the overall absorbency, both sharpening and softening your look at the same time."
-        }
-    ],
-    "CollegeCarousel":[
-        {
-            "id":1,
-            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Screenshot%202019-09-14%20at%202.16.47%20PM.png"
-        }, {
-            "id":2,
-            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Screenshot%202019-09-18%20at%204.06.18%20PM.png"
-           
-        }, {
-            "id":3,
-            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Screenshot%202019-09-14%20at%202.15.49%20PM.png"
-          
-        }
-    ],
-    "WorkRelaxCards":[
-        {
-            "id":1,
-            "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-2.png",
-            "title":"F(IT) MATTERS",
-            "subtitle":"A size for every one."
-        },
-        {
-            "id":2,
-            "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-3.png",
-            "title":"PERSONALISED BRANDING",
-            "subtitle":"Your design. Our customization"
-        }, {
-            "id":3,
-            "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-4.png",
-            "title":"TEAM UP FOR TEAM WEAR",
-            "subtitle":"Bulk orders delivered seamlessly"
-        }
-    ],
-    "TimeLine":[
-        {
-            "id":1,
-            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png",
-            "title":"Single line brief"
-        },{
-            "id":2,
-            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-2.png",
-            "title":"Mind mapping"
-        },{
-            "id":3,
-            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-3.png",
-            "title":"Design and details"
-        },{
-            "id":4,
-            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-4.png",
-            "title":"Sampling"
-        },{
-            "id":5,
-            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-5.png",
-            "title":"Manufacturing"
-        },{
-            "id":6,
-            "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-6.png",
-            "title":"Delivery"
-        }
-    ],
-    "EnterPriseGetInTouch":[{
-        "id":1,
-        "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Untitled-1.png"
-    },{
-        "id":2,
-        "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Untitled-2.png"
-    }
-],
-"Schools":[
+  "uniforms": [
     {
-    "id":1,
-    "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/jain.jpeg",
-    "name":"JGI"
-},
-{
-    "id":2,
-    "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/rvschool.png",
-    "name":"RV"
-},{
-    "id":3,
-    "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/sophias.jpg",
-    "name":"SOPHIA"
-},{
-    "id":4,
-    "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/kumarans.png",
-    "name":"KUMARANS"
-},{
-    "id":5,
-    "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Logo-%20New%20Horizon%20Gurukul.jpg",
-    "name":"NEW HORIZON GURUKUL"
-},{
-    "id":6,
-    "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/cgis.png",
-    "name":"CISB"
-},{
-    "id":7,
-    "image":"https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/NHIS%20LOGO%20Jpeg.jpg",
-    "name":"NHIS"
-}
-],
-"BeAtEase":{
-    "id":1,
-    "image":"http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/BK,.jpg"
-}
-
+      "id": 1,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/627bd600820ea897cb5a5cfc/webp/day-wear-polos-480x480.jpg",
+      "name": "Day wear POLO"
+    },
+    {
+      "id": 2,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
+      "name": "CIS Royal Day Wear(Grade 1-5)"
+    },
+    {
+      "id": 3,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f798f04705ab2ca347bb/images/5aa0f798f04705ab2ca347bc/5aa0f79ff04705ab2ca347d7/webp/5aa0f79ff04705ab2ca347d7-480x480.jpg",
+      "name": "NHG Shirt[Girls, Grade 1-10]"
+    },
+    {
+      "id": 4,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/601d6ffdbb47db6b5e246674/webp/middle-school-480x480.jpg",
+      "name": "CIS Sky Day Wear"
+    },
+    {
+      "id": 5,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f5c6f04705ab2ca345c6/images/5aa0f5c6f04705ab2ca345c7/5aa0f5d0f04705ab2ca345f9/webp/5aa0f5d0f04705ab2ca345f9-480x480.jpg",
+      "name": "NHG Shirt"
+    },
+    {
+      "id": 6,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/627b614a77743f91a456432d/webp/front-view-nhg-shirt-girls-grade-11-12--480x480.jpg",
+      "name": "NHG County Shirt"
+    }
+  ],
+  "Blogs": [
+    {
+      "id": 1,
+      "title": "STYLING ACCESSORIES THAT COMPLEMENT YOUR FORMAL WEAR"
+    },
+    {
+      "id": 2,
+      "title": "5 CLASSIC LOOKS FOR HER"
+    },
+    {
+      "id": 3,
+      "title": "ACING YOUR FORMAL ATTIRE"
+    },
+    {
+      "id": 4,
+      "title": "SELECTING & STYLING YOUR WORKWEAR"
+    },
+    {
+      "id": 5,
+      "title": "LET'S TALK 'BODY TYPES',WOMEN!"
+    },
+    {
+      "id": 6,
+      "title": "5 CLASSIC LOOKS FOR HIM"
+    },
+    {
+      "id": 7,
+      "title": "TIPS FOR A GREAT OUTFIT"
+    },
+    {
+      "id": 8,
+      "title": "DRESSING TO SUCCEED: THE IMPORTANCE OF FORMALS"
+    },
+    {
+      "id": 9,
+      "title": "WORKWEAR FOR ALL SEASONS: THE WOMEN EDIT"
+    },
+    {
+      "id": 10,
+      "title": "THE ACECRAFT DIFFERENCE"
+    },
+    {
+      "id": 11,
+      "title": "CORPORATE TO CUPCAKES!-STORY OF A SUPERWOMAN"
+    },
+    {
+      "id": 12,
+      "title": "HOW TO COMPLETE YOUR COLLEGE LOOK"
+    },
+    {
+      "id": 13,
+      "title": "DRESS THE RIGHT WAY TO IMPRESS THE RIGHT WAY"
+    }
+  ],
+  "CollegeMaterials": [
+    {
+      "id": 1,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/woolen-ball.jpg",
+      "title": "Naturally Cutting-Edge.",
+      "content": "The ‘best of both worlds’ has a new definition. Every fabric in the acecraft line-up is made from a blend of two fibres to give you the best range. No tech involved - it’s just the touch of nature."
+    },
+    {
+      "id": 2,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Wool.png",
+      "title": "The Blended Wool",
+      "content": "The Blended Wool is a class apart - with a mix of polyester for its wrinkle/crease-resistance and wool for warmth and absorbency, end your day looking the same as how you began it."
+    },
+    {
+      "id": 3,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Cotton.png",
+      "title": "The Blended Cotton",
+      "content": "The Blended Cotton is extremely strong and breathable. Easy to iron, this variant shrinks lesser than pure cotton and retains its colour, which makes it a favourite choice for your everyday college wear."
+    },
+    {
+      "id": 4,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Viscose.png",
+      "title": "The Blended Viscose",
+      "content": "The Blended Viscose addition combines two ends of the spectrum - durability and a sense of softness. While the polyester contributes to resilience and shape retention, the viscose adds on to the overall absorbency, both sharpening and softening your look at the same time."
+    }
+  ],
+  "CollegeCarousel": [
+    {
+      "id": 1,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Screenshot%202019-09-14%20at%202.16.47%20PM.png"
+    },
+    {
+      "id": 2,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Screenshot%202019-09-18%20at%204.06.18%20PM.png"
+    },
+    {
+      "id": 3,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Screenshot%202019-09-14%20at%202.15.49%20PM.png"
+    }
+  ],
+  "WorkRelaxCards": [
+    {
+      "id": 1,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-2.png",
+      "title": "F(IT) MATTERS",
+      "subtitle": "A size for every one."
+    },
+    {
+      "id": 2,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-3.png",
+      "title": "PERSONALISED BRANDING",
+      "subtitle": "Your design. Our customization"
+    },
+    {
+      "id": 3,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-4.png",
+      "title": "TEAM UP FOR TEAM WEAR",
+      "subtitle": "Bulk orders delivered seamlessly"
+    }
+  ],
+  "TimeLine": [
+    {
+      "id": 1,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png",
+      "title": "Single line brief"
+    },
+    {
+      "id": 2,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-2.png",
+      "title": "Mind mapping"
+    },
+    {
+      "id": 3,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-3.png",
+      "title": "Design and details"
+    },
+    {
+      "id": 4,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-4.png",
+      "title": "Sampling"
+    },
+    {
+      "id": 5,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-5.png",
+      "title": "Manufacturing"
+    },
+    {
+      "id": 6,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-6.png",
+      "title": "Delivery"
+    }
+  ],
+  "EnterPriseGetInTouch": [
+    {
+      "id": 1,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Untitled-1.png"
+    },
+    {
+      "id": 2,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Untitled-2.png"
+    }
+  ],
+  "Schools": [
+    {
+      "id": 1,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/jain.jpeg",
+      "name": "JGI"
+    },
+    {
+      "id": 2,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/rvschool.png",
+      "name": "RV"
+    },
+    {
+      "id": 3,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/sophias.jpg",
+      "name": "SOPHIA"
+    },
+    {
+      "id": 4,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/kumarans.png",
+      "name": "KUMARANS"
+    },
+    {
+      "id": 5,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Logo-%20New%20Horizon%20Gurukul.jpg",
+      "name": "NEW HORIZON GURUKUL"
+    },
+    {
+      "id": 6,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/cgis.png",
+      "name": "CISB"
+    },
+    {
+      "id": 7,
+      "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/NHIS%20LOGO%20Jpeg.jpg",
+      "name": "NHIS"
+    }
+  ],
+  "BeAtEase": [
+    {
+      "id": 1,
+      "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/BK,.jpg"
+    }
+  ],
+  "register": [
+    
+    {
+      "fname": "Priyadarshan",
+      "lname": "M",
+      "email": "Priyadarshanmanoharan@gmail.com",
+      "password": "aA1!",
+      "category": "School",
+      "dname": "Priyadarshan M",
+      "dcode": "123",
+      "city": "Coimbatore",
+      "state": "Tamil Nadu",
+      "gst": "234",
+      "id": 1
+    },  {
+        "fname": "Shakthi",
+        "lname": "M",
+        "email": "Priyadarshanmanoharan@gmail.com",
+        "password": "aA1!",
+        "category": "School",
+        "dname": "Priyadarshan M",
+        "dcode": "123",
+        "city": "Coimbatore",
+        "state": "Tamil Nadu",
+        "gst": "234",
+        "id": 2
+      },  {
+        "fname": "Karthikeyan",
+        "lname": "M",
+        "email": "Priyadarshanmanoharan@gmail.com",
+        "password": "aA1!",
+        "category": "School",
+        "dname": "Priyadarshan M",
+        "dcode": "123",
+        "city": "Coimbatore",
+        "state": "Tamil Nadu",
+        "gst": "234",
+        "id": 3
+      }
+  ]
 }

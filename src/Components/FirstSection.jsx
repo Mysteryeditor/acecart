@@ -1,9 +1,6 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/App.css'
 import React from 'react'; import { useState } from 'react';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/App.css';
@@ -11,11 +8,7 @@ import settingImage from 'C:/Users/cgvak/Desktop/React/acecart/src/Assets/images
 import Badge from '@mui/material/Badge';
 import Settings from './NavList';
 import { Link } from 'react-router-dom';
-import SchoolPage from './SchoolPage/SchoolPage';
-import { BrowserRouter } from 'react-router-dom';
-import { Router } from 'react-router-dom';
-import { useParams, useNavigate } from 'react-router-dom';
-// import SchoolPageTwo from './SchoolPage/SchoolPageTwo';
+
 function HomePage() {
   const [isHovering, setIsHovering] = useState(false);
 
