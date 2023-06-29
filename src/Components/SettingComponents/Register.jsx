@@ -9,43 +9,61 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import axios from "axios";
 import { useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function SignUpForm() {
-   const [Fname,setFname]=useState('')
-    const [Lname,setLname]=useState('')
-    const [email,setemail]=useState('')
-    const [pwd,setpwd]=useState('')
-    const [category,setcategory]=useState('')
-    const [dname,setDname]=useState('')
-    const [dcode,setdcode]=useState('')
-    const [city,setcity]=useState('')
-    const [state,setState]=useState('')
-    const [gst,setGst]=useState('')
+    const [Fname, setFname] = useState('')
+    const [Lname, setLname] = useState('')
+    const [email, setemail] = useState('')
+    const [pwd, setpwd] = useState('')
+    const [category, setcategory] = useState('')
+    const [dname, setDname] = useState('')
+    const [dcode, setdcode] = useState('')
+    const [city, setcity] = useState('')
+    const [state, setState] = useState('')
+    const [gst, setGst] = useState('')
 
+    const myToast = () => toast.success("Successfully created an account",{
+        position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: false,
+    closeButton:false,
+    theme:"colored"
+    })
 
-    const postData=()=>{
-        axios.post("http://localhost:4000/register",{
-            fname:Fname,
-            lname:Lname,
+    const postData = () => {
+        axios.post("http://localhost:4000/register", {
+            fname: Fname,
+            lname: Lname,
             email: email,
-            password:pwd,
-            category:category,
-            dname:dname,
-            dcode:dcode,
-            city:city,
-            state:state,
-            gst:gst
+            password: pwd,
+            category: category,
+            dname: dname,
+            dcode: dcode,
+            city: city,
+            state: state,
+            gst: gst,
+            isLogged: false
         })
-        
-        .then((error)=>{
-            console.log(error)
-        })
+
+            .then((error) => {
+                console.log(error)
+            })
+            .then((response) => {
+              
+                    myToast();
+                    
+             
+            })
     }
-   
-   
- const { register, handleSubmit, formState: { errors }, watch } = useForm() 
+
+
+    const { register, handleSubmit, formState: { errors }, watch } = useForm()
     const onSubmit = (data) => {
         console.log(data)
-data.preventDefault();
         setFname(data.firstName);
         setLname(data.lastName);
         setemail(data.email);
@@ -56,10 +74,10 @@ data.preventDefault();
         setcity(data.city);
         setState(data.state);
         setGst(data.gst);
-        console.log("The first name is "+Fname);
+        console.log("The first name is " + Fname);
         postData();
     }
-   
+
 
     return (
         <div>
@@ -126,19 +144,19 @@ data.preventDefault();
 
 
                             <Form.Group className="mb-3"  >
-                                <Form.Control placeholder="Dealership Name" id="dname" {...register('dname',{required:true})} />
+                                <Form.Control placeholder="Dealership Name" id="dname" {...register('dname', { required: true })} />
                                 {errors.dname && <span className='signUpSpan'>Dealership name is required</span>}
                             </Form.Group>
 
                             <Form.Group className="mb-3 "  >
 
-                                <Form.Control placeholder="Dealership Number/Code" id="dcode" {...register('dcode',{required:true})}/>
+                                <Form.Control placeholder="Dealership Number/Code" id="dcode" {...register('dcode', { required: true })} />
                                 {errors.dcode && <span className='signUpSpan'>Dealership code is required</span>}
                             </Form.Group>
 
 
                             <Form.Group as={Col} className='mb-3'>
-                                <Form.Control placeholder="City" id="city" {...register('city',{required:true})}/>
+                                <Form.Control placeholder="City" id="city" {...register('city', { required: true })} />
                                 {errors.city && <span className='signUpSpan'>City is required</span>}
                             </Form.Group>
 
@@ -146,7 +164,7 @@ data.preventDefault();
                                 <Form.Label className='justify-content-start d-flex' column sm={2}>
                                     State
                                 </Form.Label>
-                                <Form.Select defaultValue="" className='my-1' id="state" {...register('state',{required:true})}>
+                                <Form.Select defaultValue="" className='my-1' id="state" {...register('state', { required: true })}>
                                     <option value=""></option>
                                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -188,7 +206,7 @@ data.preventDefault();
                             </Form.Group>
 
                             <Form.Group as={Col} className='mb-3'>
-                                <Form.Control placeholder="GST Number" id="gstnum" {...register('gst',{required:true})}/>
+                                <Form.Control placeholder="GST Number" id="gstnum" {...register('gst', { required: true })} />
                                 {errors.gst && <span className='signUpSpan'>GST number is required</span>}
                             </Form.Group>
 
@@ -199,11 +217,12 @@ data.preventDefault();
                                 Register
                             </Button>
                             <div>
-                            <span className=' already p-4'>Already have an account? <Link className='login' to="/login" >Login!</Link></span></div>
+                                <span className=' already p-4'>Already have an account? <Link className='login' to="/login" >Login!</Link></span></div>
                         </Form>
                     </Card.Body>
                 </Card>
             </div>
+            <ToastContainer />
         </div>
     );
 }

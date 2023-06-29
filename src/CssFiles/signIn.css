@@ -53,3 +53,7 @@
 .login:hover{
     color: black;
 }
+
+.myToast{
+    background-color: #468847;
+}

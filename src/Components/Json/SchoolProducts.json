@@ -231,43 +231,19 @@
     }
   ],
   "register": [
-    
     {
-      "fname": "Priyadarshan",
-      "lname": "M",
-      "email": "Priyadarshanmanoharan@gmail.com",
-      "password": "aA1!",
-      "category": "School",
-      "dname": "Priyadarshan M",
-      "dcode": "123",
-      "city": "Coimbatore",
-      "state": "Tamil Nadu",
-      "gst": "234",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "password": "",
+      "category": "",
+      "dname": "",
+      "dcode": "",
+      "city": "",
+      "state": "",
+      "gst": "",
+      "isLogged": true,
       "id": 1
-    },  {
-        "fname": "Shakthi",
-        "lname": "M",
-        "email": "Priyadarshanmanoharan@gmail.com",
-        "password": "aA1!",
-        "category": "School",
-        "dname": "Priyadarshan M",
-        "dcode": "123",
-        "city": "Coimbatore",
-        "state": "Tamil Nadu",
-        "gst": "234",
-        "id": 2
-      },  {
-        "fname": "Karthikeyan",
-        "lname": "M",
-        "email": "Priyadarshanmanoharan@gmail.com",
-        "password": "aA1!",
-        "category": "School",
-        "dname": "Priyadarshan M",
-        "dcode": "123",
-        "city": "Coimbatore",
-        "state": "Tamil Nadu",
-        "gst": "234",
-        "id": 3
-      }
+    }
   ]
 }
