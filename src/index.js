@@ -15,6 +15,8 @@ import Enterprise from './Components/Enterprise/Enterprise';
 import SignIn from './Components/SettingComponents/Login';
 import Register from './Components/SettingComponents/Register';
 import Login from './Components/SettingComponents/Login';
+import SchoolUniforms from './Components/SchoolPage/SchoolPageTwo';
+import SchoolUniformProducts from './Components/SchoolPage/SchoolProductsSecond';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -33,8 +35,10 @@ root.render(
       <Route path="/orderStatus" element={<Error404 />} />
       <Route path="/contact" element={<Error404 />} />
       <Route path='/login' element={<Login />}/>
-
-    </Routes>
+      <Route path='/schoolUniforms' element={<SchoolUniforms/>}/>
+      <Route path='/schooluniformproduct' element={<SchoolUniformProducts/>}/>
+      <Route path="/schooluniformproduct/:id" component={SchoolUniformProducts} />
+      </Routes>
 
     <FooterNavBar />
   </BrowserRouter>

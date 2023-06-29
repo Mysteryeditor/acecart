@@ -8,7 +8,7 @@
     margin-left: -200px;
     height: 100%;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(2, 0, 36, 1) 100%);
-
+z-index: 1;
 }
 .HomeUls{
     color: #9E9E9E;
@@ -17,6 +17,16 @@
     font-weight: 500;
 }
 .HomeUls:hover{
+    color: white;
+    cursor: pointer;    
+}
+.HomeUlslogout{
+    color: #9E9E9E;
+    font-family: 'Proxima';
+    font-size: 18px;
+    font-weight: 500;
+}
+.HomeUlslogout:hover{
     color: white;
     cursor: pointer;    
 }

@@ -6,10 +6,15 @@
     font-family: ProximaBold;
     src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Bold.otf );
 }
-
-.schoolMainDiv{
-    padding-bottom: 500px;
+@font-face {
+    font-family: ProximaThin;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Thin.otf );
 }
+@font-face {
+    font-family: blenheim;
+    src: url(../Fonts/Proxima-Nova-Font/Blenheim\ Signature\ v2.ttf);
+}
+
 .SchoolUniformLinks{
     list-style: none;
     overflow: hidden;
@@ -81,4 +86,60 @@ color: #978f8f;
 }
 .beatease{
     font-family: ProximaBold;
+}
+.getInTouchSchool{
+    background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/School-41.jpg);
+    background-position: top;
+    min-height: 565px !important;
+    /* background-repeat: no-repeat;
+    font-size: 30px !important; */
+    background-size: 100%;
+}
+.GITSchool{
+    height: 36px;
+    width: 114px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-family: Proxima;
+    border-color: white;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+.DUSchool{
+    color: #978f8f;
+    font-size: 30px;
+    font-family: Proxima;
+}
+#byschool{
+    font-size: 16px;
+    color: #978f8f;
+    font-family: blenheim;
+
+}
+.getInTsouchSpansSchool{
+    margin-top: -20px;
+    color: #978f8f;
+}
+.aceSchool{
+    color: #978f8f;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 7px;
+}
+.establishSchool{
+    font-family: ProximaThin;
+    color:#978f8f;
+    font-size:20px;
+}
+.signatureLookSchool{
+    font-family: ProximaBold;
+    color: #978f8f;
+    font-size: 20px;
+}
+.supplyChangeSchool{
+    font-family: ProximaThin;
+    color:#978f8f;
+    font-size:20px;
 }

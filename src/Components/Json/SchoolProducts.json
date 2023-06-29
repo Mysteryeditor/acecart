@@ -192,6 +192,7 @@
       "id": 1,
       "image": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/jain.jpeg",
       "name": "JGI"
+      
     },
     {
       "id": 2,
@@ -232,18 +233,31 @@
   ],
   "register": [
     {
-      "fname": "",
-      "lname": "",
-      "email": "",
-      "password": "",
-      "category": "",
-      "dname": "",
-      "dcode": "",
-      "city": "",
-      "state": "",
-      "gst": "",
-      "isLogged": true,
+      "email": "Priyadarshanmanoharan@gmail.com",
+      "password": "aA1!",
+      "category": "School",
+      "dname": "Priyadarshan M",
+      "dcode": "123",
+      "city": "Coimbatore",
+      "state": "Tamil Nadu",
+      "gst": "325",
+      "isLogged": false,
       "id": 1
+    },
+    {
+      "fname": "Satis Kumar",
+      "lname": "Jayaprakash",
+      "email": "Priyadarshanmanoharan@gmail.com",
+      "password": "sS2@",
+      "category": "School",
+      "dname": "Satis",
+      "dcode": "567",
+      "city": "Coimbatore",
+      "state": "Tamil Nadu",
+      "gst": "789",
+      "isLogged": false,
+      "cart": [],
+      "id": 2
     }
   ]
 }

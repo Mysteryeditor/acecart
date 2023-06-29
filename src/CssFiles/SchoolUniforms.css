@@ -1,0 +1,62 @@
+@font-face {
+    font-family: Proxima;
+    src: url(../Fonts/Proxima-Nova-Font/Proxima\ Nova\ Font.otf);
+}
+@font-face {
+    font-family: ProximaBold;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Bold.otf);
+}
+@font-face {
+    font-family: ProximaThin;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Thin.otf);
+}
+
+.bannerSUniform{
+    min-height: 100vh;
+    background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/MJK07401.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    background-position: center;
+    
+}
+.Proxima{
+    font-family: Proxima;
+}
+.ProximaThin{
+    font-family: ProximaThin;
+}
+.ProximaBold{
+    font-family: ProximaBold;
+}
+.clr-glite{
+    color: #978f8f;
+}
+.dcodeSUni{
+    font-size: 30px;
+}
+#sort{
+    width: 190px;
+    height: 34px;
+    color: #7E818C;
+    border-color:rgb(216, 212, 212) ;
+}
+.UniformCards{
+
+    border-radius: 0px;
+}
+.UniCardImg{
+    width: 300px;
+    height: 360px;
+    border-radius: 0px;
+
+}
+.uniName{
+    font-size: 14px;
+    text-decoration: none;
+  
+
+}

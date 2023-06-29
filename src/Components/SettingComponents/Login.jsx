@@ -5,13 +5,16 @@ import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SecondSection from '../SecondSection'
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+
 const Login = () => {
   const history = useNavigate()
   const [uname, setUname] = useState('');
   const [pwd, setPwd] = useState('');
-  const [id,setId] = useState('')
+
+  var Fname,Lname,email,password,category,dname,dcode,city,state,gst,cart,id;
+
   const myToastFail = () => toast.error('Please check the username and the password!', {
     position: "top-center",
     autoClose: 5000,
@@ -20,10 +23,10 @@ const Login = () => {
     pauseOnHover: false,
     draggable: false,
     progress: undefined,
-    closeButton:false,
-    theme:"colored"
+    closeButton: false,
+    theme: "colored"
   });
-  const myToastPass = ()=> toast.success("Successfully logged in",{
+  const myToastPass = () => toast.success("Successfully logged in", {
     position: "top-center",
     autoClose: 5000,
     hideProgressBar: true,
@@ -31,8 +34,8 @@ const Login = () => {
     pauseOnHover: false,
     draggable: false,
     progress: undefined,
-    closeButton:false,
-    theme:"colored"
+    closeButton: false,
+    theme: "colored"
   })
 
 
@@ -42,72 +45,57 @@ const Login = () => {
       .then((response) => response.json())
       .then((data) => {
 
+
+
         const foundUser = data.find((user) => user.email === uname && user.password === pwd)
-      const [formData, setFormData]=useState({
-        fname: '',
-        lname: '',
-        email: '',
-        password: '',
-        category: '',
-        dname: '',
-        dcode: '',
-        city: '',
-        state: '',
-        gst: ''
-      })
+
 
 
         if (foundUser) {
 
-          // const xhttp = new XMLHttpRequest();
-          // xhttp.open("PUT",`http://localhost:4000/register/1`)
-          // xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-          // xhttp.send(
-          //   JSON.stringify({
-          //     isLogged:true
-          //   })
-          // );
+          axios.get(`http://localhost:4000/register?email_like=${uname}`)
+            .then((response) => {
+              Fname = response.data[0].firstName;
+              Lname = response.data[0].lastName;
+              email = response.data[0].email;
+              password = response.data[0].password;
+              category = response.data[0].category;
+              dname = response.data[0].dname;
+              dcode = response.data[0].dcode;
+              city = response.data[0].city;
+              state = response.data[0].state;
+              gst = response.data[0].gst;
+              cart=response.data[0].cart;
+              id=response.data[0].id;
 
+              console.log("ID value is" + Fname)
+            })
+          axios.put(`http://localhost:4000/register/${id}`, {
+            fname: Fname,
+            lname: Lname,
+            email: email,
+            password: password,
+            category: category,
+            dname: dname,
+            dcode: dcode,
+            city: city,
+            state: state,
+            gst: gst,
+            cart:cart,
+            isLogged: true
 
-
-          // xhttp.onreadystatechange=function (){
-          //   if(this.readyState == 4 && this.status == 200){
-          //     console.log(this.responseText);
-              
-          //   }
-          // }
-// console.log("Founde user is  ")
-axios.get(`http://localhost:4000/register?email_like=${uname}`)
-.then((response)=>{
-  
-setId(response.data[0].id)
-  console.log("ID value is"+id)
-})
-          axios.put(`http://localhost:4000/register/${id}`,{
-            fname,
-  lname,
-  email,
-  password,
-  category,
-  dname,
-  dcode,
-  city,
-  state,
-  gst,
-  isLogged: true
-          
           })
-          .then((response)=>{
-            if(response.data.status===true){
-              myToastPass();
-            }else console.log("Operation was unsuccessful")
-          })
-          .catch(err => console.error("Wasn't able to update property.", err))
-          
+            .then((response) => {
+             console.log(Fname)
+                myToastPass();
+             
+            })
+            .catch(err => console.error("Wasn't able to update property.", err))
+
           console.log('Login success');
 
-       
+
           // history("/")
         } else {
           console.log('Login failed');
@@ -144,8 +132,8 @@ setId(response.data[0].id)
             </form>
           </Card.Body>
         </Card>
-          <ToastContainer />
-          
+        <ToastContainer />
+
 
 
       </div>

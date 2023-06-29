@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import axios from "axios";
 import { useEffect } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer,toast } from 'react-toastify';
+
 function SignUpForm() {
     const [Fname, setFname] = useState('')
     const [Lname, setLname] = useState('')
@@ -22,6 +22,8 @@ function SignUpForm() {
     const [city, setcity] = useState('')
     const [state, setState] = useState('')
     const [gst, setGst] = useState('')
+    const [cart, setCart] = useState('')
+   
 
     const myToast = () => toast.success("Successfully created an account",{
         position: "top-center",
@@ -33,7 +35,26 @@ function SignUpForm() {
     closeButton:false,
     theme:"colored"
     })
+  
 
+
+    const { register, handleSubmit, formState: { errors }, watch } = useForm()
+    const onSubmit = (data) => {
+        console.log(data.firstName)
+        setFname(data.firstName);
+        setLname(data.lastName);
+        setemail(data.email);
+        setpwd(data.password);
+        setcategory(data.category);
+        setDname(data.dname);
+        setdcode(data.dcode);
+        setcity(data.city);
+        setState(data.state);
+        setGst(data.gst);
+        setCart(data.cart)
+        console.log("The first name is " + Fname);
+        postData();
+    }
     const postData = () => {
         axios.post("http://localhost:4000/register", {
             fname: Fname,
@@ -46,38 +67,18 @@ function SignUpForm() {
             city: city,
             state: state,
             gst: gst,
+            cart:cart,
             isLogged: false
         })
 
             .then((error) => {
-                console.log(error)
+                console.log(Fname)
             })
             .then((response) => {
-              
-                    myToast();
-                    
+                myToast()                  
              
             })
     }
-
-
-    const { register, handleSubmit, formState: { errors }, watch } = useForm()
-    const onSubmit = (data) => {
-        console.log(data)
-        setFname(data.firstName);
-        setLname(data.lastName);
-        setemail(data.email);
-        setpwd(data.password);
-        setcategory(data.category);
-        setDname(data.dname);
-        setdcode(data.dcode);
-        setcity(data.city);
-        setState(data.state);
-        setGst(data.gst);
-        console.log("The first name is " + Fname);
-        postData();
-    }
-
 
     return (
         <div>

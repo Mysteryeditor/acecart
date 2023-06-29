@@ -23,7 +23,8 @@ export default function SecondSection() {
     };
     return (
         <React.Fragment >
-            <div className="SecondSectionBody">            <Carousel className='HomeCarousel' activeIndex={index} onSelect={handleSelect}>
+            <div className="SecondSectionBody">       
+    <Carousel className='HomeCarousel' activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
           className="d-block w-100"

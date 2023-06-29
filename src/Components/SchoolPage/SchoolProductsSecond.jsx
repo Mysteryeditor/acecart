@@ -2,11 +2,12 @@
 import React from 'react'
 import { Router } from 'react-router-dom';
 import { useParams, useNavigate } from 'react-router-dom';
-const SchoolPageTwo = () => {
+const SchoolUniformProducts = () => {
 
    
-        const params = useParams();
-        const navigate = useNavigate();
+  const { id } = useParams();
+  const navigate = useNavigate();
+
      
         const onBackClick=(e)=>{
          e.preventDefault();
@@ -16,7 +17,7 @@ const SchoolPageTwo = () => {
 
   return (
     <div>
-        <h2>Shirt Name{params.name}</h2>
+              <h2>Shirt Name{id}</h2>
         <button onClick={onBackClick}>Go back to the uniforms</button>
     </div>
   )
@@ -24,4 +25,4 @@ const SchoolPageTwo = () => {
 }
 
 
-export default SchoolPageTwo
+export default SchoolUniformProducts
