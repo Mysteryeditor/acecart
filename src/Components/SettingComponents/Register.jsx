@@ -72,7 +72,7 @@ function SignUpForm() {
         })
 
             .then((error) => {
-                console.log(Fname)
+                console.log(error)
             })
             .then((response) => {
                 myToast()                  

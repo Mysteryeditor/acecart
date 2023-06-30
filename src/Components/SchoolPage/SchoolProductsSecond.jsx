@@ -1,157 +1,341 @@
 
-import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/SchoolProductsSecond.css'
+import axios from 'axios';
+import { ToastContainer,toast } from 'react-toastify';
+import { CartProvider, useCart } from 'react-use-cart';
 const SchoolUniformProducts = () => {
 
-   
+
   const { id } = useParams();
   const navigate = useNavigate();
+  const [productCost, setProductCost] = useState(0)
+  const [size, setSize] = useState(18);
+  const [schoolProd, setSchoolProd] = useState(null)
+  const [carImg, setCarImg] = useState(null);
+  const [quantity,setQuantity]=useState(1);
+  const { addItem } = useCart();
+    const onBackClick = (e) => {
+    e.preventDefault();
+    navigate("/school")
+  }
+  const myToastAdded =()=>toast.success("Successfully add to cart!",{
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: false,
+    closeButton:false,
+    theme:"colored"
+  })
+  const myToastFailed=()=>toast.error("Failed to add!",{
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: false,
+    closeButton:false,
+    theme:"colored"
+  })
+
+
+  useEffect(() => {
+
+    fetch(`http://localhost:4000/uniforms/${id}`)
+
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        setSchoolProd(data)
+      }
+
+      );
+
+    fetch(`http://localhost:4000/uniforms`)
+
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        setCarImg(data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+
+
+    console.log("The id is" + id)
+
+
+
+
+  }, [id]);
+  const sizeChange = (e) => {
+    setSize(e.target.value)
+  }
+
+  const productCounter = (oldCost, offer) => {
+
+    const newCost = parseInt(oldCost);
+    let newOffer = parseInt(offer)
+    if (!size) {
+      return newCost;
+    }
+
+    if (size >= 24) {
+      console.log("Old cost is 1 " + oldCost)
+
+      oldCost = oldCost + 25; //old cost 450+25
+    }
+    if (size >= 26) {
+      console.log("Old cost is 2 " + oldCost)
+
+      oldCost = oldCost + 25; //475+25
+
+    }
+    if (size >= 28 && size <= 30) {
+      console.log("Old cost is 3 " + oldCost)
+
+      oldCost = oldCost + 25;   //500+25
+
+    }
+    if (size >= 32 && size <= 34) {
+      console.log("Old cost is 4 " + oldCost)
+
+      oldCost = oldCost + 25;     //525+25
+
+    }
+
+
+
+    if (size >= 18 && size <= 22) {
+
+      return (newCost)
+
+    } else if (size >= 24 && size <= 26)
+      return (parseInt(newCost + ((newOffer * oldCost) / 100)), oldCost)
+    else if (size >= 28 && size <= 30)
+      return (parseInt(newCost + ((newOffer * oldCost) / 100)), oldCost)
+    else if (size >= 32 && size <= 34)
+      newOffer = newOffer - 2;
+    return (parseInt(newCost + ((newOffer * oldCost) / 100)), oldCost)
+
+
+
+  }
+ const productOffer=(size,offer)=>{
+
+  if (size >= 18 && size <= 30) {
+
+    return (offer)
+
+  } 
+  else if (size >= 32 && size <= 34)
+    
+  return (parseInt(offer = offer - 2))
+
+
+ }
+
+ const productCode=(size,prodCode)=>{
+  console.log(prodCode[2])
+  console.log(size)
+if(size==18){
+  return prodCode[0]
+}else if(size==20){
+  return prodCode[1]
+}else if(size==22){
+  return prodCode[2]
+}else if(size==24){
+  return prodCode[3]
+}else if(size==26){
+  return prodCode[4]
+}else if(size==28){
+  return prodCode[5]
+}else if(size==30){
+  return prodCode[6]
+}else if(size==32){
+  return prodCode[7]
+}else if(size==34){
+  return prodCode[8]
+}
+
+  }
+  const quantityChange=(e)=>{
+    setQuantity(e.target.value)
+  }
+
+  const handleAddToCart = () => {
+    const item = {
+      image:schoolProd.image,
+      cost:schoolProd.cost,
+      quantity:quantity,
+      title:schoolProd.title,
+      id:schoolProd.id
+    };
+
+    addItem(item);
+    console.log('Item added to cart:', item);
+    console.log(item.quantity);
+
+    // POST item to Cartitems endpoint
+    fetch('http://localhost:4000/cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(item)
+    })
+      .then((response) => response.json())
+      .then(() => {
+        myToastAdded()
+
+      })
+      .catch((error) => {
+        myToastFailed()
+
+      });
+  };
+  // const addToCart=()=>{
+  //   const items ={
+      // image:schoolProd.image,
+      // cost:schoolProd.cost,
+      // quantity:quantity,
+      // title:schoolProd.title,
+      // id:schoolProd.id
+  //   }
+  //   addItem(items)
+  //   .catch((err)=>{
+  //     console.log(err)
+  //   })
+
+  //     axios.post("http://localhost:4000/cart",{
+  //       items
+  //     })
+  //     .then((response)=>{
+  //       myToastAdded()
+  //     })
+  //     .catch((error)=>{
+  //       myToastFailed()
+  //           })
+
   
-  const [schoolProd,setSchoolProd] = useState(null)
-  const [carImg,setCarImg]= useState(null)   
-        const onBackClick=(e)=>{
-         e.preventDefault();
-         navigate("/school")
-        }
-        
-       
-        useEffect(() => {
-        
-            fetch(`http://localhost:4000/uniforms/${id}`)
-          
-            .then((response) => response.json())
-            .then((data) => {console.log(data) 
-              setSchoolProd(data)
-            }
-            
-            );
-            
-            fetch(`http://localhost:4000/uniforms`)
-          
-            .then((response) => response.json())
-            .then((data) => {console.log(data) 
-              setCarImg(data)
-            } )
-            .catch((err)=>{
-              console.log(err)
-            })
-            
-           
-            console.log("The id is"+id)
-          
+  // }
 
-         
-              
-      }, [id]);
-
-
+ 
+ 
 
 
   return (
     <div>
-    {schoolProd&&
-
-  
-    <div>
-      {schoolProd.image}
-      <Container>
-      <div className='row pt-5 mt-5'>
-<div className='col-lg-6 col-md-6 col-sm-6 col-xl-6 pt-5 mt-5'>
-  <img src={schoolProd.image} alt="Dress Image" />
-</div>
-<div className='col-lg-6 col-md-6 col-sm-6 col-xl-6 pt-5 mt-5 text-black'>
-<h1>{schoolProd.title}</h1>
-<h5>Product code: {schoolProd.productcode}</h5>
-<h5>Brand: {schoolProd.brand}</h5>
-<h5>Sold By: {schoolProd.soldby}</h5>
-<h1>&#8377;{schoolProd.cost}<span className='h5'><del>&#8377;{schoolProd.actualcost}</del></span></h1>
-<h6>{schoolProd.offer}% OFF</h6>
-
-<hr />
-
-<button className='bg-black text-white'>SIZE GUIDE</button>
-<select className='w-25 text-start' name="size" id="size">
-  {schoolProd.size.map((size)=>(
-    <option value={`${size}`}>{size}</option> 
-  ))}
-</select>
-<span>{schoolProd.stock} item left in Stock</span>
-
-<hr />
-<label className='bg-black text-white p-1' htmlFor="quantity">Quantity</label><input type="number" name="qty" id="quantity" />
-
-<div className='row container pt-5 mt-5'>
-<button className='col-lg-4 me-1 bg-black text-white'>Add to Cart</button>
-<button className='col-lg-4 ms-1 bg-black text-white'>Buy Now</button>
-
-</div>
+      {schoolProd &&
 
 
+        <div>
 
-</div>
-   
-      </div>
-      <div>
+          <Container>
+            <div className='row pt-5 mt-5'>
+              <div className='col-lg-6 col-md-6 col-sm-6 col-xl-6 pt-5 mt-5'>
+                <img src={schoolProd.image} alt="Dress Image" />
+              </div>
+              <div className='col-lg-6 col-md-6 col-sm-6 col-xl-6 pt-5 mt-5 text-black'>
+                <h1>{schoolProd.title}</h1>
 
-  <div className='bg-light p-2'>Description of product</div>
-  <div className='p-2'>
-  <h5 >NO RETURNS & NO EXCHANGE.</h5>
-  <p >{schoolProd.material}</p>
-  </div>
-</div>
+                <h5>Product code: {productCode(size,schoolProd.productcode)}</h5>
+                <h5>Brand: {schoolProd.brand}</h5>
+                <h5>Sold By: {schoolProd.soldby}</h5>
+                <h1>&#8377;{productCounter(schoolProd.cost, schoolProd.offer)}<span className='h5'><del>&#8377;{productCounter(schoolProd.actualcost, schoolProd.offer)}</del></span></h1>
+                <h6>{productOffer(size,schoolProd.offer)}% OFF</h6>
 
-      </Container>
+                <hr />
 
-      </div>    
+                <button className='bg-black text-white'>SIZE GUIDE</button>
+                <select className='w-25 text-start' name="size" id="size" value={size} onChange={sizeChange} >
+                  {schoolProd.size.map((size) => (
+                    <option value={`${size}`}>{size}</option>
+                  ))}
+                </select>
+                <span>{schoolProd.stock} item left in Stock</span>
 
-    
-    }
+                <hr />
+                <label className='bg-black text-white p-1' htmlFor="quantity">Quantity</label><input type="number" name="qty" id="quantity" value={quantity} onChange={quantityChange} />
 
-    
-<div className='products container'>
-  <div className='bg-light p-2'>Related Products</div>
-<div>
-{carImg &&
+                <div className='row container pt-5 mt-5'>
+                <CartProvider>
+                  <button onClick={handleAddToCart} className='col-lg-4 me-1 bg-black text-white'>Add to Cart</button>
+                  </CartProvider>
+                  <button className='col-lg-4 ms-1 bg-black text-white'>Buy Now</button>
 
-<Carousel>
+                </div>
 
-{carImg.map((carImg)=>(
-      <Carousel.Item>
-     
-        <Container>
-        <div className='row d-flex justify-content-center '>
-          <div className="col-lg-2 col-sm-2 col-md-2 col-xl-2">
-        <img
-          className="col-lg-12 col-sm-12 col-md-12 col-xl-12"
-          src={`${carImg.image}`}
-          alt="First slide"
-        /> 
-        <h6 className='text-center'>{carImg.name}</h6>
+
+
+              </div>
+
+            </div>
+            <div>
+
+              <div className='bg-light p-2'>Description of product</div>
+              <div className='p-2'>
+                <h5 >NO RETURNS & NO EXCHANGE.</h5>
+                <p >{schoolProd.material}</p>
+              </div>
+            </div>
+
+          </Container>
+
         </div>
-          
 
-  </div>
-  </Container>
-    
-        
-      </Carousel.Item>
-  ))}
-     
-    </Carousel>
-  }
-</div>
 
-</div>
+      }
 
-        <button onClick={onBackClick}>Go back to the uniforms</button>
+
+      <div className='products container'>
+        <div className='bg-light p-2'>Related Products</div>
+        <div>
+          {carImg &&
+
+            <Carousel>
+
+              {carImg.map((carImg) => (
+                <Carousel.Item>
+
+                  <Container>
+                    <div className='row d-flex justify-content-center '>
+                      <div className="col-lg-2 col-sm-2 col-md-2 col-xl-2">
+                        <img
+                          className="col-lg-12 col-sm-12 col-md-12 col-xl-12"
+                          src={`${carImg.image}`}
+                          alt="First slide"
+                        />
+                        <h6 className='text-center'>{carImg.name}</h6>
+                      </div>
+
+
+                    </div>
+                  </Container>
+
+
+                </Carousel.Item>
+              ))}
+
+            </Carousel>
+          }
+        </div>
+
+      </div>
+
+      <button onClick={onBackClick}>Go back to the uniforms</button>
+
+      <ToastContainer/>
     </div>
   )
- 
+
 }
 
 
