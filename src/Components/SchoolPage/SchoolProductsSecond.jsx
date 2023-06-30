@@ -18,7 +18,15 @@ const SchoolUniformProducts = () => {
   const [schoolProd, setSchoolProd] = useState(null)
   const [carImg, setCarImg] = useState(null);
   const [quantity,setQuantity]=useState(1);
-  const { addItem } = useCart();
+  const {  isEmpty,
+    totalUniqueItems,
+    items,
+    totalItems,
+    cartTotal,
+    addItem,
+    updateItemQuantity,
+    removeItem,
+    emptyCart } = useCart();
     const onBackClick = (e) => {
     e.preventDefault();
     navigate("/school")
@@ -170,37 +178,37 @@ if(size==18){
     setQuantity(e.target.value)
   }
 
-  const handleAddToCart = () => {
-    const item = {
-      image:schoolProd.image,
-      cost:schoolProd.cost,
-      quantity:quantity,
-      title:schoolProd.title,
-      id:schoolProd.id
-    };
+  // const addItem = () => {
+  //   const item = {
+  //     image:schoolProd.image,
+  //     cost:schoolProd.cost,
+  //     quantity:quantity,
+  //     title:schoolProd.title,
+  //     id:schoolProd.id
+  //   };
 
-    addItem(item);
-    console.log('Item added to cart:', item);
-    console.log(item.quantity);
+  //   updateItemQuantity(item);
+  //   console.log('Item added to cart:', item);
+  //   console.log(item.quantity);
 
-    // POST item to Cartitems endpoint
-    fetch('http://localhost:4000/cart', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(item)
-    })
-      .then((response) => response.json())
-      .then(() => {
-        myToastAdded()
+  //   // POST item to Cartitems endpoint
+  //   fetch('http://localhost:4000/cart', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(item)
+  //   })
+  //     .then((response) => response.json())
+  //     .then(() => {
+  //       myToastAdded()
 
-      })
-      .catch((error) => {
-        myToastFailed()
+  //     })
+  //     .catch((error) => {
+  //       myToastFailed()
 
-      });
-  };
+  //     });
+  // };
   // const addToCart=()=>{
   //   const items ={
       // image:schoolProd.image,
@@ -264,10 +272,12 @@ if(size==18){
 
                 <hr />
                 <label className='bg-black text-white p-1' htmlFor="quantity">Quantity</label><input type="number" name="qty" id="quantity" value={quantity} onChange={quantityChange} />
-
+                <h5>
+            Cart ({totalUniqueItems}) total Items: ({totalItems})
+          </h5>
                 <div className='row container pt-5 mt-5'>
                 <CartProvider>
-                  <button onClick={handleAddToCart} className='col-lg-4 me-1 bg-black text-white'>Add to Cart</button>
+                  <button onClick={()=>updateItemQuantity(schoolProd)} className='col-lg-4 me-1 bg-black text-white'>Add to Cart</button>
                   </CartProvider>
                   <button className='col-lg-4 ms-1 bg-black text-white'>Buy Now</button>
 
