@@ -37,7 +37,7 @@ root.render(
       <Route path='/login' element={<Login />}/>
       <Route path='/schoolUniforms' element={<SchoolUniforms/>}/>
       <Route path='/schooluniformproduct' element={<SchoolUniformProducts/>}/>
-      <Route path="/schooluniformproduct/:id" component={SchoolUniformProducts} />
+      <Route path="/schooluniformproduct/:id" element={<SchoolUniformProducts/>} />
       </Routes>
 
     <FooterNavBar />

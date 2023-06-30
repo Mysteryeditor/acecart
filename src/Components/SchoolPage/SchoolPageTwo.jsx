@@ -11,7 +11,7 @@ import { Container } from '@mui/material';
 const SchoolUniforms = () => {
 
   const [uniforms, setUniforms] = useState([]);
-  const id=useParams();
+
    const fetchData = () => {
     fetch("http://localhost:4000/uniforms")
       .then((response) => {
