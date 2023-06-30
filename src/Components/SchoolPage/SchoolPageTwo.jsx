@@ -64,7 +64,7 @@ const SchoolUniforms = () => {
               {uniforms.map((uniform) => (
                 <div className='col-lg-4 justify-content-center d-flex'>
                   <Link to={`/schooluniformproduct/${uniform.id}`} key={uniform.id}>
-                  <Card className='border-0 mt-5' key={uniform.id} >
+                  <Card className='border-0 mt-5' key={uniform.id}>
                     <Card.Img variant="top" className='UniCardImg' src={uniform.image} />
                     <Card.Body >
                       <Card.Text >

@@ -1,98 +1,98 @@
 {
   "uniforms": [
-    {
-      "1": {
+    
+       {
         "id": 1,
         "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/627bd600820ea897cb5a5cfc/webp/day-wear-polos-480x480.jpg",
         "name": "Day wear POLO",
         "title": "NHIS Day Wear Polo [Boys & Girls, Nursery-Grade 5]",
-        "product code":[],
+        "productcode":["NHISDWT18"],
         "brand": "ACECRAFT",
-        "sold by": "Alchemy",
-        "cost": [340,360,400,430],
-        "actual cost": [450,475,525,550],
-        "offer": [24,22],
+        "soldby": "Alchemy",
+        "cost": [340],
+        "actualcost": [450],
+        "offer": [24],
         "size": [18,20,22,24,26,28,30,32,34],
-        "stock":[19,52,7,2,0,17,5,13,2],
+        "stock":[19],
         "quantity": 1,
         "material": "Made from Poly-cotton. Polo Tshirt. Short sleeves."
       },
-      "2": {
+       {
         "id": 2,
         "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
         "name": "CIS Royal Day Wear(Grade 1-5)",
         "title": "",
-        "product code": "",
+        "productcode": "",
         "brand": "",
-        "sold by": "",
+        "soldby": "",
         "cost": "",
-        "actual cost": "",
+        "actualcost": "",
         "offer": "",
         "size": "",
         "quantity": "",
         "material": ""
       },
-      "3": {
+      {
         "id": 3,
         "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f798f04705ab2ca347bb/images/5aa0f798f04705ab2ca347bc/5aa0f79ff04705ab2ca347d7/webp/5aa0f79ff04705ab2ca347d7-480x480.jpg",
         "name": "NHG Shirt[Girls, Grade 1-10]",
         "title": "",
-        "product code": "",
+        "productcode": "",
         "brand": "",
-        "sold by": "",
+        "soldby": "",
         "cost": "",
-        "actual cost": "",
+        "actualcost": "",
         "offer": "",
         "size": "",
         "quantity": "",
         "material": ""
       },
-      "4": {
+      {
         "id": 4,
         "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/601d6ffdbb47db6b5e246674/webp/middle-school-480x480.jpg",
         "name": "CIS Sky Day Wear",
         "title": "",
-        "product code": "",
+        "productcode": "",
         "brand": "",
-        "sold by": "",
+        "soldby": "",
         "cost": "",
-        "actual cost": "",
+        "actualcost": "",
         "offer": "",
         "size": "",
         "quantity": "",
         "material": ""
       },
-      "5": {
+       {
         "id": 5,
         "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f5c6f04705ab2ca345c6/images/5aa0f5c6f04705ab2ca345c7/5aa0f5d0f04705ab2ca345f9/webp/5aa0f5d0f04705ab2ca345f9-480x480.jpg",
         "name": "NHG Shirt",
         "title": "",
-        "product code": "",
+        "productcode": "",
         "brand": "",
-        "sold by": "",
+        "soldby": "",
         "cost": "",
-        "actual cost": "",
+        "actualcost": "",
         "offer": "",
         "size": "",
         "quantity": "",
         "material": ""
       },
-      "6": {
+      {
         "id": 6,
         "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/627b614a77743f91a456432d/webp/front-view-nhg-shirt-girls-grade-11-12--480x480.jpg",
         "name": "NHG County Shirt",
         "title": "",
-        "product code": "",
+        "productcode": "",
         "brand": "",
-        "sold by": "",
+        "soldby": "",
         "cost": "",
-        "actual cost": "",
+        "actualcost": "",
         "offer": "",
         "size": "",
         "quantity": "",
         "material": ""
       }
-    }
+    
     
   ],
   "Blogs": [
