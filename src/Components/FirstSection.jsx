@@ -51,7 +51,9 @@ function HomePage() {
                 "& .settingImage:hover": {
 
                 }
-              }} src={settingImage} alt="" />     <Badge className='badge' sx={{
+              }} src={settingImage} alt="" />    
+              
+              <Link to='/cart'> <Badge className='badge' sx={{
                 "& .MuiBadge-badge": {
                   color: "gray",
                   backgroundColor: "#d0d5db"
@@ -61,7 +63,8 @@ function HomePage() {
                   backgroundColor: "black"
                 }
               }} badgeContent={0} showZero>
-                  <i class="mx-1 fs-5 fa-solid fa-cart-shopping text-white"></i></Badge>
+                  
+                  <i class="mx-1 fs-5 fa-solid fa-cart-shopping text-white" ></i></Badge></Link>
               </div>
             </Navbar.Collapse>
           </Container>

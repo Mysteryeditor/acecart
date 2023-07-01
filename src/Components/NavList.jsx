@@ -10,7 +10,7 @@ const Settings = (e) => {
   const [log, setLog] = useState(false)
   const [display, setDisplay] = useState('block')
   const [logoutDisplay,setLogoutDisplay]=useState('none')
-  var Fname,Lname,email,password,category,dname,dcode,city,state,gst,id;
+  var Fname,Lname,email,password,category,dname,dcode,city,state,gst,id,cart;
   const myToastPass = () => toast.success("Logged out!!!", {
     position: "top-center",
     autoClose: 5000,
@@ -38,6 +38,7 @@ const logout=()=>{
               city = response.data[0].city;
               state = response.data[0].state;
               gst = response.data[0].gst;
+              cart=response.data[0].cart;
               id=response.data[0].id;
 
               console.log("ID value is" + id)
@@ -53,6 +54,7 @@ const logout=()=>{
             city: city,
             state: state,
             gst: gst,
+            cart:cart,
             isLogged: false
 
           })

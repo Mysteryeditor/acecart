@@ -5,15 +5,15 @@ import HomePage from './Components/FirstSection';
 import SecondSection from './Components/SecondSection';
 import { Route,Routes } from 'react-router-dom';
 import SchoolPage from './Components/SchoolPage/SchoolPage';
+import { CartProvider } from 'react-use-cart';
+import SchoolUniformProducts from './Components/SchoolPage/SchoolProductsSecond';
 
 function App() {
   return (
     <div className="App">
-        <HomePage />
-        <Routes>
-          <Route exact path='/' element={<SecondSection />} />
-          <Route path="/school" element={<SchoolPage />} />
-        </Routes>
+        <CartProvider>
+        <SchoolUniformProducts></SchoolUniformProducts>
+        </CartProvider>
     </div>
   );
 }

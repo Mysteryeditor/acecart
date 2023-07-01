@@ -17,8 +17,11 @@ import Register from './Components/SettingComponents/Register';
 import Login from './Components/SettingComponents/Login';
 import SchoolUniforms from './Components/SchoolPage/SchoolPageTwo';
 import SchoolUniformProducts from './Components/SchoolPage/SchoolProductsSecond';
+import { CartProvider } from 'react-use-cart';
+import Cart from './Components/Cart/Cart';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <CartProvider>
   <BrowserRouter>
     <HomePage />
 
@@ -38,10 +41,12 @@ root.render(
       <Route path='/schoolUniforms' element={<SchoolUniforms/>}/>
       <Route path='/schooluniformproduct' element={<SchoolUniformProducts/>}/>
       <Route path="/schooluniformproduct/:id" element={<SchoolUniformProducts/>} />
+      <Route path='/cart' element={<Cart/>}/>
       </Routes>
 
     <FooterNavBar />
   </BrowserRouter>
+  </CartProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

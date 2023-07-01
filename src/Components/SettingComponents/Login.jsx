@@ -13,7 +13,7 @@ const Login = () => {
   const [uname, setUname] = useState('');
   const [pwd, setPwd] = useState('');
 
-  var Fname,Lname,email,password,category,dname,dcode,city,state,gst,cart,id;
+  var Fname, Lname, email, password, category, dname, dcode, city, state, gst, cart, id;
 
   const myToastFail = () => toast.error('Please check the username and the password!', {
     position: "top-center",
@@ -66,11 +66,12 @@ const Login = () => {
               city = response.data[0].city;
               state = response.data[0].state;
               gst = response.data[0].gst;
-              cart=response.data[0].cart;
-              id=response.data[0].id;
+              cart = response.data[0].cart;
+              id = response.data[0].id;
 
               console.log("ID value is" + Fname)
             })
+            
           axios.put(`http://localhost:4000/register/${id}`, {
             fname: Fname,
             lname: Lname,
@@ -82,14 +83,14 @@ const Login = () => {
             city: city,
             state: state,
             gst: gst,
-            cart:cart,
+            cart: cart,
             isLogged: true
 
           })
             .then((response) => {
-             console.log(Fname)
-                myToastPass();
-             
+              console.log(Fname)
+              myToastPass();
+
             })
             .catch(err => console.error("Wasn't able to update property.", err))
 

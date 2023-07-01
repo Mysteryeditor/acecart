@@ -6,10 +6,11 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/SchoolProductsSecond.css'
 import axios from 'axios';
-import { ToastContainer,toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import { CartProvider, useCart } from 'react-use-cart';
 const SchoolUniformProducts = () => {
 
+  var Fname, Lname, email, password, category, dname, dcode, city, state, gst, cart, resid;
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -17,8 +18,8 @@ const SchoolUniformProducts = () => {
   const [size, setSize] = useState(18);
   const [schoolProd, setSchoolProd] = useState(null)
   const [carImg, setCarImg] = useState(null);
-  const [quantity,setQuantity]=useState(1);
-  const {  isEmpty,
+  const [quantity, setQuantity] = useState(1);
+  const { isEmpty,
     totalUniqueItems,
     items,
     totalItems,
@@ -27,29 +28,29 @@ const SchoolUniformProducts = () => {
     updateItemQuantity,
     removeItem,
     emptyCart } = useCart();
-    const onBackClick = (e) => {
+  const onBackClick = (e) => {
     e.preventDefault();
     navigate("/school")
   }
-  const myToastAdded =()=>toast.success("Successfully add to cart!",{
+  const myToastAdded = () => toast.success("Successfully add to cart!", {
     position: "top-center",
     autoClose: 5000,
     hideProgressBar: true,
     closeOnClick: true,
     pauseOnHover: false,
     draggable: false,
-    closeButton:false,
-    theme:"colored"
+    closeButton: false,
+    theme: "colored"
   })
-  const myToastFailed=()=>toast.error("Failed to add!",{
+  const myToastFailed = () => toast.error("Failed to add!", {
     position: "top-center",
     autoClose: 5000,
     hideProgressBar: true,
     closeOnClick: true,
     pauseOnHover: false,
     draggable: false,
-    closeButton:false,
-    theme:"colored"
+    closeButton: false,
+    theme: "colored"
   })
 
 
@@ -136,46 +137,46 @@ const SchoolUniformProducts = () => {
 
 
   }
- const productOffer=(size,offer)=>{
+  const productOffer = (size, offer) => {
 
-  if (size >= 18 && size <= 30) {
+    if (size >= 18 && size <= 30) {
 
-    return (offer)
+      return (offer)
 
-  } 
-  else if (size >= 32 && size <= 34)
-    
-  return (parseInt(offer = offer - 2))
+    }
+    else if (size >= 32 && size <= 34)
 
+      return (parseInt(offer = offer - 2))
 
- }
-
- const productCode=(size,prodCode)=>{
-  console.log(prodCode[2])
-  console.log(size)
-if(size==18){
-  return prodCode[0]
-}else if(size==20){
-  return prodCode[1]
-}else if(size==22){
-  return prodCode[2]
-}else if(size==24){
-  return prodCode[3]
-}else if(size==26){
-  return prodCode[4]
-}else if(size==28){
-  return prodCode[5]
-}else if(size==30){
-  return prodCode[6]
-}else if(size==32){
-  return prodCode[7]
-}else if(size==34){
-  return prodCode[8]
-}
 
   }
-  const quantityChange=(e)=>{
-    setQuantity(e.target.value)
+
+  const productCode = (size, prodCode) => {
+    console.log(prodCode[2])
+    console.log(size)
+    if (size == 18) {
+      return prodCode[0]
+    } else if (size == 20) {
+      return prodCode[1]
+    } else if (size == 22) {
+      return prodCode[2]
+    } else if (size == 24) {
+      return prodCode[3]
+    } else if (size == 26) {
+      return prodCode[4]
+    } else if (size == 28) {
+      return prodCode[5]
+    } else if (size == 30) {
+      return prodCode[6]
+    } else if (size == 32) {
+      return prodCode[7]
+    } else if (size == 34) {
+      return prodCode[8]
+    }
+
+  }
+  const quantityChange = (e) => {
+    updateItemQuantity(e.target.value)
   }
 
   // const addItem = () => {
@@ -209,34 +210,69 @@ if(size==18){
 
   //     });
   // };
-  // const addToCart=()=>{
-  //   const items ={
-      // image:schoolProd.image,
-      // cost:schoolProd.cost,
-      // quantity:quantity,
-      // title:schoolProd.title,
-      // id:schoolProd.id
-  //   }
-  //   addItem(items)
-  //   .catch((err)=>{
-  //     console.log(err)
-  //   })
+  const addToCart = (e) => {
+    const items = {
+      image: e.image,
+      price: e.cost,
+      quantity: totalItems+1,
+      title: e.title,
+      id: e.id
+    }
+    addItem(items)
+    axios.get("http://localhost:4000/register?isLogged_like=true")
+      .then((res) => {
+        console.log(res.data[0].cart)
+        Fname = res.data[0].firstName;
+        Lname = res.data[0].lastName;
+        email = res.data[0].email;
+        password = res.data[0].password;
+        category = res.data[0].category;
+        dname = res.data[0].dname;
+        dcode = res.data[0].dcode;
+        city = res.data[0].city;
+        state = res.data[0].state;
+        gst = res.data[0].gst;
+        cart = res.data[0].cart;
+        resid = res.data[0].id;
+        console.log(resid)
+      })
+      .then(()=>{
+        axios.put(`http://localhost:4000/register/${resid}`, {
+          fname: Fname,
+          lname: Lname,
+          email: email,
+          password: password,
+          category: category,
+          dname: dname,
+          dcode: dcode,
+          city: city,
+          state: state,
+          gst: gst,
+          cart: items,
+          isLogged: true
+          
+        })
+          .then((response) => {
+    
+            myToastAdded()
+    
+          })
+          .catch((error) => {
+            console.log(error)
+            myToastFailed()
+          })
+    
+      })  .catch((error) => {
+        console.log(error)
+      })
 
-  //     axios.post("http://localhost:4000/cart",{
-  //       items
-  //     })
-  //     .then((response)=>{
-  //       myToastAdded()
-  //     })
-  //     .catch((error)=>{
-  //       myToastFailed()
-  //           })
+    
+    
 
-  
-  // }
+  }
 
- 
- 
+
+
 
 
   return (
@@ -254,11 +290,11 @@ if(size==18){
               <div className='col-lg-6 col-md-6 col-sm-6 col-xl-6 pt-5 mt-5 text-black'>
                 <h1>{schoolProd.title}</h1>
 
-                <h5>Product code: {productCode(size,schoolProd.productcode)}</h5>
+                <h5>Product code: {productCode(size, schoolProd.productcode)}</h5>
                 <h5>Brand: {schoolProd.brand}</h5>
                 <h5>Sold By: {schoolProd.soldby}</h5>
                 <h1>&#8377;{productCounter(schoolProd.cost, schoolProd.offer)}<span className='h5'><del>&#8377;{productCounter(schoolProd.actualcost, schoolProd.offer)}</del></span></h1>
-                <h6>{productOffer(size,schoolProd.offer)}% OFF</h6>
+                <h6>{productOffer(size, schoolProd.offer)}% OFF</h6>
 
                 <hr />
 
@@ -273,11 +309,11 @@ if(size==18){
                 <hr />
                 <label className='bg-black text-white p-1' htmlFor="quantity">Quantity</label><input type="number" name="qty" id="quantity" value={quantity} onChange={quantityChange} />
                 <h5>
-            Cart ({totalUniqueItems}) total Items: ({totalItems})
-          </h5>
+                  Cart ({totalUniqueItems}) total Items: ({totalItems})
+                </h5>
                 <div className='row container pt-5 mt-5'>
-                <CartProvider>
-                  <button onClick={()=>updateItemQuantity(schoolProd)} className='col-lg-4 me-1 bg-black text-white'>Add to Cart</button>
+                  <CartProvider>
+                    <button onClick={() => addToCart(schoolProd)} className='col-lg-4 me-1 bg-black text-white'>Add to Cart</button>
                   </CartProvider>
                   <button className='col-lg-4 ms-1 bg-black text-white'>Buy Now</button>
 
@@ -342,7 +378,7 @@ if(size==18){
 
       <button onClick={onBackClick}>Go back to the uniforms</button>
 
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   )
 
