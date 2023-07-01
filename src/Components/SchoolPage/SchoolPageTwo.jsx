@@ -68,7 +68,7 @@ const SchoolUniforms = () => {
                     <Card.Img variant="top" className='UniCardImg' src={uniform.image} />
                     <Card.Body >
                       <Card.Text >
-                        <label className='pt-5 Proxima text-black uniName text-decoration-none'>{uniform.name}</label>
+                        <label className='pt-5 Proxima text-black uniName text-decoration-none'>{uniform.title}</label>
                       </Card.Text>
                     </Card.Body>
                   </Card>

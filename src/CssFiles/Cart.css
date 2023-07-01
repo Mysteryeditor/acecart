@@ -21,3 +21,16 @@
 .ProximaThin{
     font-family: ProximaThin;
 }
+.clr-f8f{
+    color: #978f8f;
+}
+.contShop{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+.contShopLink{
+    text-decoration: none;
+}

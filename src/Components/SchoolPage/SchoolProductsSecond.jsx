@@ -216,8 +216,10 @@ const SchoolUniformProducts = () => {
       price: e.cost,
       quantity: totalItems+1,
       title: e.title,
+      size:size,
       id: e.id
     }
+    console.log(size)
     addItem(items)
     axios.get("http://localhost:4000/register?isLogged_like=true")
       .then((res) => {

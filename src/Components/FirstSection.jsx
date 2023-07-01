@@ -8,17 +8,24 @@ import settingImage from 'C:/Users/cgvak/Desktop/React/acecart/src/Assets/images
 import Badge from '@mui/material/Badge';
 import Settings from './NavList';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import axios from 'axios';
 
 function HomePage() {
   const [isHovering, setIsHovering] = useState(false);
-
+  const [cartBadge,setCartBadge] = useState(0)
   const handleMouseOver = () => {
     setIsHovering(!isHovering);
   }
   const handleMouseOut = () => {
     setIsHovering(false);
   }
-
+useEffect(()=>{
+  axios.get("http://localhost:4000/register?isLogged_like=true")
+  .then((response)=>{
+    setCartBadge(response.data[0].cart.quantity)
+  })
+},[])
 
   return (
 
@@ -47,7 +54,7 @@ function HomePage() {
                   Link
                 </Nav.Link>
               </Nav>
-              <div>      <img onClick={handleMouseOver} className='settingImage mx-3' sx={{
+              <div className='me-2'>      <img onClick={handleMouseOver} className='settingImage mx-3' sx={{
                 "& .settingImage:hover": {
 
                 }
@@ -62,9 +69,9 @@ function HomePage() {
                   color: "white",
                   backgroundColor: "black"
                 }
-              }} badgeContent={0} showZero>
+              }} badgeContent={cartBadge} showZero>
                   
-                  <i class="mx-1 fs-5 fa-solid fa-cart-shopping text-white" ></i></Badge></Link>
+                  <i class=" fs-5 fa-solid fa-cart-shopping text-white" ></i></Badge></Link>
               </div>
             </Navbar.Collapse>
           </Container>
