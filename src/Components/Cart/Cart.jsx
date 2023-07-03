@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/Cart.css'
 
 const Cart = () => {
-    const { isEmpty, updateItemQuantity, removeItem, totalItems, totalUniqueItems, cartTotal } = useCart()
+    const { isEmpty, updateItemQuantity, removeItem, totalItems, totalUniqueItems, cartTotal ,emptyCart} = useCart()
     const [id, setId] = useState('');
     const [cartProducts, setCartProducts] = useState('')
     const [quantity, setQuantity] = useState(1)
@@ -43,8 +43,8 @@ const remove=(e)=>{
         const fetchData = () => {
             axios.get("http://localhost:4000/register?isLogged_like=true")
                 .then((response) => {
-                    setFname(response.data[0].firstName)
-                    setLname(response.data[0].lastName)
+                    setFname(response.data[0].fname)
+                    setLname(response.data[0].lname)
                     setemail(response.data[0].email)
                     setpassword(response.data[0].password)
                     setcategory(response.data[0].category)
@@ -90,7 +90,8 @@ const remove=(e)=>{
 
                 <hr />
 
-                <div>{cartProducts.length>0 &&
+                <div>
+                    {cartProducts.length>0 &&
                     <table className='mb-5'>
 
 {cartProducts.map((prod)=>(
@@ -116,12 +117,13 @@ const remove=(e)=>{
 
                             </div>
 <hr />
+<button className='btn btn-warning' onClick={emptyCart}>Empty cart</button>
 
                         </div></tr>
 
 ))}
                     </table>
-                    }
+                    } 
                     <div className='row container'>
                     <div className='mb-4 col-lg-5 container'>
                     <h5 className='Proxima container'>Enter Coupon Code here:</h5>

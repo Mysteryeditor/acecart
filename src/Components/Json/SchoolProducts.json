@@ -506,13 +506,32 @@
       "city": "Coimbatore",
       "state": "Tamil Nadu",
       "gst": "789",
-      "cart": {
-        "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-        "quantity": 12,
-        "title": "CIS Royal Day Wear (Grade 1-5)",
-        "size": 18,
-        "id": 1
-      },
+      "cart": [
+        {
+          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
+          "price": 450,
+          "quantity": 85,
+          "title": "CIS Royal Day Wear (Grade 1-5)",
+          "size": 18,
+          "id": 1
+        },
+        {
+          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
+          "price": 450,
+          "quantity": 86,
+          "title": "CIS Royal Day Wear (Grade 1-5)",
+          "size": 18,
+          "id": 1
+        },
+        {
+          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
+          "price": 450,
+          "quantity": 1,
+          "title": "CIS Royal Day Wear (Grade 1-5)",
+          "size": 18,
+          "id": 1
+        }
+      ],
       "isLogged": true,
       "id": 1
     },

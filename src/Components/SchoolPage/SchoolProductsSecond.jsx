@@ -10,7 +10,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import { CartProvider, useCart } from 'react-use-cart';
 const SchoolUniformProducts = () => {
 
-  var Fname, Lname, email, password, category, dname, dcode, city, state, gst, cart, resid;
+  var Fname, Lname, email, password, category, dname, dcode, city, state, gst, resid;
+  var cart = []
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -211,16 +212,19 @@ const SchoolUniformProducts = () => {
   //     });
   // };
   const addToCart = (e) => {
-    const items = {
-      image: e.image,
-      price: e.cost,
-      quantity: totalItems+1,
-      title: e.title,
-      size:size,
-      id: e.id
+   const items={
+    image: e.image,
+    price: e.cost,
+    quantity: totalItems+1,
+    title: e.title,
+    size:size,
+    id:e.id
     }
-    console.log(size)
+
+
+    console.log(schoolProd.id)
     addItem(items)
+    
     axios.get("http://localhost:4000/register?isLogged_like=true")
       .then((res) => {
         console.log(res.data[0].cart)
@@ -234,9 +238,15 @@ const SchoolUniformProducts = () => {
         city = res.data[0].city;
         state = res.data[0].state;
         gst = res.data[0].gst;
-        cart = res.data[0].cart;
+       cart=res.data[0].cart;
+       console.log()
+       if(!cart.includes(items.id)){
+       cart.push(items)
+
+       }
         resid = res.data[0].id;
         console.log(resid)
+        console.log("Cart vandhu "+res.data[0].cart[0].image)
       })
       .then(()=>{
         axios.put(`http://localhost:4000/register/${resid}`, {
@@ -250,7 +260,7 @@ const SchoolUniformProducts = () => {
           city: city,
           state: state,
           gst: gst,
-          cart: items,
+          cart:cart,
           isLogged: true
           
         })
