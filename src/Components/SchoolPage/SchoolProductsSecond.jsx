@@ -224,7 +224,8 @@ const SchoolUniformProducts = () => {
 
     console.log(schoolProd.id)
     addItem(items)
-    
+    var count=false
+
     axios.get("http://localhost:4000/register?isLogged_like=true")
       .then((res) => {
         console.log(res.data[0].cart)
@@ -240,10 +241,21 @@ const SchoolUniformProducts = () => {
         gst = res.data[0].gst;
        cart=res.data[0].cart;
        console.log()
-       if(!cart.includes(items.id)){
-       cart.push(items)
+       const checker=()=>{
+       
+          if(cart.includes(items.id)){
+            count=true
+          
+          console.log("True or false"+count)
+         }
 
+         if(count===true){
+          cart.push(items)
+         }
        }
+       checker();
+       
+    
         resid = res.data[0].id;
         console.log(resid)
         console.log("Cart vandhu "+res.data[0].cart[0].image)
