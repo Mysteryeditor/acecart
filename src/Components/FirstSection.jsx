@@ -25,6 +25,9 @@ useEffect(()=>{
   .then((response)=>{
     setCartBadge(response.data[0].cart.quantity)
   })
+  .catch((err)=>{
+   console.log(err)
+  })
 },[])
 
   return (

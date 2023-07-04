@@ -7,11 +7,13 @@ import Card from 'react-bootstrap/Card';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/SchoolUniforms.css';
 import { Badge } from 'react-bootstrap';
 import { Container } from '@mui/material';
+import sortBy from 'sort-by';
 
 const SchoolUniforms = () => {
 
   const [uniforms, setUniforms] = useState([]);
 
+  
    const fetchData = () => {
     fetch("http://localhost:4000/uniforms")
       .then((response) => {
@@ -48,8 +50,8 @@ const SchoolUniforms = () => {
   <div className='col-lg-9 justify-content-end d-flex'>
   <select name="sort" id="sort" className='Proxima p-1'>
     <option value="" disabled>Sort by:</option>
-    <option value="Low To High">Price: Low To High</option>
-    <option value="High To Low">Price: High To Low</option>
+    <option value="LowToHigh">Price: Low To High</option>
+    <option value="HighToLow">Price: High To Low</option>
     <option value="Ascending">Name: Ascending order</option>
     <option value="Descending">Name: Descending order</option>
   </select>

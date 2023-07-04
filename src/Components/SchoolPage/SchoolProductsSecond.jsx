@@ -212,21 +212,21 @@ const SchoolUniformProducts = () => {
   //     });
   // };
   const addToCart = (e) => {
-   const items={
-    image: e.image,
-    price: e.cost,
-    quantity: totalItems+1,
-    title: e.title,
-    size:size,
-    id:e.id
+    const items = {
+      image: e.image,
+      price: e.cost,
+      quantity: totalItems + 1,
+      title: e.title,
+      size: size,
+      id: e.id
     }
 
 
     console.log(schoolProd.id)
-    addItem(items)
-    var count=false
+    // addItem(items)
 
-    axios.get("http://localhost:4000/register?isLogged_like=true")
+
+    axios.get("http://localhost:4000/register?isLogged=true")
       .then((res) => {
         console.log(res.data[0].cart)
         Fname = res.data[0].firstName;
@@ -239,28 +239,45 @@ const SchoolUniformProducts = () => {
         city = res.data[0].city;
         state = res.data[0].state;
         gst = res.data[0].gst;
-       cart=res.data[0].cart;
-       console.log()
-       const checker=()=>{
-       
-          if(cart.includes(items.id)){
-            count=true
-          
-          console.log("True or false"+count)
-         }
+        cart = res.data[0].cart;
+        console.log("cart oda value " + cart)
+        const checker = () => {
+          var count = false
 
-         if(count===true){
-          cart.push(items)
-         }
-       }
-       checker();
-       
-    
+          for (const obj of cart) {
+            if (obj.id == items.id) {
+              for (let i = 0; i <= cart.length; i++) {
+                if(cart[i].id == obj.id) {
+                  cart[i].quantity += 1;
+                  console.log(cart[i].quantity)
+                  break;
+                } else {
+                  count = true
+                }
+              }
+            }
+          }
+          if (count == false) {
+            cart.push(items)
+            myToastAdded()
+
+            console.log("True or false" + count)
+          } else {
+            console.log("True or false" + count)
+            console.log("Cart idhudhan " + cart.data)
+            console.log("Items idhudhan " + items.data)
+
+            console.log("Already added")
+          }
+        }
+        checker();
+
+
         resid = res.data[0].id;
         console.log(resid)
-        console.log("Cart vandhu "+res.data[0].cart[0].image)
+        console.log("Cart vandhu " + res.data[0].cart[0].image)
       })
-      .then(()=>{
+      .then(() => {
         axios.put(`http://localhost:4000/register/${resid}`, {
           fname: Fname,
           lname: Lname,
@@ -272,26 +289,24 @@ const SchoolUniformProducts = () => {
           city: city,
           state: state,
           gst: gst,
-          cart:cart,
+          cart: cart,
           isLogged: true
-          
+
         })
           .then((response) => {
-    
-            myToastAdded()
-    
+
+
+
           })
           .catch((error) => {
             console.log(error)
             myToastFailed()
           })
-    
-      })  .catch((error) => {
-        console.log(error)
+
       })
 
-    
-    
+
+
 
   }
 

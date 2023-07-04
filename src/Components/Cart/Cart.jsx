@@ -8,25 +8,25 @@ import { Link } from 'react-router-dom'
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/Cart.css'
 
 const Cart = () => {
-    const { isEmpty, updateItemQuantity, removeItem, totalItems, totalUniqueItems, cartTotal ,emptyCart} = useCart()
+    const { isEmpty, updateItemQuantity, removeItem, totalItems, totalUniqueItems, cartTotal, emptyCart } = useCart()
     const [id, setId] = useState('');
     const [cartProducts, setCartProducts] = useState('')
     const [quantity, setQuantity] = useState(1)
-    const [Fname,setFname] = useState('')
-    const [Lname,setLname] = useState('')
+    const [Fname, setFname] = useState('')
+    const [Lname, setLname] = useState('')
 
-    const [email,setemail] = useState('')
-    const [password,setpassword] = useState('')
-    const [category,setcategory] = useState('')
-    const [dname,setdname] = useState('')
-    const [dcode,setdcode] = useState('')
-    const [city,setcity] = useState('')
-    const [state,setstate] = useState('')
-    const [gst,setgst] = useState('')
+    const [email, setemail] = useState('')
+    const [password, setpassword] = useState('')
+    const [category, setcategory] = useState('')
+    const [dname, setdname] = useState('')
+    const [dcode, setdcode] = useState('')
+    const [city, setcity] = useState('')
+    const [state, setstate] = useState('')
+    const [gst, setgst] = useState('')
 
-const remove=(e)=>{
-    removeItem(e)
-}
+    const remove = (e) => {
+        removeItem(e)
+    }
 
 
 
@@ -34,12 +34,12 @@ const remove=(e)=>{
         const items = {
             image: cartProducts.image,
             price: cartProducts.cost,
-            quantity: totalItems+1,
+            quantity: totalItems + 1,
             title: cartProducts.title,
-            size:cartProducts.size,
+            size: cartProducts.size,
             id: cartProducts.id
-          }
-          console.log("TI"+id)
+        }
+        console.log("TI" + id)
         const fetchData = () => {
             axios.get("http://localhost:4000/register?isLogged_like=true")
                 .then((response) => {
@@ -57,7 +57,7 @@ const remove=(e)=>{
                     setCartProducts(response.data[0].cart)
                     console.log(response.data[0])
                 })
-                .then(()=>{
+                .then(() => {
                     axios.put(`http://localhost:4000/register/${id}`, {
                         fname: Fname,
                         lname: Lname,
@@ -71,11 +71,14 @@ const remove=(e)=>{
                         gst: gst,
                         cart: items,
                         isLogged: true
-                        
-                      })
-                      .catch((err)=>{
-                        console.log()
-                      })
+
+                    })
+                        .catch((err) => {
+                            return (<h1>Please login first</h1>)
+                        })
+                })
+                .catch(() => {
+                    return (<h1>Please login first</h1>)
                 })
 
         }
@@ -91,54 +94,54 @@ const remove=(e)=>{
                 <hr />
 
                 <div>
-                    {cartProducts.length>0 &&
-                    <table className='mb-5'>
+                    {cartProducts.length > 0 &&
+                        <table className='mb-5'>
 
-{cartProducts.map((prod)=>(
-                        <tr >  <div key={prod.id} className='container'>
-                            {console.log(prod.image)}
+                            {cartProducts.map((prod) => (
+                                <tr >  <div key={prod.id} className='container'>
+                                    {console.log(prod.image)}
 
-                            <div className='row'>
-                                <div className='col-lg-4 col-md-4 col-sm-4 col-xl-4'>
-                                    <img src={`${prod.image}`} alt="" />
-                                </div>
-                                <div className='col-lg-4 col-md-4 col-sm-4 col-xl-4'>
-                                    <h4 className='ProximaBold'>{prod.title}</h4>
-                                    <h6 className='ProximaBold'>Size:{prod.size}</h6>
-                                </div>
-                                <div className='col-lg-2 col-sm-2 col-md-2 '>
-                                    <button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems - 1)}>-</button><label onChange={(e) => totalItems(e.target.value)} >{totalItems}</label><button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems + 1)}>+</button>
-                               {console.log("Tot it"+totalItems)}
-                                </div>
-                                <div className='col-lg-2 col-sm-2 col-md-2 '>
-                                    <h4><label>&#8377;{cartTotal}</label></h4>
-                                    <button className='bg-transparent border-0 text-danger Proxima' >Remove</button>
-                                </div>
+                                    <div className='row'>
+                                        <div className='col-lg-4 col-md-4 col-sm-4 col-xl-4'>
+                                            <img src={`${prod.image}`} alt="" />
+                                        </div>
+                                        <div className='col-lg-4 col-md-4 col-sm-4 col-xl-4'>
+                                            <h4 className='ProximaBold'>{prod.title}</h4>
+                                            <h6 className='ProximaBold'>Size:{prod.size}</h6>
+                                        </div>
+                                        <div className='col-lg-2 col-sm-2 col-md-2 '>
+                                            <button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems - 1)}>-</button><label onChange={(e) => totalItems(e.target.value)} >{totalItems}</label><button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems + 1)}>+</button>
+                                            {console.log("Tot it" + totalItems)}
+                                        </div>
+                                        <div className='col-lg-2 col-sm-2 col-md-2 '>
+                                            <h4><label>&#8377;{cartTotal}</label></h4>
+                                            <button className='bg-transparent border-0 text-danger Proxima' >Remove</button>
+                                        </div>
 
-                            </div>
-<hr />
-<button className='btn btn-warning' onClick={emptyCart}>Empty cart</button>
+                                    </div>
+                                    <hr />
+                                    <button className='btn btn-warning' onClick={emptyCart}>Empty cart</button>
 
-                        </div></tr>
+                                </div></tr>
 
-))}
-                    </table>
-                    } 
+                            ))}
+                        </table>
+                    }
                     <div className='row container'>
-                    <div className='mb-4 col-lg-5 container'>
-                    <h5 className='Proxima container'>Enter Coupon Code here:</h5>
-                    <input type="text" className='w-75 py-1 Proxima' /><button className='bg-transparent border-1 px-3 py-1 Proxima' >Apply!</button>
-                    </div>
-                    <div className='col-lg-4 container'><h4 className='ProximaBold clr-f8f'>SubTotal</h4>
-                    <h4 className='ProximaBold'>Total</h4></div>
-                    <div className='col-lg-3 text-end ProximaBold container'><h6 className='clr-f8f'>&#8377;{cartTotal}</h6>
-                    <h3 className='ProximaBold '>&#8377;{cartTotal}</h3></div>
+                        <div className='mb-4 col-lg-5 container'>
+                            <h5 className='Proxima container'>Enter Coupon Code here:</h5>
+                            <input type="text" className='w-75 py-1 Proxima' /><button className='bg-transparent border-1 px-3 py-1 Proxima' >Apply!</button>
+                        </div>
+                        <div className='col-lg-4 container'><h4 className='ProximaBold clr-f8f'>SubTotal</h4>
+                            <h4 className='ProximaBold'>Total</h4></div>
+                        <div className='col-lg-3 text-end ProximaBold container'><h6 className='clr-f8f'>&#8377;{cartTotal}</h6>
+                            <h3 className='ProximaBold '>&#8377;{cartTotal}</h3></div>
 
                     </div>
-                   <div className='text-end mb-5 container'>
-                       <Link to='/' className='contShopLink text-black'> <span className='contShop p-2 Proxima'>Continue Shopping</span></Link>  <Link to='/placeorder' className='contShopLink text-black'><span className='contShop p-2 Proxima'>Place Order</span></Link>
-                        </div>
-                  
+                    <div className='text-end mb-5 container'>
+                        <Link to='/' className='contShopLink text-black'> <span className='contShop p-2 Proxima'>Continue Shopping</span></Link>  <Link to='/placeorder' className='contShopLink text-black'><span className='contShop p-2 Proxima'>Place Order</span></Link>
+                    </div>
+
                 </div>
 
 

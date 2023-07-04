@@ -26,20 +26,21 @@ const Login = () => {
     closeButton: false,
     theme: "colored"
   });
-  const myToastPass = () => toast.success("Successfully logged in", {
-    position: "top-center",
-    autoClose: 5000,
-    hideProgressBar: true,
-    closeOnClick: true,
-    pauseOnHover: false,
-    draggable: false,
-    progress: undefined,
-    closeButton: false,
-    theme: "colored"
-  })
+  // const myToastPass = () => toast.success("Successfully logged in", {
+  //   position: "top-center",
+  //   autoClose: 5000,
+  //   hideProgressBar: true,
+  //   closeOnClick: true,
+  //   pauseOnHover: false,
+  //   draggable: false,
+  //   progress: undefined,
+  //   closeButton: false,
+  //   theme: "colored"
+  // })
 
 
-  const fetchData = () => {
+  const fetchData = (e) => {
+    e.preventDefault();
     fetch('http://localhost:4000/register')
       .then((response) => response.json())
       .then((data) => {
@@ -52,11 +53,11 @@ const Login = () => {
 
         if (foundUser) {
 
-
           axios.get(`http://localhost:4000/register?email_like=${uname}`)
             .then((response) => {
-              Fname = response.data[0].firstName;
-              Lname = response.data[0].lastName;
+              console.log(uname)
+              Fname = response.data[0].fname;
+              Lname = response.data[0].lname;
               email = response.data[0].email;
               password = response.data[0].password;
               category = response.data[0].category;
@@ -68,33 +69,35 @@ const Login = () => {
               cart = response.data[0].cart;
               id = response.data[0].id;
 
-              console.log("ID value is" + Fname)
+              console.log("ID value is" + id)
+            })
+            .then(()=>{
+              axios.put(`http://localhost:4000/register/${id}`, {
+                fname: Fname,
+                lname: Lname,
+                email: email,
+                password: password,
+                category: category,
+                dname: dname,
+                dcode: dcode,
+                city: city,
+                state: state,
+                gst: gst,
+                cart: cart,
+                isLogged: true
+    
+              })
+                .then(()=>{
+                  history("/")
+
+                })
+                .catch(err => console.error("Wasn't able to update property.", err))
+    
+              console.log('Login success');
+    
             })
             
-          axios.put(`http://localhost:4000/register/${id}`, {
-            fname: Fname,
-            lname: Lname,
-            email: email,
-            password: password,
-            category: category,
-            dname: dname,
-            dcode: dcode,
-            city: city,
-            state: state,
-            gst: gst,
-            cart: cart,
-            isLogged: true
-
-          })
-            .then((response) => {
-              console.log(Fname)
-              myToastPass();
-
-            })
-            .catch(err => console.error("Wasn't able to update property.", err))
-
-          console.log('Login success');
-
+          
 
           // history("/")
         } else {
@@ -110,6 +113,7 @@ const Login = () => {
 
 
   }
+
 
 
 

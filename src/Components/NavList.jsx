@@ -28,8 +28,8 @@ const logout=()=>{
 
   axios.get(`http://localhost:4000/register/?isLogged_like=true`)
             .then((response) => {
-              Fname = response.data[0].firstName;
-              Lname = response.data[0].lastName;
+              Fname = response.data[0].fname;
+              Lname = response.data[0].lname;
               email = response.data[0].email;
               password = response.data[0].password;
               category = response.data[0].category;

@@ -48,7 +48,7 @@ root.render(
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/orderStatus' element={<OrderStatus />}/>
       <Route path='/ModalGIT' element={<ModalGIT />}/>
-      <Route path='/BlogNotes' element={<BlogNotes />}/>
+      <Route path='/BlogNotes/:id' element={<BlogNotes />}/>
 
       </Routes>
 
