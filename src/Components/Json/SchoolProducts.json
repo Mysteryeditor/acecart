@@ -510,90 +510,18 @@
         {
           "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
           "price": 450,
-          "quantity": 38,
+          "quantity": 3,
           "title": "CIS Royal Day Wear (Grade 1-5)",
           "size": 18,
           "id": 1
         },
         {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-          "price": 450,
+          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f01491c2e5ab32f3385f/images/5aa0f01491c2e5ab32f33860/5aa0f01d91c2e5ab32f33897/webp/5aa0f01d91c2e5ab32f33897-640x640.jpg",
+          "price": 385,
           "quantity": 1,
-          "title": "CIS Royal Day Wear (Grade 1-5)",
+          "title": "NHG Shorts",
           "size": 18,
-          "id": 1
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-          "price": 450,
-          "quantity": 1,
-          "title": "CIS Royal Day Wear (Grade 1-5)",
-          "size": 18,
-          "id": 1
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-          "price": 450,
-          "quantity": 1,
-          "title": "CIS Royal Day Wear (Grade 1-5)",
-          "size": 18,
-          "id": 1
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-          "price": 450,
-          "quantity": 1,
-          "title": "CIS Royal Day Wear (Grade 1-5)",
-          "size": 18,
-          "id": 1
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-          "price": 450,
-          "quantity": 1,
-          "title": "CIS Royal Day Wear (Grade 1-5)",
-          "size": 18,
-          "id": 1
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-          "price": 450,
-          "quantity": 1,
-          "title": "CIS Royal Day Wear (Grade 1-5)",
-          "size": 18,
-          "id": 1
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-          "price": 450,
-          "quantity": 1,
-          "title": "CIS Royal Day Wear (Grade 1-5)",
-          "size": 18,
-          "id": 1
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-          "price": 450,
-          "quantity": 1,
-          "title": "CIS Royal Day Wear (Grade 1-5)",
-          "size": 18,
-          "id": 1
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-          "price": 450,
-          "quantity": 1,
-          "title": "CIS Royal Day Wear (Grade 1-5)",
-          "size": 18,
-          "id": 1
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-          "price": 450,
-          "quantity": 1,
-          "title": "CIS Royal Day Wear (Grade 1-5)",
-          "size": 18,
-          "id": 1
+          "id": 6
         }
       ],
       "isLogged": true,

@@ -249,10 +249,11 @@ const SchoolUniformProducts = () => {
               for (let i = 0; i <= cart.length; i++) {
                 if(cart[i].id == obj.id) {
                   cart[i].quantity += 1;
+                  count=true
                   console.log(cart[i].quantity)
                   break;
                 } else {
-                  count = true
+                  count = false
                 }
               }
             }
