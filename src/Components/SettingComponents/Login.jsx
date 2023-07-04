@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Card } from 'react-bootstrap';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/signIn.css'
 import { useState } from 'react';
@@ -39,8 +39,7 @@ const Login = () => {
   })
 
 
-  const fetchData = (e) => {
-    e.preventDefault();
+  const fetchData = () => {
     fetch('http://localhost:4000/register')
       .then((response) => response.json())
       .then((data) => {
@@ -111,6 +110,7 @@ const Login = () => {
 
 
   }
+
 
 
 

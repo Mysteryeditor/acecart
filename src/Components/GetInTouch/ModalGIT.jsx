@@ -1,35 +1,21 @@
 import React from 'react'
 
-
-const GetInTouch = (props) => {
-    
+const ModalGIT = () => {
   return (
-    <div className='getIntTouchMainDiv'>
-        <div className={`col-lg-${props.colSize} mx-auto  rounded-3 ${props.bgColor}`}>
+    <div>  <>
+    <div className="card designcard justify-content-center">
+        <h6 className="designeruniform text-center pt-2">Designer Uniforms</h6>
+        <div className="text-center horizontal-line">
+            <span>by</span>
+        </div>
+        <h6 className="acecraft text-center">acecraft</h6>
+        <button className="getintouch text-center" type="button" data-bs-toggle="modal" data-bs-target=".example3Modal" data-bs-whatever="@mdo">GET IN TOUCH</button>
+    </div>
 
-
-<div className={`row getInTouchrow`} style={{height:"154px",width:"240px"}}>
-  <div className='col-lg-12 d-flex justify-content-center align-items-center'>
-  <div className='text-center  d-block'>
-            <h3 className='Duni'>Designer Uniforms</h3>
-            <div className='d-flex justify-content-center'>
-            <h5 className='getInTouchSpans  '>______</h5><h2 id='by' className='mx-2'> by </h2>  <h5 className='getInTouchSpans '>______</h5>
-            </div>
-            <h3 className='ace '>acecraft</h3>
-            <h2>{props.title}</h2>
-        <button data-bs-toggle="modal" data-bs-target=".example3Modal" data-bs-whatever="@mdo" className='GIT text-white p-1 px-2  bg-transparent '>Get In Touch</button>
-
-            </div> 
-  </div>
-
-</div>
-
-</div>
-
-<div className="modal fade example3Modal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal fade example3Modal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
             <div className="modal-content" style={{ width: '550px', height: '560px' }}>
-                <button type="button" className="btn-close ms-auto p-3" data-bs-dismiss="modal" aria-label="Close" ></button>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" style={{ color: '#000000', fontSize: '10px' }}></button>
                 <h5 className="modal-title exampleModalLabel text-center mt-5" style={{ fontSize: '30px', fontWeight: '640' }}>Get your Uniforms designed and<br /> styled by Us!</h5>
                 <div className="container-fluid icons">
                     <form>
@@ -82,8 +68,8 @@ const GetInTouch = (props) => {
             </div>
         </div>
     </div>
-    </div>
+</></div>
   )
 }
 
-export default GetInTouch
+export default ModalGIT

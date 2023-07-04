@@ -1,0 +1,35 @@
+@font-face {
+    font-family: Proxima;
+    src: url(../Fonts/Proxima-Nova-Font/Proxima\ Nova\ Font.otf);
+}
+@font-face {
+    font-family: ProximaBold;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Bold.otf);
+}
+@font-face {
+    font-family: ProximaThin;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Thin.otf);
+}
+.mdInput{
+    border-radius: 0px;
+}
+.contOrderStatus{
+    border-radius: 0px;
+    border: black;
+    font-family: Proxima;
+}
+.Proxima{
+    font-family: Proxima;
+}
+.ProximaBold{
+    font-family: ProximaBold;
+}
+.ProximaThin{
+    font-family: ProximaThin;
+}
+.findYourOrderStatus{
+    border-right: 1px solid black;
+}
+.orderStatus{
+    background-color: #e1e1e1;
+}

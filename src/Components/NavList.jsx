@@ -92,8 +92,10 @@ const logout=()=>{
   console.log("Display outside if " + display)
   return (
     <div className='HomeForm text-end' >
+      
       <ul className='HomeUlsMain position-absolute ' >
         {console.log(log)}
+        
         <li style={{ display: display }}>
           <Link to='/signIn'><label className='HomeUls' >Sign In | <i class="fa-solid fa-right-to-bracket"></i></label></Link>
         </li>

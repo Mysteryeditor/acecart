@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/SchoolPage.css'
+import { Container } from 'react-bootstrap';
+import GetInTouch from '../GetInTouch/GetInTouch';
 const SchoolPage = () => {
   const [schools, setSchools] = useState([])
   const [beatease, setBeAtEase] = useState([]);
@@ -84,7 +86,7 @@ const SchoolPage = () => {
         {beatease.length > 0 && (
           <div>
             {beatease.map((beEase) => (
-              <img key={beEase.id} src={`${beEase.image}`} className='col-lg-12' alt="" />
+              <img key={beEase.id} src={`${beEase.image}`} className='img-fluid col-lg-12' alt="" />
             ))
             }
           </div>
@@ -95,8 +97,13 @@ const SchoolPage = () => {
 
       </div>
 
-      <div className='getInTouchSchool pt-4'>
-        <div className='text-center pt-5 d-block'>
+      <div className='getInTouchSchool pt-5'>
+      <Container fluid >
+        
+        <GetInTouch  colSize="2" bgColor='bg-black' height="200"/>
+     
+    </Container>
+        {/* <div className='text-center pt-5 d-block'>
           <h3 className='DUSchool pt-5'>Designer Uniforms</h3>
           <div className='d-flex justify-content-center'>
             <h3 className='getInTsouchSpansSchool'>________</h3><h1 id='byschool' className='mx-2'> by </h1>  <h3 className='getInTsouchSpansSchool'>________</h3>
@@ -104,9 +111,9 @@ const SchoolPage = () => {
           <h3 className='aceSchool '>acecraft</h3>
           <h3 className='establishSchool text-center mt-4 '>Establish a <span className='signatureLookSchool'>signature look</span> for your school.</h3>
         <h3 className='supplyChangeSchool mt-5 '>Looking to change your supplier?</h3>
-          <div className='justify-content-center d-flex'> <label className='GITSchool text-white p-1 px-2 mb-2 bg-transparent'>Get In Touch</label></div>
+          <Link to='/ModalGIT' className='text-decoration-none'><div className='justify-content-center d-flex '> <label className='GITSchool  text-white p-1 px-2 mb-2 bg-transparent'>Get In Touch</label></div></Link>
 
-        </div>
+        </div> */}
       </div>
     </div>
   )

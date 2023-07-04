@@ -19,6 +19,10 @@ import SchoolUniforms from './Components/SchoolPage/SchoolPageTwo';
 import SchoolUniformProducts from './Components/SchoolPage/SchoolProductsSecond';
 import { CartProvider } from 'react-use-cart';
 import Cart from './Components/Cart/Cart';
+import OrderStatus from './Components/SettingComponents/OrderStatus';
+import GetInTouch from './Components/GetInTouch/GetInTouch';
+import ModalGIT from './Components/GetInTouch/ModalGIT';
+import BlogNotes from './Components/Notes/BlogNotes';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <CartProvider>
@@ -35,13 +39,17 @@ root.render(
       <Route path="/airenmask" element={<Error404 />} />
       <Route path="/signIn" element={<SignIn />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/orderStatus" element={<Error404 />} />
+      <Route path="/Error404" element={<Error404 />} />
       <Route path="/contact" element={<Error404 />} />
       <Route path='/login' element={<Login />}/>
       <Route path='/schoolUniforms' element={<SchoolUniforms/>}/>
       <Route path='/schooluniformproduct' element={<SchoolUniformProducts/>}/>
       <Route path="/schooluniformproduct/:id" element={<SchoolUniformProducts/>} />
       <Route path='/cart' element={<Cart/>}/>
+      <Route path='/orderStatus' element={<OrderStatus />}/>
+      <Route path='/ModalGIT' element={<ModalGIT />}/>
+      <Route path='/BlogNotes' element={<BlogNotes />}/>
+
       </Routes>
 
     <FooterNavBar />

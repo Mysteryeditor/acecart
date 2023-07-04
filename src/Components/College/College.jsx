@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/College.css';
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom';
 
 
 
@@ -187,7 +188,7 @@ const College = () => {
               <h5 className='getInTsouchSpans'>________</h5><h2 id='by' className='mx-2'> by </h2>  <h5 className='getInTosuchSpans'>________</h5>
               </div>
               <h3 className='ace'>acecraft</h3>
-             <button className='GIT text-white p-1 px-2 border-2 border-white bg-transparent '>Get In Touch</button>
+             <Link to='/GetInTouch'><button className='GIT text-white p-1 px-2 border-2 border-white bg-transparent '>Get In Touch</button></Link>
 
               </div> 
     </div>

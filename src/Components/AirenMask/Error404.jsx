@@ -9,7 +9,7 @@ const Error404 = () => {
         <Container>
         <h1>Error(404)</h1>
         <h3>Page you are requesting does not exist.</h3>
-        <Link to='/' className='goToHomeLink'>Go to Home</Link>
+        <Link to='/Error404' className='goToHomeLink'>Go to Home</Link>
         </Container>
     </div>
   )

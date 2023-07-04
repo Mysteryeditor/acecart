@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/Notes.css'
+import { Link } from 'react-router-dom';
 
 function NotesBlogs (){
 
@@ -32,14 +33,14 @@ function NotesBlogs (){
     {blogs.length > 0 && (
  <div className='row '>
     {blogs.map((blog)=>(
-        <Card className='m-2 blogsCard rounded-0 shadow' key={blog.id}>
+       <Card className='m-2 blogsCard rounded-0 shadow' key={blog.id}>
             
        <Card.Body className=' card-body bg-black  mt-1 blogscardBody'>
-         <Card.Text className="text-white card-text text-center blogTitle">
+       <Link to='/BlogNotes' className='text-decoration-none'>  <Card.Text className="text-white card-text text-center blogTitle">
   
           {blog.title}
   
-         </Card.Text>
+         </Card.Text></Link>
  
        </Card.Body>
        

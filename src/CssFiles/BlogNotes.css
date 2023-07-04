@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Proxima;
+    src: url(../Fonts/Proxima-Nova-Font/Proxima\ Nova\ Font.otf);
+}
+@font-face {
+    font-family: ProximaBold;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Bold.otf);
+}
+@font-face {
+    font-family: ProximaThin;
+    src: url(../Fonts/Proxima-Nova-Font/FontsFree-Net-Proxima-Nova-Thin.otf);
+}
+
+
+.Proxima{
+    font-family: Proxima;
+}
+.ProximaBold{
+    font-family: ProximaBold;
+}
+.ProximaThin{
+    font-family: ProximaThin;
+}
+.fontSizeBlogNotes{
+    font-size: 14px;
+}
+.text-clr-BN{
+    color: #978f8f;
+}
+.Comment-BN{
+    border-radius: 0px;
+}
+.Comment-BN::placeholder{
+    color: #978f8f;
+    font-size: small;
+}
+.PostBtn{
+    border-radius: 50px;
+    background-color: #555555;
+    border-color: #978f8f;
+}
+.PostBtn:hover{
+    background-color: #555555;
+    border-color: #978f8f;
+}
