@@ -13,7 +13,7 @@ import axios from 'axios';
 
 function HomePage() {
   const [isHovering, setIsHovering] = useState(false);
-  const [cartBadge,setCartBadge] = useState(0)
+  const [cartBadge,setCartBadge] = useState('')
   const handleMouseOver = () => {
     setIsHovering(!isHovering);
   }
@@ -23,7 +23,7 @@ function HomePage() {
 useEffect(()=>{
   axios.get("http://localhost:4000/register?isLogged_like=true")
   .then((response)=>{
-    setCartBadge(response.data[0].cart.quantity)
+    setCartBadge(response.data[0].cart.length)
   })
   .catch((err)=>{
    console.log(err)
@@ -78,14 +78,15 @@ useEffect(()=>{
               </div>
             </Navbar.Collapse>
           </Container>
+          {isHovering && (
+        <div className='justify-content-end d-flex settings mt-5 '><Settings /></div>)}
         </Navbar>
 
       </div>
 
 
 
-      {isHovering && (
-        <div className='justify-content-end d-flex settings'><Settings /></div>)}
+      
 
     </React.Fragment>
   );

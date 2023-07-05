@@ -243,6 +243,8 @@ const SchoolUniformProducts = () => {
         console.log("cart oda value " + cart)
         const checker = () => {
           var count = false
+          //Redundancy elimination
+          
 
           for (const obj of cart) {
             if (obj.id == items.id) {
@@ -258,6 +260,7 @@ const SchoolUniformProducts = () => {
               }
             }
           }
+          //pushing the new item to the cart array
           if (count == false) {
             cart.push(items)
             myToastAdded()
