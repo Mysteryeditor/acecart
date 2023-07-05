@@ -15,6 +15,7 @@ const SchoolUniformProducts = () => {
 
   const { id } = useParams();
   const navigate = useNavigate();
+  const [logIn,setLogin] = useState(false)
   const [productCost, setProductCost] = useState(0)
   const [size, setSize] = useState(18);
   const [schoolProd, setSchoolProd] = useState(null)
@@ -223,7 +224,7 @@ const SchoolUniformProducts = () => {
 
 
     console.log(schoolProd.id)
-    addItem(items)
+    // addItem(items)
 
 
     axios.get("http://localhost:4000/register?isLogged=true")
@@ -240,6 +241,8 @@ const SchoolUniformProducts = () => {
         state = res.data[0].state;
         gst = res.data[0].gst;
         cart = res.data[0].cart;
+        setLogin(true)
+
         console.log("cart oda value " + cart)
         const checker = () => {
           var count = false
@@ -307,8 +310,14 @@ const SchoolUniformProducts = () => {
             myToastFailed()
           })
 
-      })
+      }).catch((error) => {
+        if(!logIn){
 
+          return     navigate("/Prompt")
+      } 
+      })
+      
+     
 
 
 
@@ -351,9 +360,9 @@ const SchoolUniformProducts = () => {
 
                 <hr />
                 <label className='bg-black text-white p-1' htmlFor="quantity">Quantity</label><input type="number" name="qty" id="quantity" value={quantity} onChange={quantityChange} />
-                <h5>
+                {/* <h5>
                   Cart ({totalUniqueItems}) total Items: ({totalItems})
-                </h5>
+                </h5> */}
                 <div className='row container pt-5 mt-5'>
                   <CartProvider>
                     <button onClick={() => addToCart(schoolProd)} className='col-lg-4 me-1 bg-black text-white'>Add to Cart</button>

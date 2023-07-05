@@ -23,37 +23,38 @@ import OrderStatus from './Components/SettingComponents/OrderStatus';
 import GetInTouch from './Components/GetInTouch/GetInTouch';
 import ModalGIT from './Components/GetInTouch/ModalGIT';
 import BlogNotes from './Components/Notes/BlogNotes';
+import Prompt from './Components/Prompt/Prompt';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <CartProvider>
-  <BrowserRouter>
-    <HomePage />
+    <BrowserRouter>
+      <HomePage />
 
-    <Routes>
-      
-      <Route exact path='/' element={<SecondSection />} />
-      <Route path="/school" element={<SchoolPage />} />
-      <Route path="/college" element={<College />} />
-      <Route path="/Enterprise" element={<Enterprise />} />
-      <Route path="/notes" element={<NotesBlogs />} />
-      <Route path="/airenmask" element={<Error404 />} />
-      <Route path="/signIn" element={<SignIn />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/Error404" element={<Error404 />} />
-      <Route path="/contact" element={<Error404 />} />
-      <Route path='/login' element={<Login />}/>
-      <Route path='/schoolUniforms' element={<SchoolUniforms/>}/>
-      <Route path='/schooluniformproduct' element={<SchoolUniformProducts/>}/>
-      <Route path="/schooluniformproduct/:id" element={<SchoolUniformProducts/>} />
-      <Route path='/cart' element={<Cart/>}/>
-      <Route path='/orderStatus' element={<OrderStatus />}/>
-      <Route path='/ModalGIT' element={<ModalGIT />}/>
-      <Route path='/BlogNotes/:id' element={<BlogNotes />}/>
+      <Routes>
 
+        <Route exact path='/' element={<SecondSection />} />
+        <Route path="/school" element={<SchoolPage />} />
+        <Route path="/college" element={<College />} />
+        <Route path="/Enterprise" element={<Enterprise />} />
+        <Route path="/notes" element={<NotesBlogs />} />
+        <Route path="/airenmask" element={<Error404 />} />
+        <Route path="/signIn" element={<SignIn />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/Error404" element={<Error404 />} />
+        <Route path="/contact" element={<Error404 />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/schoolUniforms' element={<SchoolUniforms />} />
+        <Route path='/schooluniformproduct' element={<SchoolUniformProducts />} />
+        <Route path="/schooluniformproduct/:id" element={<SchoolUniformProducts />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/orderStatus' element={<OrderStatus />} />
+        <Route path='/ModalGIT' element={<ModalGIT />} />
+        <Route path='/BlogNotes/:id' element={<BlogNotes />} />
+        <Route path='/Prompt' element={<Prompt />} />
       </Routes>
 
-    <FooterNavBar />
-  </BrowserRouter>
+      <FooterNavBar />
+    </BrowserRouter>
   </CartProvider>
 );
 

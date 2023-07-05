@@ -6,15 +6,19 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../../CssFiles/Cart.css'
+import { useNavigate } from 'react-router-dom'
+
 
 const Cart = () => {
     const { isEmpty, updateItemQuantity, removeItem, totalItems, totalUniqueItems, cartTotal, emptyCart } = useCart()
+    const navigate = useNavigate();
+
     const [id, setId] = useState('');
+    const [logIn,setLogin] = useState(false)
     const [cartProducts, setCartProducts] = useState('')
     const [quantity, setQuantity] = useState(1)
     const [Fname, setFname] = useState('')
     const [Lname, setLname] = useState('')
-
     const [email, setemail] = useState('')
     const [password, setpassword] = useState('')
     const [category, setcategory] = useState('')
@@ -55,6 +59,7 @@ const Cart = () => {
                     setgst(response.data[0].gst)
                     setId(response.data[0].id)
                     setCartProducts(response.data[0].cart)
+                    setLogin(true)
                     console.log(response.data[0])
                 })
                 .then(() => {
@@ -76,13 +81,17 @@ const Cart = () => {
                         .catch((err) => {
                             return (<h1>Please login first</h1>)
                         })
-                })
-                .catch(() => {
-                    return (<h1>Please login first</h1>)
-                })
+                }).catch(()=>{
+                    if(!logIn){
 
+                        return     navigate("/Prompt")
+                    }
+    
+                })
+                
+                
         }
-
+        
         fetchData()
     }, [])
     if (isEmpty) return <h1 className='p-5 text-center'>Your cart is empty</h1>;

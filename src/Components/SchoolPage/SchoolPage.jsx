@@ -101,7 +101,7 @@ const SchoolPage = () => {
       <div className='getInTouchSchool pt-5'>
       <Container fluid >
         
-      <GetInTouch  colSize="2"  className="text-center gitSchlcomponent"  acecraft={{fontSize:"30px"}} schoolStyle={{height:"305px",width:"1170px"}} title="Establish a signature look for your school." subTitle='Looking to change your supplier?' height="200"/>
+      <GetInTouch   colSize="2"  className="text-center gitSchlcomponent" class="py-4"  acecraft={{fontSize:"30px"}} schoolStyle={{height:"305px",width:"1170px"}} title="Establish a signature look for your school." subTitle='Looking to change your supplier?' height="200"/>
 
     </Container>
       </div>

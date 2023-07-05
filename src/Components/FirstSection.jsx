@@ -13,9 +13,9 @@ import axios from 'axios';
 
 function HomePage() {
   const [isHovering, setIsHovering] = useState(false);
-  const [cartBadge,setCartBadge] = useState('')
+  const [cartBadge,setCartBadge] = useState('0')
   const handleMouseOver = () => {
-    setIsHovering(!isHovering);
+    setIsHovering(true);
   }
   const handleMouseOut = () => {
     setIsHovering(false);
@@ -57,7 +57,7 @@ useEffect(()=>{
                   Link
                 </Nav.Link>
               </Nav>
-              <div className='me-2'>      <img onClick={handleMouseOver} className='settingImage mx-3' sx={{
+              <div className='me-2'>      <img onMouseOver={handleMouseOver}  className='settingImage mx-3' sx={{
                 "& .settingImage:hover": {
 
                 }
@@ -79,7 +79,7 @@ useEffect(()=>{
             </Navbar.Collapse>
           </Container>
           {isHovering && (
-        <div className='justify-content-end d-flex settings mt-5 '><Settings /></div>)}
+        <div onMouseLeave={handleMouseOut} className='justify-content-end d-flex settings mt-5 '><Settings /></div>)}
         </Navbar>
 
       </div>

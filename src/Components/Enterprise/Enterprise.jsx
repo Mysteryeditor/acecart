@@ -117,7 +117,7 @@ const Enterprise = () => {
             <div>
               <Container fluid>
 
-                <GetInTouch colSize="2" bgColor='bg-black' height="200" enterpriseStyle={{height:"154px",width:"240px"}} />
+                <GetInTouch colSize="2" bgColor='bg-black' enterpriseStyle={{height:"154px",width:"240px"}} />
 
               </Container>
             </div>

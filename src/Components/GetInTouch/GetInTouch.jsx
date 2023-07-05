@@ -16,8 +16,8 @@ const GetInTouch = (props) => {
             <h5 className='getInTouchSpans  '>______</h5><h2 id='by' className='mx-2'> by </h2>  <h5 className='getInTouchSpans '>______</h5>
             </div>
             <h3 className='ace' style={props.acecraft}>acecraft</h3>
-            <h4 className='w-100 ProximaThin py-4'>{props.title}</h4>
-            <h4 className='w-100 ProximaThin pb-5'>{props.subTitle}</h4>
+            <h4 className={`w-100 ProximaThin ${props.class}`}>{props.title}</h4>
+            <h4 className={`w-100 ProximaThin ${props.class}`}>{props.subTitle}</h4>
         <button data-bs-toggle="modal" data-bs-target=".example3Modal" data-bs-whatever="@mdo" className='GIT text-white p-1 px-2  bg-transparent '>Get In Touch</button>
 
             </div> 
