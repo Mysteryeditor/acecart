@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { Card } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { isEmail } from 'validator';
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/signIn.css';
+import '../../CssFiles/signIn.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import axios from "axios";

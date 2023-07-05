@@ -516,12 +516,28 @@
           "id": 1
         },
         {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f01491c2e5ab32f3385f/images/5aa0f01491c2e5ab32f33860/5aa0f01d91c2e5ab32f33897/webp/5aa0f01d91c2e5ab32f33897-640x640.jpg",
-          "price": 385,
-          "quantity": 1,
-          "title": "NHG Shorts",
+          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6ffdbb47db6b5e246674/webp/middle-school-480x480.jpg",
+          "price": 500,
+          "quantity": 5,
+          "title": "CIS Sky Day Wear (Grade 6-8)",
           "size": 18,
-          "id": 6
+          "id": 3
+        },
+        {
+          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f5c6f04705ab2ca345c6/images/5aa0f5c6f04705ab2ca345c7/5aa0f5d0f04705ab2ca345f9/webp/5aa0f5d0f04705ab2ca345f9-480x480.jpg",
+          "price": 355,
+          "quantity": 1,
+          "title": "NHG Shirt (Boys)",
+          "size": 18,
+          "id": 2
+        },
+        {
+          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f01491c2e5ab32f33832/images/5aa0f01491c2e5ab32f33833/5aa0f01e91c2e5ab32f338a1/webp/5aa0f01e91c2e5ab32f338a1-640x640.jpg",
+          "price": 605,
+          "quantity": 5,
+          "title": "NHG Trousers [Boys, Grade 5-10]",
+          "size": 18,
+          "id": 8
         }
       ],
       "isLogged": true,

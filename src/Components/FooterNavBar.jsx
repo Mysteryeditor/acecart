@@ -4,9 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Overlay from 'react-bootstrap/Overlay';
 import { Link } from 'react-router-dom';
 import { TabMenu } from 'primereact/tabmenu';
-import FB from "C:/Users/cgvak/Desktop/React/acecart/src/Assets/images/FB.webp";
-import insta from "C:/Users/cgvak/Desktop/React/acecart/src/Assets/images/Insta.webp"
-import Lnkdin from "C:/Users/cgvak/Desktop/React/acecart/src/Assets/images/Lnkdin.webp"
+import FB from ".././Assets/images/FB.webp";
+import insta from ".././Assets/images/Insta.webp"
+import Lnkdin from ".././Assets/images/Lnkdin.webp"
 
 const FooterNavBar = () => {
   return (

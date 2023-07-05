@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/Notes.css'
+import '../../CssFiles/Notes.css'
 import { Link } from 'react-router-dom';
 import BlogNotes from './BlogNotes';
 

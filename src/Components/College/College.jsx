@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/College.css';
+import '../../CssFiles/College.css';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
 

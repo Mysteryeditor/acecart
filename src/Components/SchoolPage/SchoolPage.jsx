@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/SchoolPage.css'
+import '../../CssFiles/SchoolPage.css'
 import { Container } from 'react-bootstrap';
 import GetInTouch from '../GetInTouch/GetInTouch';
 const SchoolPage = () => {
@@ -27,6 +27,7 @@ const SchoolPage = () => {
   }, [])
 
   return (
+    <>
     <div className='schoolMainDiv'>
 
 
@@ -86,7 +87,7 @@ const SchoolPage = () => {
         {beatease.length > 0 && (
           <div>
             {beatease.map((beEase) => (
-              <img key={beEase.id} src={`${beEase.image}`} className='img-fluid col-lg-12' alt="" />
+              <img key={beEase.id} src={`${beEase.image}`} className='img-fluid col-lg-12 img-responsive' alt="" />
             ))
             }
           </div>
@@ -100,9 +101,22 @@ const SchoolPage = () => {
       <div className='getInTouchSchool pt-5'>
       <Container fluid >
         
-        <GetInTouch  colSize="2" bgColor='bg-black' height="200"/>
-     
+      <GetInTouch  colSize="2"  className="text-center gitSchlcomponent"  acecraft={{fontSize:"30px"}} schoolStyle={{height:"305px",width:"1170px"}} title="Establish a signature look for your school." subTitle='Looking to change your supplier?' height="200"/>
+
     </Container>
+      </div>
+      <div>
+        
+      </div>
+
+    </div>
+    </>
+  )
+}
+
+export default SchoolPage
+
+
         {/* <div className='text-center pt-5 d-block'>
           <h3 className='DUSchool pt-5'>Designer Uniforms</h3>
           <div className='d-flex justify-content-center'>
@@ -114,9 +128,3 @@ const SchoolPage = () => {
           <Link to='/ModalGIT' className='text-decoration-none'><div className='justify-content-center d-flex '> <label className='GITSchool  text-white p-1 px-2 mb-2 bg-transparent'>Get In Touch</label></div></Link>
 
         </div> */}
-      </div>
-    </div>
-  )
-}
-
-export default SchoolPage

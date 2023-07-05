@@ -4,7 +4,7 @@ import HomePage from '../FirstSection'
 import { Link, useParams } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/SchoolUniforms.css';
+import '../../CssFiles/SchoolUniforms.css';
 import { Badge } from 'react-bootstrap';
 import { Container } from '@mui/material';
 import sortBy from 'sort-by';

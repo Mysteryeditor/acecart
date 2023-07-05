@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/SchoolProductsSecond.css'
+import '../../CssFiles/SchoolProductsSecond.css'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import { CartProvider, useCart } from 'react-use-cart';
@@ -223,7 +223,7 @@ const SchoolUniformProducts = () => {
 
 
     console.log(schoolProd.id)
-    // addItem(items)
+    addItem(items)
 
 
     axios.get("http://localhost:4000/register?isLogged=true")

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/NavList.css'
+import '.././CssFiles/NavList.css'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 

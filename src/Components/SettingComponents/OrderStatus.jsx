@@ -1,5 +1,5 @@
 import React from 'react'
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/orderStatus.css';
+import '../../CssFiles/orderStatus.css';
 import { MDBInput } from 'mdb-react-ui-kit';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';

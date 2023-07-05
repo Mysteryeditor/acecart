@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/Cart.css'
+import '../../CssFiles/Cart.css'
 
 const Cart = () => {
     const { isEmpty, updateItemQuantity, removeItem, totalItems, totalUniqueItems, cartTotal, emptyCart } = useCart()

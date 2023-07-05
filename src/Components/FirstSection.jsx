@@ -3,8 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import 'C:/Users/cgvak/Desktop/React/acecart/src/App.css'
 import React from 'react'; import { useState } from 'react';
-import 'C:/Users/cgvak/Desktop/React/acecart/src/App.css';
-import settingImage from 'C:/Users/cgvak/Desktop/React/acecart/src/Assets/images/setting.png';
+import '../App.css';
+import settingImage from '.././Assets/images/setting.png';
 import Badge from '@mui/material/Badge';
 import Settings from './NavList';
 import { Link } from 'react-router-dom';

@@ -3,7 +3,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Container } from 'react-bootstrap'
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/BlogNotes.css';
+import '../../CssFiles/BlogNotes.css';
 import { MDBInput } from 'mdb-react-ui-kit';
 import { MDBTextArea } from 'mdb-react-ui-kit';
 import { useForm } from 'react-hook-form'

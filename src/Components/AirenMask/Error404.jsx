@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/AirenMask.css'
+import '../../CssFiles/AirenMask.css'
 import { Container } from 'react-bootstrap'
 const Error404 = () => {
   return (

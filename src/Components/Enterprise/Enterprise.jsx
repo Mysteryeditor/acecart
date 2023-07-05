@@ -1,5 +1,5 @@
 import React from 'react'
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/Enterprise.css';
+import '../../CssFiles/Enterprise.css';
 import { Card, Container } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -114,13 +114,17 @@ const Enterprise = () => {
               ))}
 
             </div>
+            <div>
+              <Container fluid>
+
+                <GetInTouch colSize="2" bgColor='bg-black' height="200" enterpriseStyle={{height:"154px",width:"240px"}} />
+
+              </Container>
+            </div>
           </div>
         )}
-        <Container fluid>
-        
-            <GetInTouch  colSize="2" bgColor='bg-black' height="200"/>
-         
-        </Container>
+
+
       </div>
 
 

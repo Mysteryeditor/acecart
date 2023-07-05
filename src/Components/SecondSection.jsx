@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Carousel from 'react-bootstrap/Carousel';
-import Home1 from 'C:/Users/cgvak/Desktop/React/acecart/src/Assets/images/Home-1.jpg.webp'
-import Home2 from 'C:/Users/cgvak/Desktop/React/acecart/src/Assets/images/home3.jpg.webp'
-import Home3 from 'C:/Users/cgvak/Desktop/React/acecart/src/Assets/images/home4.jpg.webp'
-import 'C:/Users/cgvak/Desktop/React/acecart/src/App.css'
+import Home1 from '.././Assets/images/Home-1.jpg.webp'
+import Home2 from '.././Assets/images/home3.jpg.webp'
+import Home3 from '.././Assets/images/home4.jpg.webp'
+import '../App.css'
 import "primereact/resources/primereact.min.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import Card from 'react-bootstrap/Card';

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Card } from 'react-bootstrap';
-import 'C:/Users/cgvak/Desktop/React/acecart/src/CssFiles/signIn.css'
+import '../../CssFiles/signIn.css'
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
