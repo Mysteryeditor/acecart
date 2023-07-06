@@ -39,7 +39,7 @@ const SchoolUniforms = () => {
   }
 
   const fetchData = () => {
-    fetch("http://localhost:4000/uniforms")
+    fetch("https://bane47.onrender.com/uniforms")
       .then((response) => {
         return response.json();
       })

@@ -8,7 +8,7 @@ import { MDBInput } from 'mdb-react-ui-kit';
 import { MDBTextArea } from 'mdb-react-ui-kit';
 import { useForm } from 'react-hook-form'
 import { useParams } from 'react-router-dom'
-
+import BaseUrl from '../BaseUrl/BaseUrl'
 
 
 const BlogNotes = () => {
@@ -22,12 +22,12 @@ const BlogNotes = () => {
         console.log(data)
     }
     const fetchData = () => {
-        axios.get("http://localhost:4000/cards")
+        axios.get(`https://bane47.onrender.com/cards`)
             .then((response) => {
                 console.log(response.data)
                 setNotes(response.data)
             })
-            axios.get(`http://localhost:4000/blogs/${id}`)
+            axios.get(`https://bane47.onrender.com/${id}`)
             .then((response) => {
                 console.log(response.data)
                 setTitle(response.data)

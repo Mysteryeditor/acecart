@@ -41,7 +41,7 @@ const Login = () => {
 
   const fetchData = (e) => {
     e.preventDefault();
-    fetch('http://localhost:4000/register')
+    fetch('https://bane47.onrender.com/register')
       .then((response) => response.json())
       .then((data) => {
 
@@ -53,7 +53,7 @@ const Login = () => {
 
         if (foundUser) {
 
-          axios.get(`http://localhost:4000/register?email_like=${uname}`)
+          axios.get(`https://bane47.onrender.com/register?email_like=${uname}`)
             .then((response) => {
               console.log(uname)
               Fname = response.data[0].fname;
@@ -72,7 +72,7 @@ const Login = () => {
               console.log("ID value is" + id)
             })
             .then(()=>{
-              axios.put(`http://localhost:4000/register/${id}`, {
+              axios.put(`https://bane47.onrender.com/register/${id}`, {
                 fname: Fname,
                 lname: Lname,
                 email: email,

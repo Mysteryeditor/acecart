@@ -17,7 +17,7 @@ const Enterprise = () => {
 
 
   const fetchData = () => {
-    fetch("http://localhost:4000/WorkRelaxCards")
+    fetch("https://bane47.onrender.com/WorkRelaxCards")
       .then((response) => {
         return response.json();
       })
@@ -26,7 +26,7 @@ const Enterprise = () => {
       })
   }
   const fetchDataGetInTTouch = () => {
-    axios.get("http://localhost:4000/EnterPriseGetInTouch")
+    axios.get("https://bane47.onrender.com/EnterPriseGetInTouch")
       .then((response) => {
         setGit(response.data)
       })

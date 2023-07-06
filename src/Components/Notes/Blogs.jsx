@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap';
 import '../../CssFiles/Notes.css'
 import { Link } from 'react-router-dom';
 import BlogNotes from './BlogNotes';
+import BaseUrl from '../BaseUrl/BaseUrl'
 
 
 function NotesBlogs (){
@@ -12,7 +13,7 @@ function NotesBlogs (){
     const [blogs,setBlogs] = useState([]);
 
     const fetchData = () => {
-        fetch("http://localhost:4000/Blogs")
+        fetch(`https://bane47.onrender.com/Blogs`)
           .then((response) => {
             return response.json();
           })

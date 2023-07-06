@@ -26,7 +26,7 @@ const Settings = (e) => {
 const logout=()=>{
 
 
-  axios.get(`http://localhost:4000/register/?isLogged_like=true`)
+  axios.get(`https://bane47.onrender.com/register/?isLogged_like=true`)
             .then((response) => {
               Fname = response.data[0].fname;
               Lname = response.data[0].lname;
@@ -43,7 +43,7 @@ const logout=()=>{
 
               console.log("ID value is" + id)
             })
-          axios.put(`http://localhost:4000/register/${id}`, {
+          axios.put(`https://bane47.onrender.com/register/${id}`, {
             fname: Fname,
             lname: Lname,
             email: email,
@@ -67,7 +67,7 @@ const logout=()=>{
           }
 
   useEffect(() => {
-    axios.get('http://localhost:4000/register/?isLogged_like=true')
+    axios.get('https://bane47.onrender.com/register/?isLogged_like=true')
       .then((response) => {
         console.log(response.data.length)
         if (response.data.length > 0) {

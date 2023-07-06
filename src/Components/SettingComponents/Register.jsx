@@ -56,7 +56,7 @@ function SignUpForm() {
         postData();
     }
     const postData = () => {
-        axios.post("http://localhost:4000/register", {
+        axios.post("https://bane47.onrender.com/register", {
             fname: Fname,
             lname: Lname,
             email: email,

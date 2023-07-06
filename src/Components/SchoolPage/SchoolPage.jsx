@@ -9,14 +9,14 @@ const SchoolPage = () => {
   const [beatease, setBeAtEase] = useState([]);
 
   const schoolnames = () => {
-    axios.get("http://localhost:4000/Schools")
+    axios.get("https://bane47.onrender.com/Schools")
       .then((response) => {
         setSchools(response.data)
       })
   }
 
   const beAtEaseMapping = () => {
-    axios.get("http://localhost:4000/BeAtEase")
+    axios.get("https://bane47.onrender.com/BeAtEase")
       .then((response) => {
         setBeAtEase(response.data)
       })

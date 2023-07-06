@@ -58,7 +58,7 @@ const SchoolUniformProducts = () => {
 
   useEffect(() => {
 
-    fetch(`http://localhost:4000/uniforms/${id}`)
+    fetch(`https://bane47.onrender.com/uniforms/${id}`)
 
       .then((response) => response.json())
       .then((data) => {
@@ -68,7 +68,7 @@ const SchoolUniformProducts = () => {
 
       );
 
-    fetch(`http://localhost:4000/uniforms`)
+    fetch(`https://bane47.onrender.com/uniforms`)
 
       .then((response) => response.json())
       .then((data) => {
@@ -199,7 +199,7 @@ const SchoolUniformProducts = () => {
   //   console.log(item.quantity);
 
   //   // POST item to Cartitems endpoint
-  //   fetch('http://localhost:4000/cart', {
+  //   fetch('https://bane47.onrender.com/cart', {
   //     method: 'POST',
   //     headers: {
   //       'Content-Type': 'application/json'
@@ -231,7 +231,7 @@ const SchoolUniformProducts = () => {
     addItem(items)
 
 
-    axios.get("http://localhost:4000/register?isLogged=true")
+    axios.get("https://bane47.onrender.com/register?isLogged=true")
       .then((res) => {
         console.log(res.data[0].cart)
         Fname = res.data[0].fname;
@@ -285,7 +285,7 @@ const SchoolUniformProducts = () => {
         console.log("Cart vandhu " + res.data[0].cart[0].image)
       })
       .then(() => {
-        axios.put(`http://localhost:4000/register/${resid}`, {
+        axios.put(`https://bane47.onrender.com/register/${resid}`, {
           fname: Fname,
           lname: Lname,
           email: email,

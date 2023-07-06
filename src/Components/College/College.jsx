@@ -13,7 +13,7 @@ const College = () => {
   // const clgMatUrl = "http://localhost:4000/CollegeMaterials";
   // const clgCarUrl = "http://localhost:4000/CollegeCarousel";
   const fetchData = () => {
-    fetch("http://localhost:4000/CollegeMaterials")
+    fetch("https://bane47.onrender.com/CollegeMaterials")
       .then((response) => {
         console.log(response)
         return response.json()
@@ -26,7 +26,7 @@ const College = () => {
   }
 
   const fetchData2 = ()=>{
-    fetch("http://localhost:4000/CollegeCarousel")
+    fetch("https://bane47.onrender.com/CollegeCarousel")
     .then((response)=>{
       return response.json()
     })

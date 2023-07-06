@@ -21,7 +21,7 @@ function HomePage() {
     setIsHovering(false);
   }
 useEffect(()=>{
-  axios.get("http://localhost:4000/register?isLogged_like=true")
+  axios.get("https://bane47.onrender.com/register?isLogged_like=true")
   .then((response)=>{
     setCartBadge(response.data[0].cart.length)
   })
