@@ -95,11 +95,13 @@ const total=(a)=>{
                         .catch((err) => {
                             return (<h1>Please login first</h1>)
                         })
-                }).catch(()=>{
+                }).catch((err)=>{
+                    console.log(err)
                     if(!logIn){
 
                         return     navigate("/Prompt")
-                    }
+                    }else
+                    return <h1 className='ProximaBold text-center'>Cart is empty</h1>
     
                 })
                 
