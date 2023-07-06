@@ -13,7 +13,7 @@ import axios from 'axios';
 
 function HomePage() {
   const [isHovering, setIsHovering] = useState(false);
-  const [cartBadge,setCartBadge] = useState('0')
+  const [cartBadge,setCartBadge] = useState(0)
   const handleMouseOver = () => {
     setIsHovering(true);
   }

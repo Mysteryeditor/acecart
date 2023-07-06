@@ -3,7 +3,19 @@
     {
       "id": 1,
       "title": "CIS Royal Day Wear (Grade 1-5)",
-      "productcode": "CIEDPT20",
+      "productcode": [
+        "CIEDPT20",
+        "CIEDPT22",
+        "CIEDPT24",
+        "CIEDPT26",
+        "CIEDPT28",
+        "CIEDPT30",
+        "CIEDPT32",
+        "CIEDPT34",
+        "CIEDPT36",
+        "CIEDPT38",
+        "CIEDPT40"
+      ],
       "brand": "ACECRAFT",
       "soldby": "Alchemy",
       "cost": 450,
@@ -23,7 +35,11 @@
         40
       ],
       "stock": [
-        0
+        12,
+        14,
+        16,
+        18,
+        20
       ],
       "quantity": 1,
       "material": [
@@ -34,7 +50,21 @@
     {
       "id": 2,
       "title": "NHG Shirt (Boys)",
-      "productcode": "NHBSHRT20",
+      "productcode": [
+        "NHBSHRT20",
+        "NHBSHRT22",
+        "NHBSHRT24",
+        "NHBSHRT26",
+        "NHBSHRT28",
+        "NHBSHRT30",
+        "NHBSHRT32",
+        "NHBSHRT34",
+        "NHBSHRT36",
+        "NHBSHRT38",
+        "NHBSHRT40",
+        "NHBSHRT42",
+        "NHBSHRT44"
+      ],
       "brand": "ACECRAFT",
       "soldby": "Alchemy",
       "cost": 355,
@@ -56,7 +86,11 @@
         44
       ],
       "stock": [
-        0
+        12,
+        14,
+        16,
+        18,
+        20
       ],
       "quantity": 1,
       "material": [
@@ -71,7 +105,17 @@
     {
       "id": 3,
       "title": "CIS Sky Day Wear (Grade 6-8)",
-      "productcode": "CIMDPT26",
+      "productcode": [
+        "CIMDPT26",
+        "CIMDPT28",
+        "CIMDPT30",
+        "CIMDPT32",
+        "CIMDPT34",
+        "CIMDPT36",
+        "CIMDPT38",
+        "CIMDPT40",
+        "CIMDPT42"
+      ],
       "brand": "ACECRAFT",
       "soldby": "Alchemy",
       "cost": 500,
@@ -89,7 +133,11 @@
         42
       ],
       "stock": [
-        0
+        12,
+        14,
+        16,
+        18,
+        20
       ],
       "quantity": 1,
       "material": [
@@ -100,7 +148,23 @@
     {
       "id": 4,
       "title": "NHG Shirt (Girls)",
-      "productcode": "NHGSHRT18",
+      "productcode": [
+        "NHGSHRT18",
+        "NHGSHRT20",
+        "NHGSHRT22",
+        "NHGSHRT24",
+        "NHGSHRT26",
+        "NHGSHRT28",
+        "NHGSHRT30",
+        "NHGSHRT32",
+        "NHGSHRT34",
+        "NHGSHRT36",
+        "NHGSHRT38",
+        "NHGSHRT40",
+        "NHGSHRT42",
+        "NHGSHRT44",
+        "NHGSHRT46"
+      ],
       "brand": "ACECRAFT",
       "soldby": "Alchemy",
       "cost": 355,
@@ -124,7 +188,11 @@
         46
       ],
       "stock": [
-        0
+        12,
+        14,
+        16,
+        18,
+        20
       ],
       "quantity": 1,
       "material": [
@@ -135,7 +203,17 @@
     {
       "id": 5,
       "title": "CIS White Day Wear (Grade 9 & 10)",
-      "productcode": "CIHDPT28",
+      "productcode": [
+        "CIHDPT28",
+        "CIHDPT30",
+        "CIHDPT32",
+        "CIHDPT34",
+        "CIHDPT36",
+        "CIHDPT38",
+        "CIHDPT40",
+        "CIHDPT42",
+        "CIHDPT44"
+      ],
       "brand": "ACECRAFT",
       "soldby": "Alchemy",
       "cost": 500,
@@ -153,7 +231,11 @@
         44
       ],
       "stock": [
-        0
+        12,
+        14,
+        16,
+        18,
+        20
       ],
       "quantity": 1,
       "material": [
@@ -164,7 +246,19 @@
     {
       "id": 6,
       "title": "NHG Shorts",
-      "productcode": "NHBSH1220",
+      "productcode": [
+        "NHBSH1220",
+        "NHBSH1222",
+        "NHBSH1224",
+        "NHBSH1226",
+        "NHBSH1228",
+        "NHBSH1230",
+        "NHBSH1232",
+        "NHBSH1234",
+        "NHBSH1236",
+        "NHBSH1238",
+        "NHBSH1240"
+      ],
       "brand": "ACECRAFT",
       "soldby": "Alchemy",
       "cost": 385,
@@ -199,7 +293,16 @@
     {
       "id": 7,
       "title": "CIS White Day Wear (Grade 11 & 12)",
-      "productcode": "CIBDPT30",
+      "productcode": [
+        "CIBDPT30",
+        "CIBDPT32",
+        "CIBDPT34",
+        "CIBDPT36",
+        "CIBDPT38",
+        "CIBDPT40",
+        "CIBDPT42",
+        "CIBDPT44"
+      ],
       "brand": "ACECRAFT",
       "soldby": "Alchemy",
       "cost": 500,
@@ -224,7 +327,17 @@
     {
       "id": 8,
       "title": "NHG Trousers [Boys, Grade 5-10]",
-      "productcode": "NHBTRS3224",
+      "productcode": [
+        "NHBTRS3224",
+        "NHBTRS3226",
+        "NHBTRS3228",
+        "NHBTRS3230",
+        "NHBTRS3232",
+        "NHBTRS3234",
+        "NHBTRS3236",
+        "NHBTRS3238",
+        "NHBTRS3240"
+      ],
       "brand": "ACECRAFT",
       "soldby": "Alchemy",
       "cost": 605,
@@ -260,7 +373,18 @@
     {
       "id": 9,
       "title": "CIS Day Wear Shorts",
-      "productcode": "CIDCSH1220",
+      "productcode": [
+        "CIDCSH1220",
+        "CIDCSH1222",
+        "CIDCSH1224",
+        "CIDCSH1226",
+        "CIDCSH1228",
+        "CIDCSH1230",
+        "CIDCSH1232",
+        "CIDCSH1234",
+        "CIDCSH1236",
+        "CIDCSH1238"
+      ],
       "brand": "ACECRAFT",
       "soldby": "Alchemy",
       "cost": 475,
@@ -498,6 +622,8 @@
   ],
   "register": [
     {
+      "fname": "Priyadarshan",
+      "lname": "M",
       "email": "Priyadarshanmanoharan@gmail.com",
       "password": "sS2@",
       "category": "School",
@@ -506,41 +632,10 @@
       "city": "Coimbatore",
       "state": "Tamil Nadu",
       "gst": "789",
-      "cart": [
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg",
-          "price": 450,
-          "quantity": 3,
-          "title": "CIS Royal Day Wear (Grade 1-5)",
-          "size": 18,
-          "id": 1
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6ffdbb47db6b5e246674/webp/middle-school-480x480.jpg",
-          "price": 500,
-          "quantity": 5,
-          "title": "CIS Sky Day Wear (Grade 6-8)",
-          "size": 18,
-          "id": 3
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f5c6f04705ab2ca345c6/images/5aa0f5c6f04705ab2ca345c7/5aa0f5d0f04705ab2ca345f9/webp/5aa0f5d0f04705ab2ca345f9-480x480.jpg",
-          "price": 355,
-          "quantity": 2,
-          "title": "NHG Shirt (Boys)",
-          "size": 18,
-          "id": 2
-        },
-        {
-          "image": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f01491c2e5ab32f33832/images/5aa0f01491c2e5ab32f33833/5aa0f01e91c2e5ab32f338a1/webp/5aa0f01e91c2e5ab32f338a1-640x640.jpg",
-          "price": 605,
-          "quantity": 5,
-          "title": "NHG Trousers [Boys, Grade 5-10]",
-          "size": 18,
-          "id": 8
-        }
-      ],
-      "isLogged": false,
+      "cart": {
+        "quantity": 2
+      },
+      "isLogged": true,
       "id": 1
     },
     {

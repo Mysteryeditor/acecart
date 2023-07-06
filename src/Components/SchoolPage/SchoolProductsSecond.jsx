@@ -100,7 +100,7 @@ const SchoolUniformProducts = () => {
 
     if (size >= 24) {
       console.log("Old cost is 1 " + oldCost)
-
+      
       oldCost = oldCost + 25; //old cost 450+25
     }
     if (size >= 26) {
@@ -178,7 +178,11 @@ const SchoolUniformProducts = () => {
 
   }
   const quantityChange = (e) => {
-    updateItemQuantity(e.target.value)
+    let quant = e.target.value;
+    if (quant < 1) {
+      quant = 1;
+    }
+    setQuantity(quant);
   }
 
   // const addItem = () => {
@@ -216,7 +220,7 @@ const SchoolUniformProducts = () => {
     const items = {
       image: e.image,
       price: e.cost,
-      quantity: totalItems + 1,
+      quantity: parseInt(quantity),
       title: e.title,
       size: size,
       id: e.id
@@ -224,14 +228,14 @@ const SchoolUniformProducts = () => {
 
 
     console.log(schoolProd.id)
-    // addItem(items)
+    addItem(items)
 
 
     axios.get("http://localhost:4000/register?isLogged=true")
       .then((res) => {
         console.log(res.data[0].cart)
-        Fname = res.data[0].firstName;
-        Lname = res.data[0].lastName;
+        Fname = res.data[0].fname;
+        Lname = res.data[0].lname;
         email = res.data[0].email;
         password = res.data[0].password;
         category = res.data[0].category;
@@ -268,12 +272,8 @@ const SchoolUniformProducts = () => {
             cart.push(items)
             myToastAdded()
 
-            console.log("True or false" + count)
           } else {
-            console.log("True or false" + count)
-            console.log("Cart idhudhan " + cart.data)
-            console.log("Items idhudhan " + items.data)
-
+           
             console.log("Already added")
           }
         }
@@ -356,7 +356,7 @@ const SchoolUniformProducts = () => {
                     <option value={`${size}`}>{size}</option>
                   ))}
                 </select>
-                <span>{schoolProd.stock} item left in Stock</span>
+                {/* <span>{schoolProd.stock} item left in Stock</span> */}
 
                 <hr />
                 <label className='bg-black text-white p-1' htmlFor="quantity">Quantity</label><input type="number" name="qty" id="quantity" value={quantity} onChange={quantityChange} />
@@ -428,7 +428,7 @@ const SchoolUniformProducts = () => {
 
       </div>
 
-      <button onClick={onBackClick}>Go back to the uniforms</button>
+      {/* <button onClick={onBackClick}>Go back to the uniforms</button> */}
 
       <ToastContainer />
     </div>

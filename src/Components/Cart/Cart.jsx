@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom'
 const Cart = () => {
     const { isEmpty, updateItemQuantity, removeItem, totalItems, totalUniqueItems, cartTotal, emptyCart } = useCart()
     const navigate = useNavigate();
-
+    var costt = 0
     const [id, setId] = useState('');
     const [logIn,setLogin] = useState(false)
     const [cartProducts, setCartProducts] = useState('')
@@ -27,12 +27,22 @@ const Cart = () => {
     const [city, setcity] = useState('')
     const [state, setstate] = useState('')
     const [gst, setgst] = useState('')
-
+    var count=false
     const remove = (e) => {
         removeItem(e)
     }
 
+const total=(a)=>{
+    if(!count){
+    for (const item of a) {
+        costt += item.quantity*item.price  
 
+        console.log("price is "+item.price)
+    }
+}
+    count=true
+    return costt
+}
 
     useEffect(() => {
         const items = {
@@ -47,6 +57,7 @@ const Cart = () => {
         const fetchData = () => {
             axios.get("http://localhost:4000/register?isLogged_like=true")
                 .then((response) => {
+                    console.log(response.data[0].cart)
                     setFname(response.data[0].fname)
                     setLname(response.data[0].lname)
                     setemail(response.data[0].email)
@@ -60,7 +71,10 @@ const Cart = () => {
                     setId(response.data[0].id)
                     setCartProducts(response.data[0].cart)
                     setLogin(true)
-                    console.log(response.data[0])
+                    total(response.data[0].cart)
+                 
+                  
+ 
                 })
                 .then(() => {
                     axios.put(`http://localhost:4000/register/${id}`, {
@@ -96,9 +110,10 @@ const Cart = () => {
     }, [])
     if (isEmpty) return <h1 className='p-5 text-center'>Your cart is empty</h1>;
     return (
-        <div>
+        <div>{  console.log("fusyhdvfc"+costt)}
+           
             <Container>
-                <h1 className='text-center p-4 Proxima'>Your bag total is &#8377;{cartTotal}</h1>
+                <h1 className='text-center p-4 Proxima'>Your bag total is &#8377;{total(cartProducts)}</h1>
 
                 <hr />
 
@@ -107,7 +122,9 @@ const Cart = () => {
                         <table className='mb-5'>
 
                             {cartProducts.map((prod) => (
-                                <tr >  <div key={prod.id} className='container'>
+                                <tr > 
+                                    
+                                     <div key={prod.id} className='container'>
                                     {console.log(prod.image)}
 
                                     <div className='row'>
@@ -119,11 +136,13 @@ const Cart = () => {
                                             <h6 className='ProximaBold'>Size:{prod.size}</h6>
                                         </div>
                                         <div className='col-lg-2 col-sm-2 col-md-2 '>
-                                            <button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems - 1)}>-</button><label onChange={(e) => totalItems(e.target.value)} >{totalItems}</label><button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems + 1)}>+</button>
+                                            {/* <button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems - 1)}>-</button> */}
+                                            <label  >{prod.quantity}</label>
+                                            {/* <button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems + 1)}>+</button> */}
                                             {console.log("Tot it" + totalItems)}
                                         </div>
                                         <div className='col-lg-2 col-sm-2 col-md-2 '>
-                                            <h4><label>&#8377;{cartTotal}</label></h4>
+                                            <h4><label>&#8377;{prod.price*prod.quantity}</label></h4>
                                             <button className='bg-transparent border-0 text-danger Proxima' >Remove</button>
                                         </div>
 
@@ -143,8 +162,8 @@ const Cart = () => {
                         </div>
                         <div className='col-lg-4 container'><h4 className='ProximaBold clr-f8f'>SubTotal</h4>
                             <h4 className='ProximaBold'>Total</h4></div>
-                        <div className='col-lg-3 text-end ProximaBold container'><h6 className='clr-f8f'>&#8377;{cartTotal}</h6>
-                            <h3 className='ProximaBold '>&#8377;{cartTotal}</h3></div>
+                        <div className='col-lg-3 text-end ProximaBold container'><h6 className='clr-f8f'>&#8377;{total(cartProducts)}</h6>
+                            <h3 className='ProximaBold '>&#8377;{total(cartProducts)}</h3></div>
 
                     </div>
                     <div className='text-end mb-5 container'>
