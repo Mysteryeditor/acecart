@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import 'C:/Users/cgvak/Desktop/React/acecart/src/App.css'
+import './App.css'
 import React from 'react'; import { useState } from 'react';
 import '../App.css';
 import settingImage from '.././Assets/images/setting.png';
