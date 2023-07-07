@@ -89,6 +89,7 @@ const Enterprise = () => {
           <h1 className='howWeDoIt text-center pt-5'>This is how we do it.</h1>
           <div className="card flex flex-column gap-3">
 
+{/* the timeline */}
             <Container>
               <TimeLineFunc></TimeLineFunc>
             </Container>

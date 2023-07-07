@@ -9,9 +9,6 @@ import { Link } from 'react-router-dom';
 const College = () => {
   const [college, setCollege] = useState([]);
   const [collegeCarousels, setCollegeCarousels] = useState([]);
-
-  // const clgMatUrl = "http://localhost:4000/CollegeMaterials";
-  // const clgCarUrl = "http://localhost:4000/CollegeCarousel";
   const fetchData = () => {
     fetch("https://bane47.onrender.com/CollegeMaterials")
       .then((response) => {
@@ -82,7 +79,7 @@ const College = () => {
 
                       <h1 className='collegeSingletitle text-center'>{collegeSingle.title}</h1>
                       <p className='text-center mx-auto w-25 collegeSingleContent'>{collegeSingle.content}</p>
-                    </>
+                    </>//to alternate the positions of the image and content
                   ) : collegeSingle.id % 2 === 0 ? (
                     <>
 

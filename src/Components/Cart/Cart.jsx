@@ -14,7 +14,7 @@ const Cart = () => {
     const navigate = useNavigate();
     var costt = 0
     const [id, setId] = useState('');
-    const [logIn,setLogin] = useState(false)
+    const [logIn, setLogin] = useState(false)
     const [cartProducts, setCartProducts] = useState('')
     const [quantity, setQuantity] = useState(1)
     const [Fname, setFname] = useState('')
@@ -27,22 +27,22 @@ const Cart = () => {
     const [city, setcity] = useState('')
     const [state, setstate] = useState('')
     const [gst, setgst] = useState('')
-    var count=false
+    var count = false
     const remove = (e) => {
         removeItem(e)
     }
 
-const total=(a)=>{
-    if(!count){
-    for (const item of a) {
-        costt += item.quantity*item.price  
-
-        console.log("price is "+item.price)
+    // to find the total amount
+    const total = (a) => {
+        if (!count) {
+            for (const item of a) {
+                costt += item.quantity * item.price
+            }
+        }
+        count = true
+        return costt
     }
-}
-    count=true
-    return costt
-}
+
 
     useEffect(() => {
         const items = {
@@ -53,11 +53,9 @@ const total=(a)=>{
             size: cartProducts.size,
             id: cartProducts.id
         }
-        console.log("TI" + id)
         const fetchData = () => {
             axios.get("https://bane47.onrender.com/register?isLogged_like=true")
                 .then((response) => {
-                    console.log(response.data[0].cart)
                     setFname(response.data[0].fname)
                     setLname(response.data[0].lname)
                     setemail(response.data[0].email)
@@ -72,48 +70,29 @@ const total=(a)=>{
                     setCartProducts(response.data[0].cart)
                     setLogin(true)
                     total(response.data[0].cart)
-                 
-                  
- 
-                })
-                .then(() => {
-                    axios.put(`https://bane47.onrender.com/register/${id}`, {
-                        fname: Fname,
-                        lname: Lname,
-                        email: email,
-                        password: password,
-                        category: category,
-                        dname: dname,
-                        dcode: dcode,
-                        city: city,
-                        state: state,
-                        gst: gst,
-                        cart: items,
-                        isLogged: true
 
-                    })
-                        .catch((err) => {
-                            return (<h1>Please login first</h1>)
-                        })
-                }).catch((err)=>{
-                    console.log(err)
-                    if(!logIn){
 
-                        return     navigate("/Prompt")
-                    }else
-                    return <h1 className='ProximaBold text-center'>Cart is empty</h1>
-    
+
                 })
-                
-                
+
+                .catch((err) => {
+                    if (!logIn) {
+                        //if no user is logged in this is displayed
+                        return navigate("/Prompt")
+                    } else
+                        return <h1 className='ProximaBold text-center'>Cart is empty</h1>
+
+                })
+
+
         }
-        
+
         fetchData()
     }, [])
     if (isEmpty) return <h1 className='p-5 text-center'>Your cart is empty</h1>;
     return (
-        <div>{  console.log("fusyhdvfc"+costt)}
-           
+        <div>{console.log("cost is" + costt)}
+
             <Container>
                 <h1 className='text-center p-4 Proxima'>Your bag total is &#8377;{total(cartProducts)}</h1>
 
@@ -124,35 +103,35 @@ const total=(a)=>{
                         <table className='mb-5'>
 
                             {cartProducts.map((prod) => (
-                                <tr > 
-                                    
-                                     <div key={prod.id} className='container'>
-                                    {console.log(prod.image)}
+                                <tr >
 
-                                    <div className='row'>
-                                        <div className='col-lg-4 col-md-4 col-sm-4 col-xl-4'>
-                                            <img src={`${prod.image}`} alt="" />
-                                        </div>
-                                        <div className='col-lg-4 col-md-4 col-sm-4 col-xl-4'>
-                                            <h4 className='ProximaBold'>{prod.title}</h4>
-                                            <h6 className='ProximaBold'>Size:{prod.size}</h6>
-                                        </div>
-                                        <div className='col-lg-2 col-sm-2 col-md-2 '>
-                                            {/* <button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems - 1)}>-</button> */}
-                                            <label  >{prod.quantity}</label>
-                                            {/* <button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems + 1)}>+</button> */}
-                                            {console.log("Tot it" + totalItems)}
-                                        </div>
-                                        <div className='col-lg-2 col-sm-2 col-md-2 '>
-                                            <h4><label>&#8377;{prod.price*prod.quantity}</label></h4>
-                                            <button className='bg-transparent border-0 text-danger Proxima' >Remove</button>
-                                        </div>
+                                    <div key={prod.id} className='container'>
+                                        {console.log(prod.image)}
 
-                                    </div>
-                                    <hr />
-                                    <button className='btn btn-warning' onClick={emptyCart}>Empty cart</button>
+                                        <div className='row'>
+                                            <div className='col-lg-4 col-md-4 col-sm-4 col-xl-4'>
+                                                <img className='img-fluid' src={`${prod.image}`} alt="" />
+                                            </div>
+                                            <div className='col-lg-4 col-md-4 col-sm-4 col-xl-4'>
+                                                <h4 className='ProximaBold'>{prod.title}</h4>
+                                                <h6 className='ProximaBold'>Size:{prod.size}</h6>
+                                            </div>
+                                            <div className='col-lg-2 col-sm-2 col-md-2 '>
+                                                {/* <button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems - 1)}>-</button> */}
+                                                <label  >{prod.quantity}</label>
+                                                {/* <button className='bg-transparent border-0' onClick={(e) => updateItemQuantity(prod.id, totalItems + 1)}>+</button> */}
+                                                {console.log("Tot it" + totalItems)}
+                                            </div>
+                                            <div className='col-lg-2 col-sm-2 col-md-2 '>
+                                                <h4><label>&#8377;{prod.price * prod.quantity}</label></h4>
+                                                <button className='bg-transparent border-0 text-danger Proxima' >Remove</button>
+                                            </div>
 
-                                </div></tr>
+                                        </div>
+                                        <hr />
+                                        {/* <button className='btn btn-warning' onClick={emptyCart}>Empty cart</button> */}
+
+                                    </div></tr>
 
                             ))}
                         </table>
